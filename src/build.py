@@ -404,12 +404,15 @@ links = [
  dict(t="숙소 정보", d="APA 우에노 에키마에", u="https://yado.knt.co.jp/st/S131006/"),
 ]
 
-# 초밥 후보를 식사 칸에 추가
+# 초밥 후보를 식사 칸의 "추천 (리뷰 기반)"에 합침 (없으면 새로 만듦)
 for _d in days:
     for _st in _d["steps"]:
         _m = _st.get("meal")
         if _m and (_d["id"], _st["time"]) in MEAL_ADD:
-            _m["groups"].append(dict(label="초밥 (리뷰 기반 추천)", keys=MEAL_ADD[(_d["id"], _st["time"])]))
+            _rg = next((g for g in _m["groups"] if g.get("label") == "추천 (리뷰 기반)"), None)
+            if _rg is None:
+                _rg = dict(label="추천 (리뷰 기반)", keys=[]); _m["groups"].append(_rg)
+            _rg["keys"] += MEAL_ADD[(_d["id"], _st["time"])]
 for g in foodGroups: g["recs"] = REC_GROUPS["food"].get(g["id"], [])
 for g in placeGroups: g["recs"] = REC_GROUPS["place"].get(g["id"], [])
 missing = [k for k in places if k not in COORDS]
@@ -417,6 +420,8 @@ from attrs import apply as _apply_attrs
 _apply_attrs(places)
 from price import apply as _apply_price
 _apply_price(places)
+from menu import apply as _apply_menu
+_apply_menu(places)
 data = dict(changes=[dict(t=a, d=b, w=c) for a, b, c in changes], places=places, days=days, foodGroups=foodGroups, placeGroups=placeGroups, alerts=alerts, checklist=checklist, links=links)
 tpl = open(os.path.join(HERE, "app_template.html"), encoding="utf-8").read()
 out = tpl.replace("__COORDS__", json.dumps(COORDS, ensure_ascii=False)).replace("__DATA__", json.dumps(data, ensure_ascii=False))

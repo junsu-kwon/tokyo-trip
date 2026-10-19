@@ -15,10 +15,12 @@ src/
   attrs.py          ← 요일별 영업시간(OH), 결제(PAY), 면세(TAX), 비 오는 날(RAIN)
   ohparse.py        ← 영업시간 문자열 → 요일별 시간 자동 변환
   price.py          ← 타베로그 1인 예산 → 2인 가격대
+  menu.py           ← data/menu.json의 대표 메뉴를 장소에 붙인다
 data/               ← 조사 결과 원본 (JSON)
   res_*.json, res2_*.json   ← Retty·핫페퍼·Trip.com·한국어 후기, 신규 추천 타베로그
   payres_*.json             ← 결제·면세·우천 조사
   budgetres_*.json          ← 타베로그 예산
+  menu.json                 ← 맛집 대표 메뉴 (menu · src 출처 · note), 출처 없는 곳은 null
 tests/              ← Playwright 클릭 테스트 (지도는 lstub.js 가짜로 대체)
 ```
 
@@ -27,6 +29,8 @@ tests/              ← Playwright 클릭 테스트 (지도는 lstub.js 가짜�
 ```bash
 cd src && python3 build.py        # → ../index.html
 ```
+
+Windows에서는 `PYTHONUTF8=1`을 붙여야 한다 (기본 인코딩이 cp949라 JSON을 못 읽음).
 
 ## 자주 하는 수정
 
@@ -37,6 +41,7 @@ cd src && python3 build.py        # → ../index.html
   - 추천 장소는 `rec_data*.py`에 `pid`(구글 place id), `ll`(좌표), `g`(구글 평점)와 함께 추가
 - **영업시간이 자동 해석과 다르면**: `src/attrs.py`의 `OH`에 요일별로 직접 적는다 (월~일 순서, `[]`=휴무)
 - **결제·면세 태그**: `attrs.py`의 `PAY`(cash/card/cashless/mixed/free/nocard), `TAX`(yes/no/mixed)
+- **대표 메뉴**: `data/menu.json`에 `"키": {"menu": ..., "src": 출처 URL, "note": ...}` (출처 없으면 안 보임)
 - **바뀐 점 기록**: `build.py`의 `changes = [...]` (준비 탭 "원본 일정과 달라진 점")
 
 ## 원칙 (지금까지 지켜 온 것)

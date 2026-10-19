@@ -186,6 +186,8 @@ li:last-child>.stop .rail:before{bottom:calc(100% - 20px)}
 .card .ic{flex:0 0 38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--hair);font-size:19px;box-shadow:inset 0 0 0 1px var(--line)}
 .card .cm{flex:1;min-width:0}
 .card .cn{font-weight:700;font-size:15px;display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center}
+.card .cmenu{font-size:13.5px;font-weight:700;color:var(--ink);margin-top:3px}
+.card .cmenu:before{content:"🍽 ";font-weight:400}
 .card .ch{font-size:13.5px;font-weight:700;color:var(--ink2);margin-top:1px}
 .card .cx{font-size:12.5px;color:var(--muted);margin-top:1px}
 .card .go{flex:0 0 auto;align-self:center;width:8px;height:8px;border-right:2px solid var(--muted);border-top:2px solid var(--muted);transform:rotate(45deg);margin-right:4px}
@@ -770,7 +772,7 @@ function exHtml(p){
 }
 function starsHtml(p){ return p.g ? `<span class="stars num">★ ${p.g.r.toFixed(1)} <span>(${p.g.n.toLocaleString()})</span></span>` : ""; }
 function card(p){
-  return `<button class="card${p.tip?" tip":""}${p.rec?" rec":""}" data-k="${esc(p.key)}"><span class="ic" aria-hidden="true">${ICON[p.cat]||"📍"}</span><span class="cm"><span class="cn">${esc(p.name)} ${tagHtml(p.tags)}</span>${attrsHtml(p)}${(p.g||p.tb)?`<span style="display:block;margin-top:1px">${starsHtml(p)}${p.tb?` <span class="stars num" style="color:var(--ink2)">타베로그 ${esc(p.tb)}</span>`:""}</span>`:""}${p.hours?`<span class="ch num" style="display:block">${p.hours}</span>`:""}${(p.brief && p.brief!==p.hours)?`<span class="cx" style="display:block">${esc(p.brief)}</span>`:""}</span><span class="go"></span></button>`;
+  return `<button class="card${p.tip?" tip":""}${p.rec?" rec":""}" data-k="${esc(p.key)}"><span class="ic" aria-hidden="true">${ICON[p.cat]||"📍"}</span><span class="cm"><span class="cn">${esc(p.name)} ${tagHtml(p.tags)}</span>${attrsHtml(p)}${(p.g||p.tb)?`<span style="display:block;margin-top:1px">${starsHtml(p)}${p.tb?` <span class="stars num" style="color:var(--ink2)">타베로그 ${esc(p.tb)}</span>`:""}</span>`:""}${p.menu?`<span class="cmenu" style="display:block">${esc(p.menu)}</span>`:""}${p.hours?`<span class="ch num" style="display:block">${p.hours}</span>`:""}${(p.brief && p.brief!==p.hours)?`<span class="cx" style="display:block">${esc(p.brief)}</span>`:""}</span><span class="go"></span></button>`;
 }
 function bindCards(root){ root.querySelectorAll(".card").forEach(b=>b.addEventListener("click",()=>openSheet(b.dataset.k,null))); }
 function listView(filterEl, listEl, groups){
@@ -839,6 +841,7 @@ function openSheet(k, dayId, step, back){
   const kicker = d ? `${d.short} ${d.when}${step && step.time?" "+step.time:""}` : (p.areaName||"");
   const facts = [];
   { const stt=openStatus(p); if (stt) facts.push([(AF.at==null&&AF.ctx==null)?"지금":esc(afWhenLabel()), `<span class="st st-${stt.s}" data-st="${esc(p.key)}">${esc(stt.t)}</span>${p.ohn?` <small style="color:var(--muted)">${esc(p.ohn)}</small>`:""}`]); }
+  if (p.menu) facts.push(["대표 메뉴", esc(p.menu)+(p.menun?` · <small>${esc(p.menun)}</small>`:"")+` <small><a href="${esc(p.menus)}" target="_blank" rel="noopener" style="color:var(--muted)">출처</a></small>`]);
   if (p.hours) facts.push(["영업시간", p.hours]);
   { const pl={cash:"현금만",card:"카드 가능",cashless:"카드만 (현금 불가)",mixed:"가게마다 달라요",free:"무료",nocard:"카드 불가"}[p.payk];
     if (pl) facts.push(["결제", esc(pl)+(p.payd&&p.payd!==pl?` · <small>${esc(p.payd)}</small>`:"")]);

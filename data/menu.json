@@ -1,0 +1,222 @@
+{
+ "unatoto": {
+  "menu": "우나동 640엔 · 우나주 1,060엔 · 히쓰마부시 1,300엔",
+  "src": "https://www.unatoto.com/menu/",
+  "note": "체인 공통 가격"
+ },
+ "kamotonegi": {
+  "menu": "오리 라멘(鴨らーめん) · 마시는 오야코동(飲める親子丼)",
+  "src": "https://www.kamotonegi.com/shoprisuto/okachimachi/",
+  "note": ""
+ },
+ "jiro": {
+  "menu": "라멘 950엔 · 부타라멘 1,050엔",
+  "src": "https://www.ramen-jiro.com/menu.html",
+  "note": "양이 아주 많아요. 주문 때 야채·마늘·기름 토핑 선택"
+ },
+ "kohitei": {
+  "menu": "블렌드 커피 810엔 · 앙브르 뒤 렌 810엔",
+  "src": "https://coffee-labo.co.jp/ikebukuro-kissaten/",
+  "note": "사이펀·넬드립 커피 전문"
+ },
+ "renoir_ikebukuro": {
+  "menu": "블렌드 커피 · 카페오레 등 커피류",
+  "src": "https://r.gnavi.co.jp/1af3avc20000/",
+  "note": "체인 공통 메뉴, 이 지점 가격은 확인 못 했어요"
+ },
+ "caretta": {
+  "menu": "우나주 並 梅 1,600엔 · 並 松 2,600엔",
+  "src": "https://www.gltjp.com/ja/article/item/21288/",
+  "note": "가격은 기사 기준이라 바뀌었을 수 있어요"
+ },
+ "hanayama": {
+  "menu": "오니히모카와 우동(鬼ひも川) · 오니가마(鬼釜) · 긴자 고젠",
+  "src": "https://www.gltjp.com/en/directory/item/14432/",
+  "note": "가격 확인 못 했어요"
+ },
+ "hokkaibanya": {
+  "menu": "캇테동(勝手丼, 원하는 네타 5접시) · 우니토로 아카미동",
+  "src": "https://tabelog.com/en/tokyo/A1313/A131301/13108642/",
+  "note": "네타는 그날 입고에 따라 달라요"
+ },
+ "renoir_ginza": {
+  "menu": "블루마운틴 No.1 · 윈너 커피 · 텐쿠 말차라테",
+  "src": "https://gourmet.watch.impress.co.jp/docs/news/1524685.html",
+  "note": "오픈~12시 모닝 서비스"
+ },
+ "butter": {
+  "menu": "버터를 먹는 핫케이크 · 밀크 아이스 · 밀크셰이크",
+  "src": "https://rurubu.jp/andmore/article/19758",
+  "note": "가격은 확인 못 했어요(2023년엔 핫케이크 2,420엔)"
+ },
+ "hanamaru": {
+  "menu": "가케우동 360엔~ · 오로시붓카케 450엔~ · 튀김 130~220엔",
+  "src": "https://www.hanamaruudon.com/menu/",
+  "note": "小 사이즈 기준"
+ },
+ "iwai": {
+  "menu": "특선 두툼 로스카츠 정식 (가고시마 로쿠비야쿠 흑돼지)",
+  "src": "https://tabelog.com/matome/11805/",
+  "note": "가격 확인 못 했어요"
+ },
+ "tsutaya": {
+  "menu": null,
+  "src": "",
+  "note": "2층 점 전용 메뉴를 확인한 출처 없음(교차로 뷰 좌석 100석, 7~22:30 운영만 확인)"
+ },
+ "qpot": {
+  "menu": "쿠마짱 가을 파르페(단호박·메이플) 음료세트 2,200엔",
+  "src": "https://www.q-pot.jp/cafe/",
+  "note": "계절 한정 메뉴라 방문 때 바뀌었을 수 있어요"
+ },
+ "yurinan": {
+  "menu": "생도라야키 · 생크림 모찌 · 딸기 다이후쿠",
+  "src": "https://www.timeout.com/tokyo/restaurants/harajuku-takeshita-dori-yurinan",
+  "note": "한정 메뉴는 수시로 바뀌어요"
+ },
+ "maasan": {
+  "menu": "이시가키규 100% 함박 (런치)",
+  "src": "https://aumo.jp/articles/22901",
+  "note": "가격은 확인 못 했어요"
+ },
+ "hikiniku": {
+  "menu": "함박 정식 1,980엔",
+  "src": "https://www.tablecheck.com/shops/hikinikutocome/reserve",
+  "note": "캐시리스"
+ },
+ "kuuya": {
+  "menu": "멘타이코 모찌 몬자 · 이카스미 몬자",
+  "src": "https://retty.me/restaurant/100001511681/",
+  "note": ""
+ },
+ "shirube": {
+  "menu": "니쿠자가 · 생선회 모둠",
+  "src": "https://www.timeout.jp/tokyo/ja/レストラン/汁べゑ-渋谷店",
+  "note": ""
+ },
+ "yokocho": {
+  "menu": "전국 향토요리 (도야마 블랙라멘·치즈닭갈비 등)",
+  "src": "https://rurubu.jp/andmore/article/12135",
+  "note": "가게마다 달라요"
+ },
+ "nonbei": {
+  "menu": "오뎅 200~400엔 · 참치볼살 스테이크 1,300엔",
+  "src": "https://storyweb.jp/lifestyle/31441/",
+  "note": "가게마다 달라요. 가격은 골목 안 '나다이치' 예시"
+ },
+ "r_gyukatsu": {
+  "menu": "규카츠 보리밥 정식",
+  "src": "https://zaikei.co.jp/releases/2228688/",
+  "note": "우에노점 가격은 확인 못 했어요"
+ },
+ "r_ichiban": {
+  "menu": "하카타 클리어 돈코츠 라멘 · 야채 돈코츠 라멘",
+  "src": "https://www.tablecheck.com/it/hakatatonkotsuramen1ban",
+  "note": "현금만"
+ },
+ "r_mutekiya": {
+  "menu": "무테키야 돈코츠 라멘 · 니쿠타마멘(차슈+반숙란)",
+  "src": "https://en.japantravel.com/tokyo/%E6%9D%B1%E4%BA%AC-%E7%84%A1%E6%95%B5%E5%AE%B6/10440",
+  "note": ""
+ },
+ "r_hibiki": {
+  "menu": "구로게와규 우둔 스테이크 100g · 오보로 두부 · 석솥밥",
+  "src": "https://savorjapan.com/0004044484",
+  "note": ""
+ },
+ "r_tsujita": {
+  "menu": "농후 츠케멘 · 농후 특제 츠케멘(아지타마·차슈 추가)",
+  "src": "https://akiba-pc.watch.impress.co.jp/docs/wakiba/find/1439734.html",
+  "note": "같은 츠지타 아키하바라 기사 기준"
+ },
+ "r_matsue": {
+  "menu": "스시 오마카세 코스 린 8,600엔 · 카가야키 13,200엔",
+  "src": "https://www.tablecheck.com/en/matsue-shibuya",
+  "note": "저녁 코스, 서비스료 별도"
+ },
+ "r_uogashi": {
+  "menu": "서서 먹는 니기리 스시 1관 75엔부터 · 점심 10관 세트",
+  "src": "https://www.timeout.jp/tokyo/ja/%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3/%E7%AB%8B%E5%96%B0%E3%81%84%E5%AF%BF%E5%8F%B8-%E9%AD%9A%E3%81%8C%E3%81%97%E6%97%A5%E6%9C%AC%E4%B8%80-%E6%B8%8B%E8%B0%B7%E9%81%93%E7%8E%84%E5%9D%82%E5%BA%97",
+  "note": ""
+ },
+ "n_ichinisan": {
+  "menu": "규카츠(130·195·260g) · 규탄카츠(15시 이후)",
+  "src": "https://visit-chiyoda.tokyo/app/spot/detail/860",
+  "note": "직접 구워 먹는 방식"
+ },
+ "n_marugo": {
+  "menu": "로스카츠 정식 · 특로스카츠 · 히레카츠",
+  "src": "https://en.japantravel.com/tokyo/%E6%9D%B1%E4%BA%AC-%E4%B8%B8%E4%BA%94/7276",
+  "note": ""
+ },
+ "n_ikkoku": {
+  "menu": "부타노 카쿠니 정식 1,400엔 · 연어 하라스 이쿠라 정식 1,500엔",
+  "src": "https://ikebukuro-times.com/archives/kamado-gohan-ikkoku.html",
+  "note": "솥밥 무한 리필"
+ },
+ "n_lapin": {
+  "menu": "에그토스트 모닝 세트(샐러드·커피) 800엔",
+  "src": "https://tabelog.com/en/tokyo/A1311/A131101/13016744/",
+  "note": "7~11시 모닝"
+ },
+ "n_shiseido": {
+  "menu": "딸기 파르페 2,400엔 · 새우튀김 샌드위치 2,600엔",
+  "src": "https://parlour.shiseido.co.jp/shoplist/salondecafeginza/",
+  "note": "계절 파르페 3,000~5,500엔"
+ },
+ "n_tokichi": {
+  "menu": "별제 마루토 파르페 2,500엔 · 생면 차소바 1,210엔",
+  "src": "https://www.timeout.jp/tokyo/ja/レストラン/tokichi-ginza",
+  "note": "파르페는 긴자점 한정"
+ },
+ "n_happypancake": {
+  "menu": "행복한 팬케이크 1,390엔 · 티라미수 팬케이크 1,780엔",
+  "src": "https://magia.tokyo/",
+  "note": "체인 공통 메뉴"
+ },
+ "n_maimon": {
+  "menu": "참치 중뱃살 · 성게 · 가스에비 · 제철 고바코게 군함",
+  "src": "https://hamoni.jp/shop/WRgWnpM5XcbS6qYrK8Gi",
+  "note": "호쿠리쿠 재료 중심, 가격대 높은 편"
+ },
+ "n_magurobito": {
+  "menu": "참치 니기리 단품 (붉은살 · 주토로 · 오토로)",
+  "src": "https://www.timeout.jp/tokyo/ja/restaurant/tachiguisushi",
+  "note": "약 50종 네타를 한 점씩 주문"
+ },
+ "n_tenka": {
+  "menu": null,
+  "src": "",
+  "note": "이 지점의 메뉴 페이지를 열람하지 못함(타베로그 차단). 체인은 대부분 균일가 회전초밥이라고만 알려짐, 지점 확인 불가"
+ },
+ "n_houkou": {
+  "menu": "오마카세 15품 8,500엔 · 해산물육수 라멘 무제한",
+  "src": "https://www.tablecheck.com/zh-CN/sushi-tomohiro",
+  "note": "음료 무제한 포함 · 예약 필수"
+ },
+ "n_itamae": {
+  "menu": "생참치 모둠 세트 · 성게 군함 · 참치볼살 튀김",
+  "src": "https://ordinarypatrons.com/2020/02/01/itamae-sushi-late-night-dining-in-tokyo-shimbashi-station板前寿司-新橋店/",
+  "note": "2023년 일부 지점 개편으로 메뉴가 바뀌었을 수 있어요"
+ },
+ "n_midori": {
+  "menu": "이타상 오마카세 니기리 · 특상 니기리",
+  "src": "https://livejapan.com/ja/in-tokyo/in-pref-tokyo/in-tsukiji/article-a0000065/",
+  "note": "대기가 길어요"
+ },
+ "n_fujiyama": {
+  "menu": "초밥·대게 2시간 무제한 13,200엔(음료 포함)",
+  "src": "https://hamoni.jp/en/shop/Wq69gmY2B4mOKFrpI7YR",
+  "note": "요금이 출처마다 달라요, 방문 전 확인"
+ },
+ "n_ginzo": {
+  "menu": "초밥 · 사시미 · 이자카야 안주",
+  "src": "https://gurunavi.com/en/g135733/rst/?__ngt__=TT18316e9ee005ac1e4ae51bVwP5KRQv51yPozh7z4ogrx",
+  "note": "예산 점심 약 1,000엔 · 저녁 약 3,500엔"
+ },
+ "n_utami": {
+  "menu": "런치 니기리(1.8인분) 약 1,500엔 · 해선동",
+  "src": "https://retty.me/theme/200248344/",
+  "note": "된장국·차완무시 포함, 점심 14시까지"
+ }
+}
