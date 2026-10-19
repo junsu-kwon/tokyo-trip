@@ -1,0 +1,170 @@
+[
+ {
+  "key": "yodobashi",
+  "pay": "card",
+  "pay_detail": "현금(엔·달러)·신용카드(AMEX·DC·Diners·JCB·Master)·교통IC·iD·QUICPay·Edy·J-Debit (전 매장 공통 안내, QR 언급 없음)",
+  "taxfree": "yes",
+  "tax_detail": "Akiba 시설정보에 '免税サポート' 표기(tokyotouristinfo). 일반 기준 5,000엔(세전)↑·여권 필요. 주의: GLTJP FAQ는 'Tax refund service not available'라고 적고 있어 출처 간 표기 불일치 — 계산대에서 확인 권장",
+  "source": "https://www.yodobashi.com/ec/support/beginner/payment/index.html ; https://tokyotouristinfo.com/detail/M0288 ; https://www.gltjp.com/en/directory/item/14049/"
+ },
+ {
+  "key": "maach",
+  "pay": "mixed",
+  "pay_detail": "매장별 상이 (공식 사이트: JRE POINT 적립·사용 가능)",
+  "taxfree": "unknown",
+  "tax_detail": "ecute 면세 안내(GLTJP)에 마치 에큐트는 없음 — 확인 못 함",
+  "source": "https://www.ecute.jp/maach ; https://www.gltjp.com/en/directory/item/14920/"
+ },
+ {
+  "key": "parco",
+  "pay": "mixed",
+  "pay_detail": "교통IC·iD·QUICPay+·PayPay·라쿠텐페이·au PAY·d払い·Alipay+·WeChat Pay·카드 터치결제(15,000엔까지) 등, 일부 매장은 불가",
+  "taxfree": "mixed",
+  "tax_detail": "통합 면세 카운터 없이 각 매장 계산대에서 면세 처리하는 방식(보도 기사 기준, 다소 오래된 정보)",
+  "source": "https://en.dev-shibuya-parco.sc-concierge.jp/info/facilities ; https://paymentnavi.com/en/paymentnews/56006.html/"
+ },
+ {
+  "key": "mega_donki",
+  "pay": "card",
+  "pay_detail": "신용카드·교통IC·iD·QUICPay 대체로 가능, 일본 QR결제는 원칙적으로 대상 외·계산대별 상이 (제3자 블로그)",
+  "taxfree": "yes",
+  "tax_detail": "면세 10% + 쿠폰 최대 7% 할인(1만엔↑ 5%, 3만엔↑ 7%, LIVE JAPAN 쿠폰을 계산대에서 제시). 여권 필요",
+  "source": "https://livejapan.com/en/in-tokyo/in-pref-tokyo/in-shibuya/spot-lj0001929/coupon/?c=325720 ; https://pay-route.co.jp/article/?p=5941"
+ },
+ {
+  "key": "shibuya109",
+  "pay": "card",
+  "pay_detail": "공식: 전 매장 신용카드·은련 사용 가능. 교통IC·QR(PayPay·Alipay·WeChat 등)은 매장별 상이. 7층 세븐은행 ATM",
+  "taxfree": "mixed",
+  "tax_detail": "참여 매장만 면세. B1 엘리베이터 홀 근처 면세 카운터(PIE VAT, 10:00–21:00), 구매 당일·마감 15분 전까지, 여권·영수증·물품 지참, 카드 명의=여권 명의",
+  "source": "https://shibuya109.jp/qa ; https://shibuya109.jp/tax-free-shopping ; https://pievat.com/tourists/japan/station-list/shibuya109"
+ },
+ {
+  "key": "loft_shibuya",
+  "pay": "card",
+  "pay_detail": "현금·Visa·JCB·Master·AMEX·은련·Alipay",
+  "taxfree": "yes",
+  "tax_detail": "6층 면세 카운터, 면세 접수 20:00까지(영업 21:00), 5,000엔(세전)↑",
+  "source": "https://www.gotokyo.org/en/spot/445/index.html ; https://livejapan.com/ja/in-tokyo/in-pref-tokyo/in-shibuya/article-a0005867/ ; https://livejapan.com/ja/in-tokyo/in-pref-tokyo/in-shibuya/article-a0005745/"
+ },
+ {
+  "key": "tokyu_plaza",
+  "pay": "unknown",
+  "pay_detail": "시부야점 결제 정보 확인 못 함(공식 사이트 접근 불가). 매장별 상이할 가능성",
+  "taxfree": "mixed",
+  "tax_detail": "3F 면세 카운터(PIE VAT, 11:00–20:00), 구매 당일·마감 15분 전까지, 여권·영수증·물품 지참",
+  "source": "https://pievat.com/tourists/japan/station-list/tokyu-plaza-shibuya"
+ },
+ {
+  "key": "bleubleuet",
+  "pay": "unknown",
+  "pay_detail": "매장 결제 정보 확인 못 함",
+  "taxfree": "unknown",
+  "tax_detail": "",
+  "source": "https://bleubleuet.jp/shop/pages/english.aspx"
+ },
+ {
+  "key": "gu_shibuya",
+  "pay": "card",
+  "pay_detail": "Visa·Master·Apple Pay·KakaoPay 가능 (체인 공통, 제3자 가이드)",
+  "taxfree": "yes",
+  "tax_detail": "계산대에서 면세, 5,500엔(세포함)↑, 실물 여권 필요 (체인 공통 정보, 시부야점 개별 확인은 못 함)",
+  "source": "https://www.trvlogue.com/en/gu-japan-shopping-guide-2"
+ },
+ {
+  "key": "nintendo",
+  "pay": "card",
+  "pay_detail": "Visa·Master·AMEX·JCB",
+  "taxfree": "yes",
+  "tax_detail": "5,000엔↑·여권 필요 (여행 블로그 기준)",
+  "source": "https://www.you.co/sg/blog/nintendo-tokyo-shibuya-store/"
+ },
+ {
+  "key": "tower_records",
+  "pay": "card",
+  "pay_detail": "JCB·VISA·MASTER·AMEX·DINERS·은련·Alipay·WeChat Pay",
+  "taxfree": "yes",
+  "tax_detail": "타워레코드 공식 면세 매장 목록에 시부야점 포함",
+  "source": "https://tower.jp/site/store/taxfree"
+ },
+ {
+  "key": "hikarie",
+  "pay": "unknown",
+  "pay_detail": "결제 정보 확인 못 함",
+  "taxfree": "mixed",
+  "tax_detail": "매장별 상이. 예: B1 AP by AMERICAN PHARMACY 면세 가능. 건물 통합 카운터는 확인 못 함",
+  "source": "https://livejapan.com/ja/in-tokyo/in-pref-tokyo/in-shibuya/article-a0005745/"
+ },
+ {
+  "key": "r_lashinbang",
+  "pay": "card",
+  "pay_detail": "현금·Visa·JCB(Master·AMEX는 매장별)·PayPay. 교통IC 등 전자화폐 불가 (체인 공통, 제3자 정리)",
+  "taxfree": "unknown",
+  "tax_detail": "",
+  "source": "https://www.pricey.jp/web/articles/6029"
+ },
+ {
+  "key": "r_amiami",
+  "pay": "unknown",
+  "pay_detail": "공식 매장 페이지에 결제 안내가 이미지로만 있어 확인 못 함",
+  "taxfree": "unknown",
+  "tax_detail": "공식 페이지에 'menzei' 이미지는 있으나 내용 확인 못 함",
+  "source": "https://realstore.amiami.jp/shop/shop2.html"
+ },
+ {
+  "key": "r_kotobukiya",
+  "pay": "card",
+  "pay_detail": "카드 가능(브랜드 미기재)",
+  "taxfree": "yes",
+  "tax_detail": "FAQ 'Do you offer tax-free services?' → 'Yes, we do.'",
+  "source": "https://www.gltjp.com/en/directory/item/17181"
+ },
+ {
+  "key": "r_linefriends",
+  "pay": "unknown",
+  "pay_detail": "",
+  "taxfree": "unknown",
+  "tax_detail": "",
+  "source": ""
+ },
+ {
+  "key": "r_mandarake",
+  "pay": "unknown",
+  "pay_detail": "시부야점 확인 못 함 (아키하바라 Complex점은 카드 가능)",
+  "taxfree": "unknown",
+  "tax_detail": "시부야점 확인 못 함 (Complex점은 5,500엔(세포함)↑·여권 지참 시 면세)",
+  "source": "https://www.gltjp.com/en/directory/item/14501/"
+ },
+ {
+  "key": "n_gachapon",
+  "pay": "cash_only",
+  "pay_detail": "신용카드 불가. 내부 동전 교환기는 1,000엔 지폐만 사용 가능. 교통IC 대응 기기는 확인 못 함",
+  "taxfree": "unknown",
+  "tax_detail": "면세 언급 없음 (가챠 기기라 사실상 해당 없음)",
+  "source": "https://www.gltjp.com/en/directory/item/16985/"
+ },
+ {
+  "key": "n_superpotato",
+  "pay": "unknown",
+  "pay_detail": "",
+  "taxfree": "unknown",
+  "tax_detail": "",
+  "source": "https://visit-chiyoda.tokyo/app/en/spot/detail/819"
+ },
+ {
+  "key": "n_hey",
+  "pay": "mixed",
+  "pay_detail": "아케이드 기기는 기본적으로 동전. 일부 기기(예: 30엔 Spa 2X)는 전자화폐 사용 가능",
+  "taxfree": "unknown",
+  "tax_detail": "",
+  "source": "https://en.akihabara-bc.jp/?p=43960"
+ },
+ {
+  "key": "hanamaru",
+  "pay": "card",
+  "pay_detail": "2024년 12월부터 국내 매장 신용카드 가능(일부 제외). 교통IC·Edy·WAON·nanaco는 많은 매장에서 가능, QR은 매장별 상이 (체인 공통, 제3자 정리)",
+  "taxfree": "n/a",
+  "tax_detail": "",
+  "source": "https://www.pricey.jp/web/articles/5874"
+ }
+]

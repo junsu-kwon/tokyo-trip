@@ -1,0 +1,4 @@
+tests/test.html
+tests/*.png
+__pycache__/
+*.pyc

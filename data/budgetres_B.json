@@ -1,0 +1,23 @@
+[
+{"key":"n_maimon","dinner":"￥5,000～￥5,999","lunch":null,"shop_dinner":"￥4,000～￥4,999","shop_lunch":"￥4,000～￥4,999","charge":"チャージ料なし","note":"review row has a single unlabeled value; dinner/lunch slot unconfirmed"},
+{"key":"n_marugo","dinner":"￥2,000～￥2,999","lunch":"￥2,000～￥2,999","shop_dinner":"￥1,000～￥1,999","shop_lunch":"￥1,000～￥1,999","charge":"無し"},
+{"key":"n_midori","dinner":"￥5,000～￥5,999","lunch":"￥4,000～￥4,999","shop_dinner":"￥3,000～￥3,999","shop_lunch":"￥2,000～￥2,999","charge":null},
+{"key":"n_shiseido","dinner":"￥3,000～￥3,999","lunch":"￥3,000～￥3,999","shop_dinner":"￥2,000～￥2,999","shop_lunch":"￥2,000～￥2,999","charge":null},
+{"key":"n_tenka","dinner":"￥1,000～￥1,999","lunch":"￥1,000～￥1,999","shop_dinner":null,"shop_lunch":null,"charge":null},
+{"key":"n_tokichi","dinner":"￥2,000～￥2,999","lunch":"￥2,000～￥2,999","shop_dinner":"￥1,000～￥1,999","shop_lunch":"￥1,000～￥1,999","charge":null},
+{"key":"n_utami","dinner":"￥6,000～￥7,999","lunch":"￥1,000～￥1,999","shop_dinner":null,"shop_lunch":null,"charge":null,"note":"備考: お通し代なし"},
+{"key":"qpot","dinner":"￥2,000～￥2,999","lunch":"￥2,000～￥2,999","shop_dinner":"￥1,000～￥1,999","shop_lunch":"￥1,000～￥1,999","charge":null},
+{"key":"r_gyukatsu","dinner":"￥2,000～￥2,999","lunch":null,"shop_dinner":null,"shop_lunch":null,"charge":null,"note":"single review value; og meta labels it 予算(夜)"},
+{"key":"r_hibiki","dinner":"￥8,000～￥9,999","lunch":"￥2,000～￥2,999","shop_dinner":"￥6,000～￥7,999","shop_lunch":"￥2,000～￥2,999","charge":"ディナータイム チャージ料1,000円（税込）"},
+{"key":"r_ichiban","dinner":"￥1,000～￥1,999","lunch":"￥1,000～￥1,999","shop_dinner":"￥1,000～￥1,999","shop_lunch":"￥1,000～￥1,999","charge":null},
+{"key":"r_matsue","dinner":"￥10,000～￥14,999","lunch":"￥4,000～￥4,999","shop_dinner":"￥10,000～￥14,999","shop_lunch":"￥3,000～￥3,999","charge":"ディナータイムに限りサービス料を10％頂戴いたします"},
+{"key":"r_mutekiya","dinner":"￥1,000～￥1,999","lunch":"￥1,000～￥1,999","shop_dinner":"～￥999","shop_lunch":"～￥999","charge":"サービス料: 無し チャージ: 無し"},
+{"key":"r_tsujita","dinner":"￥1,000～￥1,999","lunch":"￥1,000～￥1,999","shop_dinner":null,"shop_lunch":null,"charge":null},
+{"key":"r_uogashi","dinner":"￥1,000～￥1,999","lunch":"￥1,000～￥1,999","shop_dinner":"￥1,000～￥1,999","shop_lunch":"～￥999","charge":null},
+{"key":"renoir_ginza","dinner":"￥1,000～￥1,999","lunch":null,"shop_dinner":"￥1,000～￥1,999","shop_lunch":"￥1,000～￥1,999","charge":null,"note":"review row has a single unlabeled value; dinner/lunch slot unconfirmed"},
+{"key":"renoir_ikebukuro","dinner":"～￥999","lunch":"～￥999","shop_dinner":"～￥999","shop_lunch":"～￥999","charge":null},
+{"key":"shirube","dinner":"￥6,000～￥7,999","lunch":null,"shop_dinner":null,"shop_lunch":null,"charge":null,"note":"single review value; og meta labels it 予算(夜)"},
+{"key":"tsutaya","dinner":"～￥999","lunch":"～￥999","shop_dinner":null,"shop_lunch":null,"charge":null},
+{"key":"unatoto","dinner":"￥1,000～￥1,999","lunch":"￥1,000～￥1,999","shop_dinner":"￥1,000～￥1,999","shop_lunch":"～￥999","charge":null},
+{"key":"yurinan","dinner":"￥1,000～￥1,999","lunch":"～￥999","shop_dinner":null,"shop_lunch":"～￥999","charge":null,"note":"shop budget single value; og meta labels it 予算(昼)"}
+]

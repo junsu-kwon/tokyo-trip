@@ -1,0 +1,162 @@
+[
+ {
+  "key": "butter",
+  "dinner": "￥1,000～￥1,999",
+  "lunch": "￥2,000～￥2,999",
+  "shop_dinner": "￥2,000～￥2,999",
+  "shop_lunch": "￥2,000～￥2,999",
+  "charge": null
+ },
+ {
+  "key": "caretta",
+  "dinner": "￥2,000～￥2,999",
+  "lunch": "￥2,000～￥2,999",
+  "shop_dinner": "￥2,000～￥2,999",
+  "shop_lunch": "￥1,000～￥1,999",
+  "charge": null
+ },
+ {
+  "key": "hanayama",
+  "dinner": "￥2,000～￥2,999",
+  "lunch": "￥1,000～￥1,999",
+  "shop_dinner": "￥3,000～￥3,999",
+  "shop_lunch": "￥1,000～￥1,999",
+  "charge": "チャージ料なし"
+ },
+ {
+  "key": "hikiniku",
+  "dinner": "￥1,000～￥1,999",
+  "lunch": "￥1,000～￥1,999",
+  "shop_dinner": "￥1,000～￥1,999",
+  "shop_lunch": "￥1,000～￥1,999",
+  "charge": null
+ },
+ {
+  "key": "hokkaibanya",
+  "dinner": "￥5,000～￥5,999",
+  "lunch": "￥4,000～￥4,999",
+  "shop_dinner": "￥4,000～￥4,999",
+  "shop_lunch": "￥3,000～￥3,999",
+  "charge": null
+ },
+ {
+  "key": "iwai",
+  "dinner": "￥3,000～￥3,999",
+  "lunch": "￥3,000～￥3,999",
+  "shop_dinner": "￥2,000～￥2,999",
+  "shop_lunch": "￥2,000～￥2,999",
+  "charge": "なし"
+ },
+ {
+  "key": "jiro",
+  "dinner": "￥1,000～￥1,999",
+  "lunch": "￥1,000～￥1,999",
+  "shop_dinner": "～￥999",
+  "shop_lunch": "～￥999",
+  "charge": null
+ },
+ {
+  "key": "kamotonegi",
+  "dinner": "￥1,000～￥1,999",
+  "lunch": "￥1,000～￥1,999",
+  "shop_dinner": "￥1,000～￥1,999",
+  "shop_lunch": "￥1,000～￥1,999",
+  "charge": null
+ },
+ {
+  "key": "kohitei",
+  "dinner": "￥1,000～￥1,999",
+  "lunch": "￥1,000～￥1,999",
+  "shop_dinner": null,
+  "shop_lunch": "￥1,000～￥1,999",
+  "charge": null
+ },
+ {
+  "key": "kuuya",
+  "dinner": "￥5,000～￥5,999",
+  "lunch": "￥2,000～￥2,999",
+  "shop_dinner": "￥2,000～￥2,999",
+  "shop_lunch": "￥1,000～￥1,999",
+  "charge": null
+ },
+ {
+  "key": "maasan",
+  "dinner": "￥2,000～￥2,999",
+  "lunch": "￥2,000～￥2,999",
+  "shop_dinner": "￥2,000～￥2,999",
+  "shop_lunch": "￥1,000～￥1,999",
+  "charge": null
+ },
+ {
+  "key": "n_fujiyama",
+  "dinner": "￥4,000～￥4,999",
+  "lunch": "￥4,000～￥4,999",
+  "shop_dinner": "￥6,000～￥7,999",
+  "shop_lunch": null,
+  "charge": null
+ },
+ {
+  "key": "n_ginzo",
+  "dinner": "￥5,000～￥5,999",
+  "lunch": "￥2,000～￥2,999",
+  "shop_dinner": "￥3,000～￥3,999",
+  "shop_lunch": "～￥999",
+  "charge": null
+ },
+ {
+  "key": "n_happypancake",
+  "dinner": "￥1,000～￥1,999",
+  "lunch": "￥1,000～￥1,999",
+  "shop_dinner": "￥1,000～￥1,999",
+  "shop_lunch": "￥1,000～￥1,999",
+  "charge": null
+ },
+ {
+  "key": "n_houkou",
+  "dinner": "￥6,000～￥7,999",
+  "lunch": null,
+  "shop_dinner": "￥6,000～￥7,999",
+  "shop_lunch": null,
+  "charge": "なし"
+ },
+ {
+  "key": "n_ichinisan",
+  "dinner": "￥2,000～￥2,999",
+  "lunch": "￥2,000～￥2,999",
+  "shop_dinner": "￥2,000～￥2,999",
+  "shop_lunch": "￥2,000～￥2,999",
+  "charge": null
+ },
+ {
+  "key": "n_ikkoku",
+  "dinner": "￥2,000～￥2,999",
+  "lunch": "￥1,000～￥1,999",
+  "shop_dinner": null,
+  "shop_lunch": null,
+  "charge": null
+ },
+ {
+  "key": "n_itamae",
+  "dinner": "￥5,000～￥5,999",
+  "lunch": "￥2,000～￥2,999",
+  "shop_dinner": "￥5,000～￥5,999",
+  "shop_lunch": "￥1,000～￥1,999",
+  "charge": "サービス料なし、お通し料 税込550円※アルコール飲料ご注文のお客様全て"
+ },
+ {
+  "key": "n_lapin",
+  "dinner": "￥1,000～￥1,999",
+  "lunch": "￥1,000～￥1,999",
+  "shop_dinner": null,
+  "shop_lunch": "～￥999",
+  "charge": null
+ },
+ {
+  "key": "n_magurobito",
+  "dinner": "￥3,000～￥3,999",
+  "lunch": "￥3,000～￥3,999",
+  "shop_dinner": "￥2,000～￥2,999",
+  "shop_lunch": "￥1,000～￥1,999",
+  "charge": "サービス料なし"
+ }
+]

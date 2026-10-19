@@ -1,0 +1,19 @@
+[
+{"key":"unatoto","ko":{"url":"https://www.japankuru.com/ko/food/e1670/","site":"JAPANKURU (재팬쿠루)","gist":"上野6-11-15 우에노점 방문기로, 메뉴가 500~1500엔대(글쓴이는 1000엔 장어덮밥)이고 약간의 웨이팅 후 입장, 대부분 카운터석이라 혼밥에 좋음 — 단 2019년 글이라 가격 변동 가능."},"note":"japankuru 글은 2019년 1월 작성, 영업시간 11:00-22:00으로 기재(Trip 투고는 10:00-23:00)."},
+{"key":"kamotonegi","ko":null,"note":"한국어 후기 미발견. clien 후기(19235114)는 우메다점이라 제외. funliday ko 페이지(上野6-4-15 일치)는 후기 없이 영업시간만 '월~목 11-15, 금 휴무, 토일 11-20'으로 기재 — 24시간 영업 정보와 상충하니 방문 전 확인 필요."},
+{"key":"jiro","ko":null,"note":"한국어 후기 미발견(tripstore·LIVE JAPAN ko·kolonmall 기사 확인했으나 池袋東口店 언급 없음)."},
+{"key":"kohitei","tripcom":null,"ko":null,"note":"Trip.com/한국어 후기 미발견. gltjp directory 16362(皇琲亭 추정)는 fetch 오류로 미확인."},
+{"key":"renoir_ikebukuro","retty":null,"tripcom":null,"ko":null,"note":"Retty 페이지 100001054939는 이번에도 fetch 오류(retty.me 전체 접속 불가). Trip.com·한국어 미발견."},
+{"key":"caretta","retty":null,"tripcom":null,"ko":null,"note":"Retty 접속 불가. Trip.com/한국어 후기 미발견. 참고: gurunavi 카렛타시오도메점 페이지 존재 https://gurunavi.com/en/gj5n900/rst (미열람)."},
+{"key":"hanayama","retty":null,"ko":null,"note":"Retty 접속 불가. 한국어 검색에서 나온 omakaseje 페이지는 같은 주소(銀座3-14-13 B1)의 '銀座 別邸花山'(코스 전용 별관)이라 우동집 본매장과 다름 - 제외."},
+{"key":"hokkaibanya","tripcom":null,"ko":null,"note":"Trip.com/한국어 미발견. 참고: savorjapan https://savorjapan.com/0004009527, gurunavi https://gurunavi.com/en/ga6k700/rev/rst (미열람)."},
+{"key":"renoir_ginza","retty":null,"tripcom":null,"ko":null,"note":"Retty 접속 불가, Trip.com/한국어 미발견."},
+{"key":"butter","retty":null,"tripcom":null,"ko":null,"note":"Retty 접속 불가. Trip.com moments(nz.trip.com/moments/poi-marunouchi-22846910)는 마루노우치 지역 페이지로 BUTTER 언급 없음. 한국어 미발견. 참고: hamoni 매장 페이지 https://hamoni.jp/en/shop/Fv31Td4dlweSiLualKHa (미열람)."},
+{"key":"iwai","tripcom":null,"ko":null,"note":"Trip.com/한국어 미발견(waug 돈카츠 기사에 없음). 참고: byfood https://www.byfood.com/restaurant/tonkatsu-iwai-11609 (미열람)."},
+{"key":"tsutaya","retty":null,"tripcom":null,"ko":{"url":"https://www.haveagood-holiday.com/ko/articles/218242","site":"Have a Good Holiday (한국어판 여행 매거진)","gist":"Q-FRONT(SHIBUYA TSUTAYA) 2층 스타벅스 창가석에서 스크램블 교차로를 바로 내려다볼 수 있어, 교차로를 가장 좋은 각도로 보는 스폿 중 하나로 추천됨."},"note":"ko 글은 짧은 관광 소개(매장 이용 팁·웨이팅 정보 없음), '1층과 2층 스타벅스'라고 서술해 리뉴얼 전 정보가 섞였을 수 있음. Retty 100001744456 이번에도 fetch 오류."},
+{"key":"qpot","retty":null,"ko":null,"note":"Retty 접속 불가. 한국어 후기 미발견(tsunagujapan ko 하라주쿠 코스에도 없음)."},
+{"key":"yurinan","retty":null,"tripcom":null,"ko":null,"note":"Retty 접속 불가, Trip.com/한국어 미발견. 참고: Time Out https://www.timeout.com/tokyo/restaurants/harajuku-takeshita-dori-yurinan (미열람)."},
+{"key":"maasan","tripcom":null,"ko":null,"note":"Trip.com/한국어 미발견. 영문 표기는 'Maasan Hamburger Shibuya Honten'(함바그 가게)."},
+{"key":"hikiniku","ko":null,"note":"한국어 후기 미발견(tripstore 시부야 맛집글 2건, W Korea 기사 확인했으나 언급 없음). 공식 한국어 안내 https://hikinikutocome.com/ko/locations/shibuya 존재(후기 아님, 미열람)."},
+{"key":"kuuya","tripcom":null,"ko":null,"note":"Trip.com/한국어 미발견(한국어 결과는 라라포트·다이버시티 등 다른 지점뿐)."}
+]

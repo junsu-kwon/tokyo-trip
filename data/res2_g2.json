@@ -1,0 +1,19 @@
+[
+{"key":"shirube","retty":null,"tripcom":null,"ko":null,"note":"한국어 후기 3회 검색(시루베에/汁べゑ) – 해당 지점 한국어 페이지 미발견. Trip.com 미조사(예산)."},
+{"key":"yokocho","tripcom":null,"ko":{"url":"https://haveagood-holiday.com/ko/articles/220240","site":"Have a good holiday (ko)","gist":"전국 각지의 향토·소울푸드 가게가 모여 있어 술 한 잔 들고 여러 가게를 돌며 맛보기 좋고, 월~토는 다음날 새벽 5시·일요일은 23시까지 영업한다."},"note":"Trip.com: site:trip.com 검색에서 골목 단위 페이지 미발견."},
+{"key":"nonbei","ko":{"url":"https://livejapan.com/ko/in-tokyo/in-pref-tokyo/in-shibuya/spot-lj0002050/","site":"LIVE JAPAN (ko)","gist":"운치 있는 선술집 약 40곳이 늘어선 쇼와풍 골목으로, 닭꼬치·오뎅이 인기이며 합리적인 가격에 가볍게 한 잔 하기 좋다(하치코 출구에서 바로)."},"note":"LIVE JAPAN ko 스폿 페이지(골목 전체)."},
+{"key":"r_gyukatsu","retty":null,"tripcom":null,"ko":null,"note":"한국어: tripstore 우에노 글은 '아메요코 입구 쪽 우에노점'(4-10-17 지점)이라 제외. さくらテラス점 Retty/한국어 페이지 미발견(Retty theme 페이지에도 없음)."},
+{"key":"r_ichiban","ko":null,"note":"한국어 검색 2회(잇판/一絆 후기) – 한국어 후기 미발견."},
+{"key":"r_mutekiya","ko":{"url":"https://www.tripstore.kr/blog/%EB%8F%84%EC%BF%84-%EC%9D%B4%EC%BC%80%EB%B6%80%EC%BF%A0%EB%A1%9C-%EB%A7%9B%EC%A7%91-%EC%B6%94%EC%B2%9C-%EC%B4%9D%EC%A0%95%EB%A6%AC","site":"tripstore.kr","gist":"진한 돈코츠 국물과 녹는 차슈가 일품(혼마루멘 약 1,200엔)이며 식사 시간대엔 1시간 이상 대기라 10:30 오픈 직전이나 밤 10시 이후 방문을 권함(동쪽출구 도보 3분, 새벽 4시까지)."},"note":"같은 사이트 다른 글(이케부쿠로역 출구별)에서는 저녁 7시 1시간 30분 대기, 15~16시 방문 권장."},
+{"key":"r_hibiki","tripcom":null,"ko":null,"note":"한국어 검색 2회 – 카렛타 시오도메 46F 響 한국어 후기 미발견."},
+{"key":"r_tsujita","retty":null,"tripcom":null,"ko":null,"note":"한국어/Retty/Trip.com 각 검색 – 神田末広町店 페이지 미발견(tripstore 아키하바라 글에도 없음)."},
+{"key":"r_matsue","ko":null,"note":"한국어 검색 2회 – 스크램블스퀘어점 한국어 후기 미발견."},
+{"key":"r_uogashi","retty":null,"tripcom":null,"ko":null,"note":"Retty 100000001105 페이지 이번에도 fetch 오류로 수치 미확인. LIVE JAPAN ko(article-a0003122)는 센터가이점 소개이며 도겐자카점은 '인근에 있다'고만 언급 -> 제외."},
+{"key":"n_ichinisan","tripcom":null,"ko":{"url":"https://www.japankuru.com/kr/food/e1823.html","site":"Japankuru (kr)","gist":"지하(外神田3-8-17)라 눈에 잘 안 띄어 구글맵을 따라가야 하고, 기본 규카츠 세트 약 1,300엔·이른 저녁 약 10분 대기 후 나올 땐 줄이 길었다(2019년 글이라 가격 변동 가능)."},"note":"tripstore 아키하바라 글도 '항상 웨이팅, 오픈 30분 전 10:30 도착 권장, 정식 약 1,600엔' 언급(https://www.tripstore.kr/blog/akihabara-restaurant-best-recommendation). Trip.com 미발견."},
+{"key":"n_marugo","ko":{"url":"https://www.tripstore.kr/blog/akihabara-restaurant-best-recommendation","site":"tripstore.kr","gist":"두툼하고 육즙 많은 특로스카츠 정식(약 2,500엔)이 대표 메뉴로 소금만 살짝 찍어 먹기를 추천하며, 월·화 휴무."},"note":"글 표기 '마루고 돈카츠'(한자 미표기), 월·화 휴무 정보가 입력과 일치."},
+{"key":"n_ikkoku","tripcom":null,"ko":null,"note":"한국어 검색 2회 – 미발견."},
+{"key":"n_lapin","tripcom":null,"ko":null,"note":"한국어/Trip.com 검색 – 미발견."},
+{"key":"n_shiseido","ko":{"url":"https://www.tripstore.kr/blog/%EA%B8%B4%EC%9E%90-%EB%94%94%EC%A0%80%ED%8A%B8-%EB%A7%9B%EC%A7%91-%ED%95%98%EC%9D%B4%EC%97%94%EB%93%9C-%EA%B0%80%EC%84%B1%EB%B9%84-%EB%B9%84%EA%B5%90","site":"tripstore.kr","gist":"붉은 톤 인테리어에서 제철 과일 파르페와 클래식 커스터드 푸딩을 즐기는 곳(1인 약 2,500~3,500엔)으로, 주말 오후 2시쯤 약 40분 대기했다."},"note":"참고: haveagood-holiday ko에 월별 한정 파르페 기사 있음(9월호는 9/30까지 판매, 3,300~3,900엔) – 10월호는 미확인."},
+{"key":"n_tokichi","retty":null,"tripcom":null,"ko":{"url":"https://www.tripstore.kr/blog/%EA%B8%B4%EC%9E%90-%EB%94%94%EC%A0%80%ED%8A%B8-%EB%A7%9B%EC%A7%91-%ED%95%98%EC%9D%B4%EC%97%94%EB%93%9C-%EA%B0%80%EC%84%B1%EB%B9%84-%EB%B9%84%EA%B5%90","site":"tripstore.kr","gist":"긴자 식스 4층의 우지 말차 전문점으로, 쌉싸름하고 깊은 생차 젤리와 말차 파르페가 일품이라 단맛을 덜 좋아하는 사람에게 맞다(1인 약 1,500~2,000엔)."},"note":"Retty 긴자점·Trip.com 페이지 미발견."},
+{"key":"n_happypancake","ko":null,"note":"polle.com 페이지는 후쿠오카 텐진점이라 제외. 시부야점 한국어 후기 미발견."}
+]

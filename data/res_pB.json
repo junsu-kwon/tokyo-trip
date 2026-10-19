@@ -1,0 +1,378 @@
+[
+ {
+  "key": "hachiko",
+  "tripcom": {
+   "url": "https://www.trip.com/moments/poi-hachiko-statue-22846823/",
+   "rating": 4.5,
+   "n": 334,
+   "rank": "Selected for Best Things to Do in Tokyo",
+   "gist": "낮·저녁 내내 붐벼서 사진은 이른 아침이나 늦은 밤을 추천하고, 교차로 건너기 전에 동상부터 찍으라는 후기가 많음."
+  },
+  "ko": {
+   "url": "https://breezejapan.com/ko/shibuya-tokyo-guide-ko/",
+   "site": "Breeze Japan (한국어)",
+   "gist": "하치코 동상 주변은 시간대와 관계없이 붐비고, 노을 무렵부터 교차로 조명이 가장 볼만하다고 안내함."
+  },
+  "jp": null,
+  "note": "Trip.com attraction page has the same 4.5/334 and also shows an unlabeled 4.7. A Klook page for the Scramble Crossing (Korean title) shows ★4.7 from 52K+ reviews, with QFRONT Starbucks 2F and Shibuya Sky as viewpoints."
+ },
+ {
+  "key": "radiokaikan",
+  "tripcom": {
+   "url": "https://www.trip.com/moments/poi-akihabara-radio-kaikan-18687476/",
+   "rating": 5.0,
+   "n": 1,
+   "rank": null,
+   "gist": "여러 층에 애니·피규어·카드 매장이 모인 건물로, 주말엔 붐비고 위층 동선이 헷갈린다는 후기."
+  },
+  "ko": {
+   "url": "https://dpg.danawa.com/bbs/view?boardSeq=11&listSeq=5662319",
+   "site": "다나와 DPG (2024.09 후기)",
+   "gist": "1~10층에 피규어·카드·게임 매장이 있고 위탁 개인 판매라 가게마다 가격 차가 커서, 가격을 사진으로 찍어 두고 최저가 매장에서 사라고 권함. 관광객이 많음."
+  },
+  "jp": null,
+  "note": "Trip.com has only 1 review, so the score isn't meaningful. More Korean posts: stories.pe.kr/321-2 (2026-02, few benches inside, 10:00–20:00) and myrealtrip.com/community/posts/14213."
+ },
+ {
+  "key": "surugaya_plamo",
+  "tripcom": null,
+  "ko": null,
+  "jp": null,
+  "note": "No matching Trip.com POI or Korean review found for the plastic-model building specifically. Ran out of web-search budget before more searching."
+ },
+ {
+  "key": "surugaya_honkan",
+  "tripcom": null,
+  "ko": {
+   "url": "https://bbs.ruliweb.com/nin/board/300051/read/30682515",
+   "site": "루리웹 (2026.03 게시글)",
+   "gist": "아키하바라 본관은 레트로 게임을 취급하고, 구세대 중고 게임은 스루가야가 비교적 싸다는 평이 있지만 외국인 수요가 많아 득템은 어렵다는 댓글도 있음."
+  },
+  "jp": null,
+  "note": "No Trip.com POI found. Ruliweb post of 2026-09-16 (bbs.ruliweb.com/family/232/board/300079/read/30722065): a Surugaya resale-price controversy (bought for ¥6,900, listed for ¥15,000; MSRP ¥2,640). Branch not named."
+ },
+ {
+  "key": "donki_akiba",
+  "tripcom": {
+   "url": "https://in.trip.com/moments/poi-don-quijote-10354941/",
+   "rating": 4.3,
+   "n": 21,
+   "rank": null,
+   "gist": "과자·화장품·캐릭터 굿즈·가전까지 여러 층에 있고 늦게까지 열며 가격이 괜찮다는 후기. 애니·산리오 굿즈가 강점."
+  },
+  "ko": {
+   "url": "https://matcha-jp.com/ko/1080",
+   "site": "MATCHA (한국어)",
+   "gist": "2~5층이 매장이고 5층 코스프레관·면세 카운터(5,000엔 이상)와 8층 AKB48 극장이 특징이며, 의약품(핫아이마스크)·말차 과자·애니 굿즈를 추천함."
+  },
+  "jp": null,
+  "note": "The Trip.com POI is titled just 'Don Quijote', with address '4-3, Kamanda, Chiyoda-ku' (likely Sotokanda 4-3) and reviewers placing it in Akihabara. Hours conflict: MATCHA 1080 says 10:00–05:00 and MATCHA 17959 says 24 hours. Check before going. tripstore.kr says lines are huge on weekend evenings and short around 11am on weekdays."
+ },
+ {
+  "key": "yodobashi",
+  "tripcom": {
+   "url": "https://www.trip.com/moments/poi-yodobashi-multimedia-akiba-13608389/",
+   "rating": 4.5,
+   "n": 77,
+   "rank": null,
+   "gist": "아키하바라역 옆 대형 다층 가전점(카메라·게임·장난감·식당가)이고, 평일 오전 방문과 면세·카드 할인을 추천함."
+  },
+  "ko": {
+   "url": "https://www.tripstore.kr/blog/%EB%8F%84%EC%BF%84-%EC%95%84%ED%82%A4%ED%95%98%EB%B0%94%EB%9D%BC-%EC%97%AC%ED%96%89-%EC%BD%94%EC%8A%A4-%EC%87%BC%ED%95%91",
+   "site": "트립스토어 블로그 (2026)",
+   "gist": "일본 최대급 가전 매장으로 8층 식당가도 좋고, 모델별 포인트·할인율이 다르니 빅카메라와 비교하라고 권함."
+  },
+  "jp": null,
+  "note": "Directly connected to JR Akihabara Showa-dori exit. Open 9:30–22:00 with a Korean-language service (tokyotouristinfo.com/kr/detail/M0288). Per a 2018 dcinside post, plastic models/games are on 7–8F."
+ },
+ {
+  "key": "maach",
+  "tripcom": null,
+  "ko": {
+   "url": "https://www.tripstore.kr/blog/%EB%8F%84%EC%BF%84-%EC%95%84%ED%82%A4%ED%95%98%EB%B0%94%EB%9D%BC-%EC%97%AC%ED%96%89-%EC%BD%94%EC%8A%A4-%EC%87%BC%ED%95%91",
+   "site": "트립스토어 블로그 (2026)",
+   "gist": "간다강변 옛 만세이바시역 철교를 개조한 공간으로, 강을 보며 커피 한잔 하기 좋은 감성 스폿으로 소개."
+  },
+  "jp": null,
+  "note": "No Trip.com POI found for mAAch itself, only a tenant shop page."
+ },
+ {
+  "key": "zojoji",
+  "tripcom": {
+   "url": "https://www.trip.com/moments/poi-zojo-ji-temple-18699581/",
+   "rating": 4.4,
+   "n": 223,
+   "rank": "No. 15 of Fall Viewing Attractions in Tokyo",
+   "gist": "도쿄타워를 배경으로 한 조용한 사진 명소이고 벚꽃·단풍철이 특히 좋음. 도쿠가와 가문 관련 사찰이며 무료지만 붐비는 시간대가 있음."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "The Trip.com attraction page shows 4.1 with 'No reviews yet', and its 2,201 count is TripAdvisor's. I used the Moments page figures. No Korean review collected (search budget ran out)."
+ },
+ {
+  "key": "tokyo_tower",
+  "tripcom": {
+   "url": "https://www.trip.com/moments/poi-tokyo-tower-78880/",
+   "rating": 4.7,
+   "n": 5232,
+   "rank": "2026 Global 100 - Night Attractions",
+   "gist": "아카바네바시역에서 걸어가며 탑 아래 철골을 보는 걸 추천함. 메인덱으로 충분하고 탑덱은 가격 대비 아쉽다는 후기가 있음."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "The us.trip.com attraction page showed 4.7/5 from 5,212 reviews, with a lighter crowd at 4:30pm. No Korean review collected."
+ },
+ {
+  "key": "shiba_park",
+  "tripcom": {
+   "url": "https://us.trip.com/moments/poi-shiba-park-23851762/",
+   "rating": 4.5,
+   "n": 163,
+   "rank": "Selected for Best Things to Do in Tokyo",
+   "gist": "도쿄타워 촬영 명소(봄 벚꽃·가을 단풍)이고, 조조지 옆이라 한적하게 산책·피크닉하기 좋다는 후기."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "Rating covers Shiba Park as a whole, not specifically Area 4 (4号地). No Korean review collected."
+ },
+ {
+  "key": "kyushiba",
+  "tripcom": {
+   "url": "https://www.trip.com/moments/poi-kyu-shiba-rikyu-gardens-22846869/",
+   "rating": 5.0,
+   "n": 4,
+   "rank": null,
+   "gist": "연못 중심의 다이묘 정원으로 고층빌딩이 배경인 대비가 인상적이며, 음식 피크닉은 불가하다는 후기."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "Only 4 Trip.com reviews. Closed Dec 29–Jan 1, open 9:00–17:00. No Korean review collected."
+ },
+ {
+  "key": "fudanotsuji",
+  "tripcom": null,
+  "ko": null,
+  "jp": null,
+  "note": "No Trip.com POI or review found for the Fudanotsuji pedestrian bridge (a niche photo spot)."
+ },
+ {
+  "key": "parco",
+  "tripcom": {
+   "url": "https://www.trip.com/moments/poi-shibuya-parco-24091153/",
+   "rating": 4.0,
+   "n": 12,
+   "rank": null,
+   "gist": "트렌디한 큐레이션형 몰로 애니·게임·스트리트 패션 매장이 강점이고, 식당은 예약하거나 일찍 가라는 후기."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "Hosts Nintendo TOKYO, Pokemon Center Shibuya, CAPCOM and the JOJO WORLD store. No Korean review collected."
+ },
+ {
+  "key": "mega_donki",
+  "tripcom": null,
+  "ko": {
+   "url": "https://matcha-jp.com/ko/17959",
+   "site": "MATCHA (한국어)",
+   "gist": "지상 8층·24시간 영업에 통로가 넓고, B1 식품·3층 과자·화장품·7층 면세 카운터와 기념품 코너로 한 번에 쇼핑하기 좋다고 소개."
+  },
+  "jp": null,
+  "note": "Trip.com only had 'MEGA (Donki Shibuya Annex)' (Dogenzaka 2-25-12, no score) and a MEGA Donki in Sanno 3-6-3. Neither is the Udagawacho main store, so I set Trip.com to null."
+ },
+ {
+  "key": "shibuya109",
+  "tripcom": {
+   "url": "https://www.trip.com/moments/poi-shibuya-109-100032/",
+   "rating": 4.8,
+   "n": 209,
+   "rank": null,
+   "gist": "10~20대 대상 저가 트렌드 패션의 상징적 건물이고 포토존·팝업이 많지만 붐비고, 피팅룸이 없는 매장도 있다는 후기."
+  },
+  "ko": {
+   "url": "https://breezejapan.com/ko/shibuya-tokyo-guide-ko/",
+   "site": "Breeze Japan (한국어)",
+   "gist": "낮부터 저녁까지 쇼핑객으로 가장 붐빈다고 안내함."
+  },
+  "jp": null,
+  "note": "The Trip.com attraction page shows the same 4.8/209."
+ },
+ {
+  "key": "loft_shibuya",
+  "tripcom": null,
+  "ko": null,
+  "jp": null,
+  "note": "No Trip.com POI found. Search budget ran out before the Korean search."
+ },
+ {
+  "key": "tokyu_plaza",
+  "tripcom": {
+   "url": "https://www.trip.com/moments/poi-tokyu-plaza-shibuya-18170376/",
+   "rating": null,
+   "n": null,
+   "rank": null,
+   "gist": "후기는 주로 루프탑 바·식당가와 전시 위주이고, 쇼핑 평가는 거의 없음."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "The Trip.com page has no rating or review count."
+ },
+ {
+  "key": "bleubleuet",
+  "tripcom": null,
+  "ko": null,
+  "jp": null,
+  "note": "Not found (small chain store). Search budget exhausted."
+ },
+ {
+  "key": "gu_shibuya",
+  "tripcom": null,
+  "ko": null,
+  "jp": null,
+  "note": "Not found. Search budget exhausted."
+ },
+ {
+  "key": "shibuya_sky",
+  "tripcom": {
+   "url": "https://www.trip.com/travel-guide/attraction/tokyo/shibuya-sky-136018827/",
+   "rating": 4.7,
+   "n": 6068,
+   "rank": "2026 Global 100 - Best Things to Do",
+   "gist": "노을 시간대가 가장 인기라 일찍 매진되므로 미리 예약하고 슬롯보다 일찍 도착하라는 후기. 가방·모자·셀카봉은 사물함에 맡겨야 하고, 악천후엔 옥상이 닫힘."
+  },
+  "ko": {
+   "url": "https://breezejapan.com/ko/shibuya-tokyo-guide-ko/",
+   "site": "Breeze Japan (한국어)",
+   "gist": "노을 시간대 타임드 엔트리는 매진되기 쉬우니 최소 하루 전, 가능하면 며칠 전에 온라인 예약하라고 권함."
+  },
+  "jp": null,
+  "note": "The Moments page shows an inconsistent count (6k+/326). I used the attraction page's 6,068. Klook lists the SHIBUYA SKY ticket at 4.7 (46.7K)."
+ },
+ {
+  "key": "nintendo",
+  "tripcom": {
+   "url": "https://in.trip.com/moments/poi-nintendo-tokyo-144914808/",
+   "rating": 5.0,
+   "n": 1,
+   "rank": null,
+   "gist": "대형 캐릭터 조형물·체험대가 있고 한정 굿즈가 많아 기념품으로 좋지만, 외국인 쇼핑객으로 붐빔."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "Pokemon Center Shibuya on Trip.com (www.trip.com/moments/poi-pokemon-center-shibuya-144914686/) is 4.0/5 from 1 review. Arrive early because limited items sell out, and weekdays are less crowded."
+ },
+ {
+  "key": "miyashita",
+  "tripcom": {
+   "url": "https://us.trip.com/moments/poi-miyashita-park-144002957/",
+   "rating": null,
+   "n": null,
+   "rank": null,
+   "gist": "상가 위 옥상 공원(스케이트장·암벽·카페)으로, 시부야~하라주쿠 사이에 쉬어 가기 좋고 저녁 분위기가 좋다는 후기."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "The page shows an unlabeled '3.4' with no scale or count, so I left the rating null."
+ },
+ {
+  "key": "tower_records",
+  "tripcom": {
+   "url": "https://sg.trip.com/moments/poi-tower-records-shibuya-32044515/",
+   "rating": 5.0,
+   "n": 2,
+   "rank": null,
+   "gist": "J-POP·K-POP·바이닐·애니음악 층이 있는 대형 음반점이고, 청음 코너·아이돌 굿즈와 면세가 가능하다는 후기."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "Only 2 Trip.com reviews."
+ },
+ {
+  "key": "hikarie",
+  "tripcom": {
+   "url": "https://sg.trip.com/moments/poi-shibuya-hikarie-31739064/",
+   "rating": null,
+   "n": null,
+   "rank": null,
+   "gist": "식당가(6층)·B2 푸드·8~9층 전시가 볼만하다는 후기 위주."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "Trip.com shows no rating. No ShinQs-specific POI found."
+ },
+ {
+  "key": "r_amiami",
+  "tripcom": null,
+  "ko": {
+   "url": "https://dpg.danawa.com/bbs/view?boardSeq=11&listSeq=5662319",
+   "site": "다나와 DPG (2024.09 후기)",
+   "gist": "라디오회관보다 작지만 깔끔한 건물이고 신품 피규어가 많으며, 같은 넨도로이드를 면세 기준 가장 싸게(약 4,800엔) 샀다는 후기."
+  },
+  "jp": null,
+  "note": "The danawa post describes a separate, smaller building than Radio Kaikan, which fits the Figure Tower, but this isn't confirmed. AmiAmi also has a store on Radio Kaikan 4F. No Trip.com POI found."
+ },
+ {
+  "key": "r_kotobukiya",
+  "tripcom": null,
+  "ko": {
+   "url": "https://bbs.ruliweb.com/community/board/300143/read/69579360",
+   "site": "루리웹 (2025.02 게시글)",
+   "gist": "어느새 버튜버 상품도 취급해 아키바 컬처존 가기 전 들르기 좋다는 팁. 대부분 정가 판매라 다른 가게보다 비싸다는 예전 후기도 있음."
+  },
+  "jp": null,
+  "note": "The full-price note comes from dcinside 2018 (gall.dcinside.com/mgallery/board/view/?id=plamodels&no=2812). No Trip.com POI found."
+ },
+ {
+  "key": "r_linefriends",
+  "tripcom": null,
+  "ko": null,
+  "jp": null,
+  "note": "Not found on Trip.com. Search budget exhausted."
+ },
+ {
+  "key": "r_mandarake",
+  "tripcom": null,
+  "ko": null,
+  "jp": null,
+  "note": "Not found. The only Korean Mandarake notes I saw were about Akihabara Complex, not the Shibuya store."
+ },
+ {
+  "key": "r_hikarie_sky",
+  "tripcom": {
+   "url": "https://sg.trip.com/moments/poi-shibuya-hikarie-31739064/",
+   "rating": null,
+   "n": null,
+   "rank": null,
+   "gist": "히카리에 11층 스카이로비는 주변 빌딩과 거리를 내려다볼 수 있고 입장 무료라는 게시물이 있음."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "No separate POI. This is a post on the Hikarie Trip.com page."
+ },
+ {
+  "key": "n_gachapon",
+  "tripcom": null,
+  "ko": null,
+  "jp": null,
+  "note": "Not found. tripstore.kr mentions only a gacha corner on Radio Kaikan 2F (¥300–500; bring ¥100 coins), not Gachapon Kaikan."
+ },
+ {
+  "key": "n_superpotato",
+  "tripcom": null,
+  "ko": null,
+  "jp": null,
+  "note": "No Trip.com POI, only user moments. A Korean guide exists (loop.day magazine 2026, retro game shops), but the site blocked fetching, so I recorded nothing."
+ },
+ {
+  "key": "n_hey",
+  "tripcom": {
+   "url": "https://www.trip.com/travel-guide/attraction/tokyo/hey-taito-61817083/",
+   "rating": null,
+   "n": null,
+   "rank": null,
+   "gist": "Trip.com 자체 리뷰 없음."
+  },
+  "ko": null,
+  "jp": null,
+  "note": "The page shows 'No reviews yet', an unlabeled 3.1, and TripAdvisor's 9 reviews. Hours listed are 10:00–23:30."
+ }
+]
