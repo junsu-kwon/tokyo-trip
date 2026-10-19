@@ -53,11 +53,17 @@ a{color:inherit}
 .nowwx[hidden],.wx[hidden]{display:none}
 .nowwx b{font-size:14px;font-weight:850}
 .nowwx small{font-weight:600;opacity:.75;white-space:nowrap}
-.wx{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-top:10px;padding:9px 12px;border-radius:14px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);font-size:13.5px;color:var(--ink2)}
+.wx{margin-top:10px;padding:9px 12px;border-radius:14px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);font-size:13.5px;color:var(--ink2);display:grid;gap:7px}
+.wx>div{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px}
+.wx>div+div{border-top:1px dashed var(--line);padding-top:7px}
 .wx .wi{font-size:20px;line-height:1}
 .wx b{color:var(--ink);font-weight:800}
 .wx .hi{color:#d9480f;font-weight:800}.wx .lo{color:#1c7ed6;font-weight:800}
-.wx a{margin-left:auto;font-size:11.5px;color:var(--muted)}
+.wx .wxf a{margin-left:auto;font-size:11.5px;color:var(--muted)}
+.wx .wl{font-size:11.5px;font-weight:800;color:var(--muted);min-width:64px}
+.wx .wxc{gap:6px}
+.wx .wxc a{text-decoration:none;font-size:12.5px;font-weight:700;color:var(--ink);padding:3px 10px;border-radius:999px;background:var(--hair);border:1px solid var(--line);transition:transform .16s ease-out}
+.wx .wxc a:active{transform:scale(.95)}
 .hotel-btn svg{width:15px;height:15px}
 /* 일정 탭이 아닐 때는 탑승권 줄을 빼서 히어로를 조금 낮게 */
 .top:has(~main #v-plan:not(.active)) .pass{display:none}
@@ -494,7 +500,7 @@ async function loadWx(){
     st[0].timeDefines.forEach((iso,i)=>put(iso,"code",st[0].areas[0].weatherCodes[i]));
     const pmax = {}; st[1].timeDefines.forEach((iso,i)=>{ const v=st[1].areas[0].pops[i], y=iso.slice(0,10); if(v!=="") pmax[y]=Math.max(pmax[y]||0,+v); });
     Object.entries(pmax).forEach(([y,v])=>put(y,"pop",String(v)));
-    WX = {days, now: am["44132"], at: t.trim(), rep: fc[0].reportDatetime};
+    WX = {days, now: am["44132"], am, at: t.trim(), rep: fc[0].reportDatetime};
   }catch(e){ WX = null; }
   paintNowWx(); paintDayWx();
 }
@@ -505,13 +511,32 @@ function paintNowWx(){
   el.innerHTML = `지금 도쿄 <b>${n.temp[0].toFixed(1)}°</b>${n.humidity?` · 습도 ${n.humidity[0]}%`:""}${rain} <small>${esc(WX.at.slice(11,16))}</small>`;
   el.hidden = false;
 }
+// 일정 지역 → 카메탄 시·구 라이브카메라 목록, 가장 가까운 아메다스 기온 관측소
+// 23구 안에는 기온 관측소가 '도쿄'(기타노마루) 하나뿐이라 도심 지역은 모두 같은 값
+const AREA = {
+  "나리타":{cam:"12211", amd:"45121"}, "우에노":{cam:"13106", amd:"44132"}, "이케부쿠로":{cam:"13116", amd:"44132"},
+  "오다이바":{cam:"13103", amd:"44132"}, "긴자":{cam:"13102", amd:"44132"}, "아키하바라":{cam:"13101", amd:"44132"},
+  "도쿄타워":{cam:"13103", amd:"44132"}, "시부야":{cam:"13113", amd:"44132"},
+};
+const AMD_NAME = {"44132":"도쿄 도심", "45121":"나리타"};
 function paintDayWx(){
   const el = $("#daywx"); if (!el) return;
-  const d = DAYS.find(x=>x.id===curDay); const w = WX && d && WX.days[d.date];
-  if (!w || !w.code){ el.hidden = true; return; }
-  const [ic, lb] = wxLabel(w.code);
-  el.innerHTML = `<span class="wi" aria-hidden="true">${ic}</span><b>${esc(lb)}</b>${(w.max!=null&&w.min!=null)?`<span class="num"><span class="hi">${esc(w.max)}°</span> / <span class="lo">${esc(w.min)}°</span></span>`:""}${w.pop!=null?`<span class="num">☔ ${esc(w.pop)}%</span>`:""}<a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=130000" target="_blank" rel="noopener">기상청 예보</a>`;
-  el.hidden = false;
+  const d = DAYS.find(x=>x.id===curDay); if (!d){ el.hidden = true; return; }
+  const w = WX && WX.days[d.date];
+  const areas = d.route.filter(r=>AREA[r]);
+  let h = "";
+  if (w && w.code){
+    const [ic, lb] = wxLabel(w.code);
+    h += `<div class="wxf"><span class="wi" aria-hidden="true">${ic}</span><b>${esc(lb)}</b>${(w.max!=null&&w.min!=null)?`<span class="num"><span class="hi">${esc(w.max)}°</span> / <span class="lo">${esc(w.min)}°</span></span>`:""}${w.pop!=null?`<span class="num">☔ ${esc(w.pop)}%</span>`:""}<a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=130000" target="_blank" rel="noopener">기상청 예보</a></div>`;
+  }
+  const obs = [...new Set(areas.map(r=>AREA[r].amd))].map(k=>{
+    const n = WX && WX.am && WX.am[k]; if (!n || !n.temp || n.temp[0]==null) return "";
+    const rain = n.precipitation1h && n.precipitation1h[0] > 0 ? ` 🌧️ ${n.precipitation1h[0]}mm/h` : "";
+    return `<span class="num">${esc(AMD_NAME[k])} <b>${n.temp[0].toFixed(1)}°</b>${rain}</span>`;
+  }).filter(Boolean);
+  if (obs.length) h += `<div class="wxo"><span class="wl">지금 ${esc(WX.at.slice(11,16))}</span>${obs.join("")}</div>`;
+  if (areas.length) h += `<div class="wxc"><span class="wl">라이브카메라</span>${[...new Map(areas.map(r=>[AREA[r].cam,r])).entries()].map(([c])=>`<a href="https://www.cametan.com/city/${c}.html" target="_blank" rel="noopener">📹 ${esc(areas.filter(r=>AREA[r].cam===c).join("·"))}</a>`).join("")}</div>`;
+  el.innerHTML = h; el.hidden = !h;
 }
 loadWx(); setInterval(loadWx, 10*60*1000);
 
