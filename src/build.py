@@ -394,6 +394,8 @@ checklist = [
  dict(k="c8", t="현금 준비 (돈카츠 이와이 · 카모토네기 · 논베이 요코초)", done=False), dict(k="c9", t="청주공항 주차 요금 확인", done=False),
  dict(k="c11", t="귀국 스카이라이너 티켓 우에노역에서 미리 교환 (3일차 밤)", done=False),
  dict(k="c12", t="교통카드 어떻게 할지 정하기", done=False),
+ dict(k="c13", t="바우처 인쇄 또는 캡처 (스카이라이너 QR · 시부야 스카이 · 숙소 확인서 · 항공 e티켓)", done=False),
+ dict(k="c14", t="여권 사본 1장 + 여권 사진 2장 (원본과 따로 보관 · 원본은 늘 휴대, 면세에 필요)", done=False),
 ]
 links = [
  dict(t="스카이라이너 시간표", d="게이세이 공식", u="https://www.keisei.co.jp/keisei/tetudou/skyliner/jp/traffic/skyliner_timetable.php"),

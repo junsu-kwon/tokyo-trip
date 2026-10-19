@@ -39,6 +39,7 @@ a{color:inherit}
 .hero:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.8;
   background:radial-gradient(1.2px 1.2px at 12% 18%,#fff 98%,#0000),radial-gradient(1px 1px at 31% 9%,#fff 98%,#0000),radial-gradient(1.4px 1.4px at 54% 22%,#fff 98%,#0000),radial-gradient(1px 1px at 68% 7%,#fff 98%,#0000),radial-gradient(1.2px 1.2px at 62% 44%,#fff 98%,#0000),radial-gradient(1px 1px at 41% 34%,#fff 98%,#0000),radial-gradient(1px 1px at 79% 46%,#fff 98%,#0000)}
 .hero .skyline{position:absolute;left:0;right:0;bottom:0;width:100%;height:70px;display:block}
+.top-row>div{min-width:0}
 .top-row{position:relative;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 .pass{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:800;letter-spacing:.6px;padding:4px 10px 4px 9px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22)}
 .pass svg{width:14px;height:14px;fill:#fff}
@@ -46,8 +47,17 @@ a{color:inherit}
 .top .dates{font-size:12.5px;color:rgba(255,255,255,.82);font-weight:600;margin-top:10px}
 .top h1{margin:0;font-size:30px;font-weight:900;letter-spacing:-1px;line-height:1.2;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
 .top h1 .jp{font-size:13px;font-weight:700;letter-spacing:3px;opacity:.75}
-.hotel-btn{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 12px;color:#fff;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:transform .16s ease-out}
+.hotel-btn{flex:0 0 auto;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 12px;color:#fff;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:transform .16s ease-out}
 .hotel-btn:active{transform:scale(.96)}
+.nowwx{display:inline-block;max-width:100%;margin-top:8px;font-size:12.5px;font-weight:700;color:#fff;text-decoration:none;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22)}
+.nowwx[hidden],.wx[hidden]{display:none}
+.nowwx b{font-size:14px;font-weight:850}
+.nowwx small{font-weight:600;opacity:.75;white-space:nowrap}
+.wx{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-top:10px;padding:9px 12px;border-radius:14px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);font-size:13.5px;color:var(--ink2)}
+.wx .wi{font-size:20px;line-height:1}
+.wx b{color:var(--ink);font-weight:800}
+.wx .hi{color:#d9480f;font-weight:800}.wx .lo{color:#1c7ed6;font-weight:800}
+.wx a{margin-left:auto;font-size:11.5px;color:var(--muted)}
 .hotel-btn svg{width:15px;height:15px}
 /* 일정 탭이 아닐 때는 탑승권 줄을 빼서 히어로를 조금 낮게 */
 .top:has(~main #v-plan:not(.active)) .pass{display:none}
@@ -308,6 +318,7 @@ li:last-child>.stop .rail:before{bottom:calc(100% - 20px)}
         <div class="pass num">CJJ <svg viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(90deg)"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg> NRT <small>청주 → 나리타</small></div>
         <div class="dates num">10월 21일(수) – 24일(토) · 3박 4일</div>
         <h1>도쿄 여행 <span class="jp" lang="ja">東京旅行</span></h1>
+        <a class="nowwx num" id="nowwx" hidden title="기상청 아메다스 도쿄 관측소 (10분마다 갱신)" target="_blank" rel="noopener" href="https://www.jma.go.jp/bosai/amedas/#area_type=offices&amp;area_code=130000&amp;amdno=44132"></a>
       </div>
       <a class="hotel-btn" id="hotelBtn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>숙소 길찾기</a>
     </div>
@@ -448,6 +459,62 @@ try {
   const d = DAYS.find(x=>x.date===ymd); if (d) todayKey = d.id;
 } catch(e){}
 
+/* ---------- 날씨: 일본 기상청(JMA) 도쿄 ---------- */
+// 지금 기온 = 아메다스 도쿄(44132) 10분 관측, 날짜별 = 도쿄 지방(130010) 단기·주간 예보. 불러오지 못하면 숨김.
+const JMA = "https://www.jma.go.jp/bosai/";
+let WX = null;
+function wxLabel(code){
+  const c = +code, base = Math.floor(c/100), d = c%100;
+  const B = {1:["☀️","맑음"],2:["☁️","흐림"],3:["🌧️","비"],4:["❄️","눈"]}[base];
+  if (!B) return ["🌡️",""];
+  if (c===308) return ["🌧️","폭우"];
+  if (d===0) return B;
+  // 기상청 코드: x01–x05 = 때때로·한때, x10–x17 = 후. 맑음·흐림(1·2)과 비·눈(3·4)은 뒷자리 뜻이 다름
+  const dry = base<=2, wet = base===3 ? "눈" : "비";
+  let s = null;
+  if (d<=5) s = d===1 ? (base===1?"흐림":"맑음") : dry ? (d<=3?"비":"눈") : (d===2?"그침":wet);
+  else if (d>=10 && d<=17) s = dry ? (d<=11 ? (base===1?"흐림":"맑음") : d<=14 ? "비" : "눈") : ({11:"맑음",13:"흐림",14:wet})[d];
+  if (!s) return B;
+  const ic = s==="맑음" ? "⛅" : (s==="흐림" && base===1) ? "🌤️" : (s==="비" && dry) ? "🌦️" : B[0];
+  return [ic, d<10 ? `${B[1]}, 때때로 ${s}` : `${B[1]} 후 ${s}`];
+}
+async function loadWx(){
+  try{
+    const [fc, t] = await Promise.all([fetch(JMA+"forecast/data/forecast/130000.json").then(r=>r.json()), fetch(JMA+"amedas/data/latest_time.txt").then(r=>r.text())]);
+    const ts = t.trim().replace(/[-:T]/g,"").slice(0,12)+"00";
+    const am = await fetch(JMA+`amedas/data/map/${ts}.json`).then(r=>r.json());
+    const days = {};
+    const put = (iso, k, v) => { if (v===""||v==null) return; const ymd = iso.slice(0,10); (days[ymd]=days[ymd]||{})[k] = v; };
+    // 주간 예보 → 날짜별 날씨·강수확률·최저/최고
+    const wk = fc[1].timeSeries, wa = wk[0].areas[0], wt = wk[1].areas[0];
+    wk[0].timeDefines.forEach((iso,i)=>{ put(iso,"code",wa.weatherCodes[i]); put(iso,"pop",wa.pops[i]); });
+    wk[1].timeDefines.forEach((iso,i)=>{ put(iso,"min",wt.tempsMin[i]); put(iso,"max",wt.tempsMax[i]); });
+    // 단기 예보(오늘~모레)가 더 정확하니 날씨는 덮어쓰고, 강수확률은 6시간 단위 중 가장 높은 값
+    const st = fc[0].timeSeries;
+    st[0].timeDefines.forEach((iso,i)=>put(iso,"code",st[0].areas[0].weatherCodes[i]));
+    const pmax = {}; st[1].timeDefines.forEach((iso,i)=>{ const v=st[1].areas[0].pops[i], y=iso.slice(0,10); if(v!=="") pmax[y]=Math.max(pmax[y]||0,+v); });
+    Object.entries(pmax).forEach(([y,v])=>put(y,"pop",String(v)));
+    WX = {days, now: am["44132"], at: t.trim(), rep: fc[0].reportDatetime};
+  }catch(e){ WX = null; }
+  paintNowWx(); paintDayWx();
+}
+function paintNowWx(){
+  const el = $("#nowwx"); const n = WX && WX.now;
+  if (!n || !n.temp || n.temp[0]==null){ el.hidden = true; return; }
+  const rain = n.precipitation1h && n.precipitation1h[0] > 0 ? ` · 🌧️ ${n.precipitation1h[0]}mm/h` : "";
+  el.innerHTML = `지금 도쿄 <b>${n.temp[0].toFixed(1)}°</b>${n.humidity?` · 습도 ${n.humidity[0]}%`:""}${rain} <small>${esc(WX.at.slice(11,16))}</small>`;
+  el.hidden = false;
+}
+function paintDayWx(){
+  const el = $("#daywx"); if (!el) return;
+  const d = DAYS.find(x=>x.id===curDay); const w = WX && d && WX.days[d.date];
+  if (!w || !w.code){ el.hidden = true; return; }
+  const [ic, lb] = wxLabel(w.code);
+  el.innerHTML = `<span class="wi" aria-hidden="true">${ic}</span><b>${esc(lb)}</b>${(w.max!=null&&w.min!=null)?`<span class="num"><span class="hi">${esc(w.max)}°</span> / <span class="lo">${esc(w.min)}°</span></span>`:""}${w.pop!=null?`<span class="num">☔ ${esc(w.pop)}%</span>`:""}<a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=130000" target="_blank" rel="noopener">기상청 예보</a>`;
+  el.hidden = false;
+}
+loadWx(); setInterval(loadWx, 10*60*1000);
+
 /* ---------- leaflet helpers ---------- */
 const hasL = typeof window.L !== "undefined";
 // 지도 바탕: 파일로 열었을 때(file://)도 되는 서버 순서대로 시도. 타일이 계속 실패하면 다음 서버로 넘어감.
@@ -551,7 +618,7 @@ function renderDay(){
   }).join("");
   $("#dayview").innerHTML = `
     <div style="--c:${c}">
-      <div class="dayhead"><div class="route">${route}</div><div class="sub">${esc(d.sub)}</div></div>
+      <div class="dayhead"><div class="route">${route}</div><div class="sub">${esc(d.sub)}</div><div class="wx" id="daywx" hidden></div></div>
       ${d.callout?`<div class="callout">${d.callout}</div>`:""}
       <div class="daymap-wrap">
         <div class="daymap" id="daymap">${hasL?"":'<div class="mapfail">지도를 불러오려면 인터넷 연결이 필요해요.</div>'}</div>
@@ -562,7 +629,7 @@ function renderDay(){
       </div>
       <ol class="line">${steps}</ol>
     </div>`;
-  applyAF();
+  applyAF(); paintDayWx();
   $("#dayview").querySelectorAll("button.stop").forEach(b=>b.addEventListener("click",()=>{
     const s = d.steps[+b.dataset.i]; if (s.meal) openMeal(d, s); else openSheet(s.k, d.id, s);
   }));
