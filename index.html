@@ -193,7 +193,7 @@ li:last-child>.stop .rail:before{bottom:calc(100% - 20px)}
 .rainbox{margin:12px 0 0;padding:10px 12px;border-radius:12px;background:var(--rsv-bg);color:var(--rsv);font-size:13.5px;font-weight:700}
 .nowline{margin:10px 0 0;display:flex;flex-wrap:wrap;gap:4px}
 .mapaf{padding:0 14px 8px;background:var(--bg)}
-#planaf{padding:0 14px}
+#planaf{padding:0 14px;margin-top:-6px}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .st-soon{background:#3a2a0c;color:#f5b44a} }
 :root[data-theme="dark"] .st-soon{background:#3a2a0c;color:#f5b44a}
 
@@ -449,7 +449,14 @@ body:before{content:"";position:fixed;inset:-10%;z-index:-1;pointer-events:none;
              radial-gradient(50% 36% at 25% 88%,color-mix(in srgb,#7fe0e8 32%,transparent),transparent 70%),
              radial-gradient(35% 28% at 80% 92%,color-mix(in srgb,#ffd36e 30%,transparent),transparent 70%)}
 .top{background:transparent}
-.daypick,.mapfilters,.mapaf{background:color-mix(in srgb,var(--bg) 45%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.8);backdrop-filter:blur(18px) saturate(1.8)}
+/* 날짜 탑승권 줄: 유리 배경이 아래로 자연스럽게 사라지게 (사각 띠 이음매 없애기) */
+.daypick{background:transparent}
+.daypick:before{content:"";position:absolute;left:0;right:0;top:0;bottom:-14px;z-index:-1;pointer-events:none;background:color-mix(in srgb,var(--bg) 55%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.8);backdrop-filter:blur(18px) saturate(1.8);
+  -webkit-mask:linear-gradient(#000 70%,transparent);mask:linear-gradient(#000 70%,transparent)}
+/* 지도 탭: 날짜 칩 줄과 '지금 기준' 줄을 한 띠로 */
+.mapfilters,.mapaf{background:color-mix(in srgb,var(--bg) 70%,transparent)}
+.mapfilters{padding-bottom:6px}
+.mapaf{display:flow-root}
 .tabs{background:var(--glass)!important;-webkit-backdrop-filter:blur(22px) saturate(1.9);backdrop-filter:blur(22px) saturate(1.9);border-color:var(--glass-line)!important;box-shadow:inset 0 1px 0 var(--glass-hi),0 12px 32px -12px rgba(28,35,64,.4)!important}
 .sheet{background:color-mix(in srgb,var(--surface) 76%,transparent);-webkit-backdrop-filter:blur(30px) saturate(1.8);backdrop-filter:blur(30px) saturate(1.8);box-shadow:inset 0 1px 0 var(--glass-hi),0 -12px 40px rgba(20,15,40,.25)}
 .scrim{background:rgba(20,18,40,.28)}
