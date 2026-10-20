@@ -65,7 +65,12 @@ a{color:inherit}
 .wx .wi{font-size:20px;line-height:1}
 .wx b{color:var(--ink);font-weight:800}
 .wx .hi{color:#d9480f;font-weight:800}.wx .lo{color:#1c7ed6;font-weight:800}
-.wx .wxf a{margin-left:auto;font-size:11.5px;color:var(--muted)}
+.wx .wxp{gap:5px}
+.wx .pp{position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;background:var(--hair);font-size:11.5px;overflow:hidden}
+.wx .pp i{position:absolute;z-index:-1;left:0;top:0;bottom:0;width:calc(var(--p) * 1%);background:color-mix(in srgb,#1c7ed6 22%,transparent)}
+.wx .pp b{position:relative;color:var(--ink)}
+.wx .wxm{font-size:12px;color:var(--muted)}
+.wx .wxm a{margin-left:auto;font-size:11.5px;color:var(--muted)}
 .wx .wl{font-size:11.5px;font-weight:800;color:var(--muted);min-width:64px}
 .wx .wxc{gap:6px}
 .wx .wxc a{text-decoration:none;font-size:12.5px;font-weight:700;color:var(--ink);padding:3px 10px;border-radius:999px;background:var(--hair);border:1px solid var(--line);transition:transform .16s ease-out}
@@ -715,14 +720,20 @@ async function loadWx(){
     const put = (iso, k, v) => { if (v===""||v==null) return; const ymd = iso.slice(0,10); (days[ymd]=days[ymd]||{})[k] = v; };
     // 주간 예보 → 날짜별 날씨·강수확률·최저/최고
     const wk = fc[1].timeSeries, wa = wk[0].areas[0], wt = wk[1].areas[0];
-    wk[0].timeDefines.forEach((iso,i)=>{ put(iso,"code",wa.weatherCodes[i]); put(iso,"pop",wa.pops[i]); });
-    wk[1].timeDefines.forEach((iso,i)=>{ put(iso,"min",wt.tempsMin[i]); put(iso,"max",wt.tempsMax[i]); });
+    wk[0].timeDefines.forEach((iso,i)=>{ put(iso,"code",wa.weatherCodes[i]); put(iso,"pop",wa.pops[i]); put(iso,"rel",(wa.reliabilities||[])[i]); });
+    wk[1].timeDefines.forEach((iso,i)=>{ put(iso,"min",wt.tempsMin[i]); put(iso,"max",wt.tempsMax[i]);
+      put(iso,"minR",wt.tempsMinLower&&wt.tempsMinLower[i]!==""?[wt.tempsMinLower[i],wt.tempsMinUpper[i]]:null);
+      put(iso,"maxR",wt.tempsMaxLower&&wt.tempsMaxLower[i]!==""?[wt.tempsMaxLower[i],wt.tempsMaxUpper[i]]:null); });
     // 단기 예보(오늘~모레)가 더 정확하니 날씨는 덮어쓰고, 강수확률은 6시간 단위 중 가장 높은 값
     const st = fc[0].timeSeries;
     st[0].timeDefines.forEach((iso,i)=>put(iso,"code",st[0].areas[0].weatherCodes[i]));
-    const pmax = {}; st[1].timeDefines.forEach((iso,i)=>{ const v=st[1].areas[0].pops[i], y=iso.slice(0,10); if(v!=="") pmax[y]=Math.max(pmax[y]||0,+v); });
+    const pmax = {}; st[1].timeDefines.forEach((iso,i)=>{ const v=st[1].areas[0].pops[i], y=iso.slice(0,10); if(v==="") return;
+      pmax[y]=Math.max(pmax[y]||0,+v); (days[y]=days[y]||{}).pops6=(days[y].pops6||[]).concat([[+iso.slice(11,13), +v]]); });
     Object.entries(pmax).forEach(([y,v])=>put(y,"pop",String(v)));
-    WX = {days, now: am["44132"], am, at: t.trim(), rep: fc[0].reportDatetime};
+    // 단기 예보의 내일 최저·최고 (도쿄): 주간 예보에 없을 때만 채움
+    const t2 = st[2] && st[2].areas[0]; if (t2) st[2].timeDefines.forEach((iso,i)=>{ const y=iso.slice(0,10), h=+iso.slice(11,13), v=t2.temps[i]; if(v==="") return;
+      const dd=(days[y]=days[y]||{}); if (h===0 && dd.min==null) dd.min=v; if (h===9 && dd.max==null) dd.max=v; });
+    WX = {days, now: am["44132"], at: t.trim(), rep: fc[0].reportDatetime};
   }catch(e){ WX = null; }
   paintNowWx(); paintDayWx();
 }
@@ -733,14 +744,12 @@ function paintNowWx(){
   el.innerHTML = `지금 도쿄 <b>${n.temp[0].toFixed(1)}°</b>${n.humidity?` · 습도 ${n.humidity[0]}%`:""}${rain} <small>${esc(WX.at.slice(11,16))}</small>`;
   el.hidden = false;
 }
-// 일정 지역 → 카메탄 시·구 라이브카메라 목록, 가장 가까운 아메다스 기온 관측소
-// 23구 안에는 기온 관측소가 '도쿄'(기타노마루) 하나뿐이라 도심 지역은 모두 같은 값
+// 일정 지역 → 카메탄 시·구 라이브카메라 목록
 const AREA = {
-  "나리타":{cam:"12211", amd:"45121"}, "우에노":{cam:"13106", amd:"44132"}, "이케부쿠로":{cam:"13116", amd:"44132"},
-  "오다이바":{cam:"13103", amd:"44132"}, "긴자":{cam:"13102", amd:"44132"}, "아키하바라":{cam:"13101", amd:"44132"},
-  "도쿄타워":{cam:"13103", amd:"44132"}, "시부야":{cam:"13113", amd:"44132"},
+  "나리타":{cam:"12211"}, "우에노":{cam:"13106"}, "이케부쿠로":{cam:"13116"},
+  "오다이바":{cam:"13103"}, "긴자":{cam:"13102"}, "아키하바라":{cam:"13101"},
+  "도쿄타워":{cam:"13103"}, "시부야":{cam:"13113"},
 };
-const AMD_NAME = {"44132":"도쿄 도심", "45121":"나리타"};
 function paintDayWx(){
   const el = $("#daywx"); if (!el) return;
   const d = DAYS.find(x=>x.id===curDay); if (!d){ el.hidden = true; return; }
@@ -749,14 +758,18 @@ function paintDayWx(){
   let h = "";
   if (w && w.code){
     const [ic, lb] = wxLabel(w.code);
-    h += `<div class="wxf"><span class="wi" aria-hidden="true">${ic}</span><b>${esc(lb)}</b>${(w.max!=null&&w.min!=null)?`<span class="num"><span class="hi">${esc(w.max)}°</span> / <span class="lo">${esc(w.min)}°</span></span>`:""}${w.pop!=null?`<span class="num">☔ ${esc(w.pop)}%</span>`:""}<a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=130000" target="_blank" rel="noopener">기상청 예보</a></div>`;
+    const REL = {A:"높음", B:"보통", C:"낮음"};
+    h += `<div class="wxf"><span class="wi" aria-hidden="true">${ic}</span><b>${esc(lb)}</b>${w.max!=null?`<span class="num">최고 <span class="hi">${esc(w.max)}°</span></span>`:""}${w.min!=null?`<span class="num">최저 <span class="lo">${esc(w.min)}°</span></span>`:""}${w.pop!=null?`<span class="num">☔ ${esc(w.pop)}%</span>`:""}</div>`;
+    if (w.pops6 && w.pops6.length){
+      const lab = h0 => `${h0}~${h0+6}시`;
+      h += `<div class="wxp"><span class="wl">시간대별 비</span>${w.pops6.map(([h0,v])=>`<span class="pp num" style="--p:${v}"><i></i>${lab(h0)} <b>${v}%</b></span>`).join("")}</div>`;
+    }
+    const rng = [w.maxR?`최고 ${esc(w.maxR[0])}~${esc(w.maxR[1])}°`:"", w.minR?`최저 ${esc(w.minR[0])}~${esc(w.minR[1])}°`:""].filter(Boolean).join(" · ");
+    const rel = w.rel && REL[w.rel] ? `예보 신뢰도 ${REL[w.rel]}` : "";
+    h += `<div class="wxm"><span>${[rng?`예상 범위 ${rng}`:"", rel].filter(Boolean).join(" · ")||"도쿄 지방 예보"}</span><a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=130000" target="_blank" rel="noopener">기상청 ${esc(WX.rep.slice(5,7).replace(/^0/,""))}/${esc(WX.rep.slice(8,10).replace(/^0/,""))} ${esc(WX.rep.slice(11,13))}시 발표</a></div>`;
+  } else if (WX) {
+    h += `<div class="wxm"><span>아직 기상청 예보 기간(1주일)이 아니에요.</span></div>`;
   }
-  const obs = [...new Set(areas.map(r=>AREA[r].amd))].map(k=>{
-    const n = WX && WX.am && WX.am[k]; if (!n || !n.temp || n.temp[0]==null) return "";
-    const rain = n.precipitation1h && n.precipitation1h[0] > 0 ? ` 🌧️ ${n.precipitation1h[0]}mm/h` : "";
-    return `<span class="num">${esc(AMD_NAME[k])} <b>${n.temp[0].toFixed(1)}°</b>${rain}</span>`;
-  }).filter(Boolean);
-  if (obs.length) h += `<div class="wxo"><span class="wl">지금 ${esc(WX.at.slice(11,16))}</span>${obs.join("")}</div>`;
   if (areas.length) h += `<div class="wxc"><span class="wl">라이브카메라</span>${[...new Map(areas.map(r=>[AREA[r].cam,r])).entries()].map(([c])=>`<a href="https://www.cametan.com/city/${c}.html" target="_blank" rel="noopener">📹 ${esc(areas.filter(r=>AREA[r].cam===c).join("·"))}</a>`).join("")}</div>`;
   el.innerHTML = h; el.hidden = !h;
 }
