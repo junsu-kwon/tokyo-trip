@@ -22,7 +22,8 @@ data/               ← 조사 결과 원본 (JSON)
   payres_*.json             ← 결제·면세·우천 조사
   budgetres_*.json          ← 타베로그 예산
   menu.json                 ← 맛집 대표 메뉴 (menu · src 출처 · note), 출처 없는 곳은 null
-  tips.json                 ← 장소 키별 최신 리뷰 팁 (kind · tip · src · site · date), 상세 창 "최신 리뷰 팁" 버튼
+  tips.json                 ← 장소 키별 최신 리뷰 팁 (kind · tip · src · site · date · quote 원문 인용), 상세 창 "최신 리뷰 팁" 버튼
+                              2026-10-20 구글 최신순 리뷰·네이버 블로그(2025-07 이후) 수집 → 원문 인용 대조 독립 검증을 통과한 것만
 tests/              ← Playwright 클릭 테스트 (지도는 lstub.js 가짜로 대체)
 ```
 
