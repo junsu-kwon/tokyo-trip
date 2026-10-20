@@ -737,9 +737,11 @@ async function loadWx(){
     const pmax = {}; st[1].timeDefines.forEach((iso,i)=>{ const v=st[1].areas[0].pops[i], y=iso.slice(0,10); if(v==="") return;
       pmax[y]=Math.max(pmax[y]||0,+v); (days[y]=days[y]||{}).pops6=(days[y].pops6||[]).concat([[+iso.slice(11,13), +v]]); });
     Object.entries(pmax).forEach(([y,v])=>put(y,"pop",String(v)));
-    // 단기 예보의 내일 최저·최고 (도쿄): 주간 예보에 없을 때만 채움
-    const t2 = st[2] && st[2].areas[0]; if (t2) st[2].timeDefines.forEach((iso,i)=>{ const y=iso.slice(0,10), h=+iso.slice(11,13), v=t2.temps[i]; if(v==="") return;
-      const dd=(days[y]=days[y]||{}); if (h===0 && dd.min==null) dd.min=v; if (h===9 && dd.max==null) dd.max=v; });
+    // 단기 예보의 최저·최고 (도쿄): 1~2일 안의 날은 주간 예보보다 정확하므로 덮어씀.
+    // 발표 당일 칸은 기상청이 '오늘 최고'를 00시·09시 두 칸에 똑같이 넣으므로(오늘 최저는 발표 안 함) 09시 값만 최고로 쓴다.
+    const repY = fc[0].reportDatetime.slice(0,10);
+    const t2 = st[2] && st[2].areas[0]; if (t2) st[2].timeDefines.forEach((iso,i)=>{ const y=iso.slice(0,10), h=+iso.slice(11,13), v=t2.temps[i]; if(v==="" || (y===repY && h===0)) return;
+      const dd=(days[y]=days[y]||{}); dd.st=true; if (h===0) dd.min=v; if (h===9) dd.max=v; });
     WX = {days, now: am["44132"], at: t.trim(), rep: fc[0].reportDatetime};
   }catch(e){ WX = null; }
   paintNowWx(); paintDayWx();
@@ -771,7 +773,7 @@ function paintDayWx(){
       const lab = h0 => `${h0}~${h0+6}시`;
       h += `<div class="wxp"><span class="wl">시간대별 비</span>${w.pops6.map(([h0,v])=>`<span class="pp num" style="--p:${v}"><i></i>${lab(h0)} <b>${v}%</b></span>`).join("")}</div>`;
     }
-    const rng = [w.maxR?`최고 ${esc(w.maxR[0])}~${esc(w.maxR[1])}°`:"", w.minR?`최저 ${esc(w.minR[0])}~${esc(w.minR[1])}°`:""].filter(Boolean).join(" · ");
+    const rng = w.st ? "" : [w.maxR?`최고 ${esc(w.maxR[0])}~${esc(w.maxR[1])}°`:"", w.minR?`최저 ${esc(w.minR[0])}~${esc(w.minR[1])}°`:""].filter(Boolean).join(" · ");
     const rel = w.rel && REL[w.rel] ? `예보 신뢰도 ${REL[w.rel]}` : "";
     h += `<div class="wxm"><span>${[rng?`예상 범위 ${rng}`:"", rel].filter(Boolean).join(" · ")||"도쿄 지방 예보"}</span><a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=130000" target="_blank" rel="noopener">기상청 ${esc(WX.rep.slice(5,7).replace(/^0/,""))}/${esc(WX.rep.slice(8,10).replace(/^0/,""))} ${esc(WX.rep.slice(11,13))}시 발표</a></div>`;
   } else if (WX) {
