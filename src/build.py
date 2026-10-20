@@ -368,7 +368,10 @@ placeGroups = [
 alerts = [
  "<b>건담베이스는 평일 11:00 개장</b>이에요. 유니콘 건담 실물 크기 입상은 8/31에 전시가 끝났어요.",
  "메모의 \"이치방쿠지 7층 건담\"은 아키하바라가 아니라 <b>오다이바 건담베이스(다이버시티 7층)</b>예요.",
- "<b>라멘지로 이케부쿠로</b>는 당분간 저녁(17:00–21:30, 타베로그 기준)만 영업하고 화요일에 쉬어요. 1일차 저녁에 간다면 괜찮아요.",
+ "<b>라멘지로 이케부쿠로</b>는 공식 사이트 기준 당분간 저녁 17:00–21:45(마지막 주문)만 영업해요. 그런데 <b>구글 지도엔 '임시 휴업'</b>으로 떠 있어서, 출발 전 공식 X를 꼭 확인하세요 (10/20 확인).",
+ "<b>하나야마우동은 번호표가 10시부터 나오고 10시 반쯤 오전 표가 끝나요.</b> 12:30에 가면 못 먹을 가능성이 커요. 먹으려면 10시 전후 번호표부터 받거나 카렛타·홋카이반야로 (10/20 구글·네이버 리뷰).",
+ "<b>건담베이스는 평일에도 추첨·번호표가 있을 수 있어요.</b> 목요일은 바로 입장이라는 안내와 월요일 추첨 리뷰가 엇갈려요. 당일 아침 공식 영업 상황을 확인하세요 (10/20).",
+ "<b>스카이라이너 QR 교환은 25~30분 줄</b>이 흔해요. T2 지하 1층 안쪽 인포메이션 센터에서 교환하고, 받은 표가 13:22인지 확인하세요 (10/20 구글·네이버 리뷰).",
  "<b>돈카츠 이와이</b>는 <b>현금만 받고 예약이 안 돼요</b>. 점심 L.O. 13:45, 일요일 휴무.",
  "<b>라디오회관은 20:00에 닫아요.</b> 그 뒤엔 요도바시(22:00), 스루가야(21:00), 돈키호테(24시간).",
  "<b>마상 L.O.는 20:30</b>, <b>히키니쿠토코메는 완전 캐시리스</b>예요. 3일차 저녁은 17:00쯤이 좋아요.",
@@ -424,6 +427,8 @@ from price import apply as _apply_price
 _apply_price(places)
 from menu import apply as _apply_menu
 _apply_menu(places)
+from tips import apply as _apply_tips
+_apply_tips(places)
 data = dict(changes=[dict(t=a, d=b, w=c) for a, b, c in changes], places=places, days=days, foodGroups=foodGroups, placeGroups=placeGroups, alerts=alerts, checklist=checklist, links=links)
 tpl = open(os.path.join(HERE, "app_template.html"), encoding="utf-8").read()
 out = tpl.replace("__COORDS__", json.dumps(COORDS, ensure_ascii=False)).replace("__DATA__", json.dumps(data, ensure_ascii=False))

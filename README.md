@@ -16,11 +16,13 @@ src/
   ohparse.py        ← 영업시간 문자열 → 요일별 시간 자동 변환
   price.py          ← 타베로그 1인 예산 → 2인 가격대
   menu.py           ← data/menu.json의 대표 메뉴를 장소에 붙인다
+  tips.py           ← data/tips.json의 최신 리뷰 팁을 장소에 붙인다
 data/               ← 조사 결과 원본 (JSON)
   res_*.json, res2_*.json   ← Retty·핫페퍼·Trip.com·한국어 후기, 신규 추천 타베로그
   payres_*.json             ← 결제·면세·우천 조사
   budgetres_*.json          ← 타베로그 예산
   menu.json                 ← 맛집 대표 메뉴 (menu · src 출처 · note), 출처 없는 곳은 null
+  tips.json                 ← 장소 키별 최신 리뷰 팁 (kind · tip · src · site · date), 상세 창 "최신 리뷰 팁" 버튼
 tests/              ← Playwright 클릭 테스트 (지도는 lstub.js 가짜로 대체)
 ```
 

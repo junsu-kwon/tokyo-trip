@@ -1,0 +1,993 @@
+{
+ "airport2_st": [
+  {
+   "kind": "주의",
+   "tip": "좌석은 후기마다 달라요. 직접 고른 곳(10/19)도, 임의 배정(10/17)도 있으니 기대하지 마세요.",
+   "src": "https://blog.naver.com/mingyeong68/224446395312",
+   "site": "네이버 블로그",
+   "date": "2026-10-19"
+  },
+  {
+   "kind": "주의",
+   "tip": "T2 지하1층 안쪽 '정보센터'가 교환처예요. 눈앞 구매창구가 아니라 20분 날린 후기(10/17).",
+   "src": "https://blog.naver.com/luvyouxy/224444760704",
+   "site": "네이버 블로그",
+   "date": "2026-10-17"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "QR이 있어도 실물 표 교환 줄을 25~30분 섰다는 리뷰. 입국하면 교환부터 하세요.",
+   "src": "https://www.google.com/maps/search/?api=1&query=Skyliner & Keisei Information Center",
+   "site": "구글",
+   "date": "2026-09"
+  },
+  {
+   "kind": "주의",
+   "tip": "얼굴 인식 등록이 계속 실패해 결국 줄 서서 교환, 열차를 놓쳤다는 리뷰.",
+   "src": "https://www.google.com/maps/search/?api=1&query=Skyliner & Keisei Information Center",
+   "site": "구글",
+   "date": "2026-09"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "5·6호차에 앉으면 내려서 올라가는 에스컬레이터와 가까워 조금 빨리 나가요.",
+   "src": "https://blog.naver.com/yipi1000/224333098766",
+   "site": "네이버 블로그",
+   "date": "2026-07-01"
+  }
+ ],
+ "keisei_ueno": [
+  {
+   "kind": "꿀팁",
+   "tip": "왕복권이면 도착 직후 창구에서 귀국편(D4 09:40)을 교환해 두세요. 막날 줄을 피해요.",
+   "src": "https://blog.naver.com/isfp_traveler/224428754113",
+   "site": "네이버 블로그",
+   "date": "2026-10-01"
+  },
+  {
+   "kind": "주의",
+   "tip": "우에노역 매표소는 빨간 줄(유인창구)에서만 교환돼요. 파란 줄은 자동발매기용입니다.",
+   "src": "https://blog.naver.com/yipi1000/224333098766",
+   "site": "네이버 블로그",
+   "date": "2026-07-01"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "우에노역에서 나리타 T2·T3역까지 42분 걸렸어요(7월 후기). 09:40 출발이면 T2 10:25쯤 도착이에요.",
+   "src": "https://blog.naver.com/yipi1000/224333098766",
+   "site": "네이버 블로그",
+   "date": "2026-07-01"
+  }
+ ],
+ "narita": [
+  {
+   "kind": "꿀팁",
+   "tip": "T3 2번 승강장 무료버스는 약 3분(공식). 도보는 600m라 큰 짐이면 버스가 낫습니다.",
+   "src": "https://www.narita-airport.jp/en/access/shuttlebus/",
+   "site": "공식",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "T2→T3 버스는 1번 승강장에서 약 6분(공식). 걸으면 후기상 약 14분이라 짐이 적으면 도보도 돼요.",
+   "src": "https://www.narita-airport.jp/en/access/shuttlebus/",
+   "site": "공식",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "보안검색은 이른 아침~정오와 저녁이 붐벼요. T3 대기시간은 공식 페이지에 없으니 현장에서 확인하세요.",
+   "src": "https://www.narita-airport.jp/airportguide/security/congestion-time/",
+   "site": "공식",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "주의",
+   "tip": "T2·T3 연결 구간은 걸어도 된다는 후기(14분, 2026-07). 버스가 안 보이면 걸으세요.",
+   "src": "https://blog.naver.com/yipi1000/224333098766",
+   "site": "네이버 블로그",
+   "date": "2026-07-01"
+  },
+  {
+   "kind": "주의",
+   "tip": "7월 후기에서 LCC 카운터는 출발 2시간 반 전(14:20) 열렸어요. 모바일 체크인이면 카운터를 건너뛰었습니다.",
+   "src": "https://blog.naver.com/yipi1000/224333098766",
+   "site": "네이버 블로그",
+   "date": "2026-07-01"
+  }
+ ],
+ "unatoto": [
+  {
+   "kind": "주문·이용법",
+   "tip": "자리 QR로 한국어 주문이 되고 카드 결제도 됩니다. 우나규 640엔·1,060엔 후기(10/01).",
+   "src": "https://blog.naver.com/isfp_traveler/224428754113",
+   "site": "네이버 블로그",
+   "date": "2026-10-01"
+  }
+ ],
+ "kamotonegi": [
+  {
+   "kind": "줄·대기",
+   "tip": "식사 피크엔 30~60분 대기라는 후기예요. 15시 점심이면 비교적 덜 붐빌 수 있어요.",
+   "src": "https://blog.naver.com/min_woa/224424218056",
+   "site": "네이버 블로그",
+   "date": "2026-09-27"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "입구 왼쪽 자판기에서 식권을 먼저 사고, 파 토핑은 고를 수 있어요. 24시간 영업(9월 후기).",
+   "src": "https://blog.naver.com/kyuni0912/224412449370",
+   "site": "네이버 블로그",
+   "date": "2026-09-18"
+  }
+ ],
+ "sunshine_alpa": [
+  {
+   "kind": "줄·대기",
+   "tip": "공식 공지 목록에 9월 이후 정리권 안내는 없고 카드 추첨 공지뿐이에요(10/20 확인). 현장 안내를 따르세요.",
+   "src": "https://shop.pokemon.co.jp/ja/shop/pokemoncenter-megatokyo/news/",
+   "site": "공식",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "주의",
+   "tip": "영업은 10:00~20:00예요. 16:30 입장이면 약 3시간 반 쓸 수 있어요. 카드 추첨판매는 사전 응모형이에요.",
+   "src": "https://blog.naver.com/rmarn99/224438749845",
+   "site": "네이버 블로그",
+   "date": "2026-10-19"
+  }
+ ],
+ "world_import_mart": [
+  {
+   "kind": "줄·대기",
+   "tip": "이치방쿠지 쪽에 줄이 길게 서 있었다는 후기예요(9월). 계산 전 인기 상품 재고를 먼저 보세요.",
+   "src": "https://blog.naver.com/to_rara/224417754735",
+   "site": "네이버 블로그",
+   "date": "2026-09-20"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "가샤폰 데파트는 월드임포트마트 3층, 기계 수천 대 규모예요. 치이카와 같은 인기 기계만 줄이 있었어요.",
+   "src": "https://blog.naver.com/mng_d/224357276809",
+   "site": "네이버 블로그",
+   "date": "2026-07-25"
+  }
+ ],
+ "animate": [
+  {
+   "kind": "주의",
+   "tip": "공식 층 안내: 1F 캡슐·카페, 4·5F 굿즈(5F가 최대), 6F CD, 7F 한정숍. 8·9F는 행사장, B2F는 극장.",
+   "src": "https://www.animate.co.jp/shop/ikebukuro/floor/",
+   "site": "공식",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "행사일엔 입구 펜스 안까지 입장 줄이 생겼다는 후기가 있어요(9월 방문). 영업은 10~21시입니다.",
+   "src": "https://blog.naver.com/ironbelly/224428292194",
+   "site": "네이버 블로그",
+   "date": "2026-10-01"
+  }
+ ],
+ "donki_ikebukuro": [
+  {
+   "kind": "주의",
+   "tip": "면세는 10/31까지 현장 면세라 이번 여행은 해당돼요. 여권 원본이 필요하고 사본은 안 됩니다.",
+   "src": "https://blog.naver.com/dayinfo-money/224438462505",
+   "site": "네이버 블로그",
+   "date": "2026-10-12"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "공식 앱·사이트 방문객 쿠폰은 면세 구매 전제로 세금 제외 1만엔 이상 5%, 3만엔 이상 7%예요.",
+   "src": "https://blog.naver.com/dayinfo-money/224438462505",
+   "site": "네이버 블로그",
+   "date": "2026-10-12"
+  }
+ ],
+ "jiro": [
+  {
+   "kind": "주의",
+   "tip": "구글 지도엔 '임시 휴업' 표시, 공식 사이트는 7/9부터 17:00~21:45(L.O.) 영업 안내. 출발 전 공식 X 확인.",
+   "src": "https://www.ramen-jiro.com/information.html",
+   "site": "공식",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "주의",
+   "tip": "영업시간 충돌: 4월 후기는 낮 11~15:30(밤 없음), 7/16 공식 X는 17~21:30 저녁만(화 휴무). 출발 전 X 확인.",
+   "src": "https://hitosara.com/0032005043/map.html",
+   "site": "기타(히토사라)",
+   "date": "2026-07"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "현금만 가능해요. 카드·전자머니·QR은 안 되니 엔화를 챙기세요(2026-04 후기).",
+   "src": "https://retty.me/area/PRE13/ARE662/SUB66202/100000007294/",
+   "site": "기타(레티)",
+   "date": "2026-04"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "2026-04 후기 기준 약 20분 대기, 5명씩 입장해요. 줄이 가게 앞을 넘으면 식권은 입장 때 사세요.",
+   "src": "https://retty.me/area/PRE13/ARE662/SUB66202/100000007294/",
+   "site": "기타(레티)",
+   "date": "2026-04"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "양을 줄이려면 식권 살 때 '半分で'. 콜은 마늘 질문 때 하고, 초보는 'そのままで'가 무난해요.",
+   "src": "https://www.appbank.net/2023/06/28/ramen/2500219.php",
+   "site": "기타(앱뱅크)",
+   "date": "2025-02"
+  }
+ ],
+ "divercity": [
+  {
+   "kind": "주의",
+   "tip": "붐비면 평일도 입장 제한·정리권 배부 가능. 공식 안내에도 같은 문구가 있음.",
+   "src": "https://www.gundam-base.net/tokyo/guide/",
+   "site": "공식",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "주의",
+   "tip": "유니콘 건담 입상은 9월에 철거돼 현재 없음. 평일 방문 후기도 '건담이 없다'고 함.",
+   "src": "https://blog.naver.com/gamdong_log/224446771445",
+   "site": "네이버 블로그",
+   "date": "2026-10-19"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "월요일 오후 5시 반 추첨에 당첨돼 바로 들어갔다는 리뷰. 평일에도 추첨이 있을 수 있어요.",
+   "src": "https://www.google.com/maps/search/?api=1&query=THE GUNDAM BASE TOKYO",
+   "site": "구글",
+   "date": "2026-10-19"
+  },
+  {
+   "kind": "주의",
+   "tip": "후기 1건은 현장서 예약이 필요하고 만석이었다고 함(9월 방문). 평일 가이드와 상충.",
+   "src": "https://blog.naver.com/rrrrbi/224443206125",
+   "site": "네이버 블로그",
+   "date": "2026-10-16"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "1층에 건담베이스 간이 매장과 푸드트럭이 있으나 볼 건 적다는 후기.",
+   "src": "https://blog.naver.com/rrrrbi/224443206125",
+   "site": "네이버 블로그",
+   "date": "2026-10-16"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "10월 후반 사전추첨은 금~일만. 목요일(22일)은 예약 없이 일반 입장.",
+   "src": "https://japanpocketguide.com/shopping/gundam-base-tokyo/",
+   "site": "기타 가이드(10/15 확인)",
+   "date": "2026-10-15"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "평일은 11시 개점, 새벽 6시 전 줄서기 금지. 15일엔 대기 없이 입장했다고 함.",
+   "src": "https://japanpocketguide.com/shopping/gundam-base-tokyo/",
+   "site": "기타 가이드(10/15 확인)",
+   "date": "2026-10-15"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "면세는 7층 계산 후 2층 푸드코트 근처 카운터에서. 실물 여권 필수, 사본은 불가.",
+   "src": "https://channelmomentum5.tistory.com/16",
+   "site": "티스토리 블로그",
+   "date": "2025-06-01"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "면세는 이 매장 하루 합계 5,500엔 이상. 다이버시티 다른 가게와 합산 안 됨.",
+   "src": "https://channelmomentum5.tistory.com/16",
+   "site": "티스토리 블로그",
+   "date": "2025-06-01"
+  },
+  {
+   "kind": "주의",
+   "tip": "건프라 1인 1일 1회 계산, 종류별 1개, 최대 10점. 재줄서기 불가라 한 번에 담기.",
+   "src": "https://www.gundam-base.net/news/63785.html",
+   "site": "공식",
+   "date": "2024-12-09"
+  }
+ ],
+ "daiba_st": [
+  {
+   "kind": "꿀팁",
+   "tip": "유리카모메는 무인 운전이라 맨 앞칸에서 전망이 좋음. 신바시역 앞에서 바로 탑승.",
+   "src": "https://blog.naver.com/pink_rhodanthe/224444587214",
+   "site": "네이버 블로그",
+   "date": "2026-10-17"
+  }
+ ],
+ "shimbashi_st": [
+  {
+   "kind": "주의",
+   "tip": "JR 시오도메 출구 정면이 유리카모메역, 건물이 달라 밖으로 나와 2층에서 탑승.",
+   "src": "https://photravel.tistory.com/28",
+   "site": "티스토리 블로그",
+   "date": "2025-01"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "신바시~다이바 330엔, IC카드로 개찰구 터치. 양쪽 승강장 모두 같은 방향.",
+   "src": "https://photravel.tistory.com/28",
+   "site": "티스토리 블로그",
+   "date": "2025-01"
+  }
+ ],
+ "hanayama": [
+  {
+   "kind": "줄·대기",
+   "tip": "10시 20분 접수가 56번, 15시 넘어 입장했다는 리뷰(3연휴 방문).",
+   "src": "https://www.google.com/maps/search/?api=1&query=五代目花山うどん銀座店",
+   "site": "구글",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "11시에 가니 정리권 접수가 이미 마감, 11시 40분 도착도 실패했다는 후기 2건.",
+   "src": "https://blog.naver.com/asdf1-902/224446347472",
+   "site": "네이버 블로그",
+   "date": "2026-10-19"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "오전 번호표는 10시 반이면 끝나요. 오후 1시 반엔 면이 떨어져 줄을 마감했다는 리뷰.",
+   "src": "https://www.google.com/maps/search/?api=1&query=五代目花山うどん銀座店",
+   "site": "구글",
+   "date": "2026-10-19"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "정리권은 10시부터 배부. 10시 도착해 26번을 받고 12시 반에 먹었다는 후기.",
+   "src": "https://blog.naver.com/hyodyomii/224445651237",
+   "site": "네이버 블로그",
+   "date": "2026-10-18"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "주말 11시에 키오스크 등록해 14:30~15:00 입장. 12:30 점심으로는 무리일 수 있음.",
+   "src": "https://blog.naver.com/raumnote/224441785983",
+   "site": "네이버 블로그",
+   "date": "2026-10-17"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "예약 불가, 입구 발권기에서 정리권. QR로 순서를 보고 메일 알림이 옴.",
+   "src": "https://blog.naver.com/ddu_day_/224443213134",
+   "site": "네이버 블로그",
+   "date": "2026-10-16"
+  },
+  {
+   "kind": "주의",
+   "tip": "평일 영업은 11:00~15:30, 17:30~21:30. 물은 유료.",
+   "src": "https://blog.naver.com/ddu_day_/224443213134",
+   "site": "네이버 블로그",
+   "date": "2026-10-16"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "알림(앞 5~10팀) 직후 가도 30분 더 기다렸다는 후기. 알림 뒤 여유 있게 이동.",
+   "src": "https://travelklidd.tistory.com/17",
+   "site": "티스토리 블로그",
+   "date": "2025-06-29"
+  }
+ ],
+ "caretta": [
+  {
+   "kind": "주문·이용법",
+   "tip": "카렛타 지하 1층. 캐리어는 입구 쪽에 맡겨 줬다는 후기. 36석, 카드·PayPay 가능.",
+   "src": "https://blog.naver.com/jjy5290/224443750318",
+   "site": "네이버 블로그",
+   "date": "2026-10-16"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "예약 여부를 먼저 물었지만 예약 없이도 자리가 넉넉했다는 후기. 타베로그는 예약 불가 표기.",
+   "src": "https://blog.naver.com/yuku_sky/224436614788",
+   "site": "네이버 블로그",
+   "date": "2026-10-09"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "8월 후기: 오픈이 11:20로 밀린 날이 있고, 정오 무렵 3팀 줄, 12시 전 만석.",
+   "src": "https://tabelog.com/kr/tokyo/A1301/A130103/13288521/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-08"
+  }
+ ],
+ "hokkaibanya": [
+  {
+   "kind": "주의",
+   "tip": "타베로그 기준 목요일 점심 9~15시·저녁 17~21시 영업, 셋째 수요일 휴무. 인터넷 예약 안내.",
+   "src": "https://tabelog.com/kr/tokyo/A1313/A131301/13108642/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-10"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "오전 9시 오픈, 9시대에도 손님이 꽤 있었음. 5번 홋카이라이스 4,500엔.",
+   "src": "https://blog.naver.com/goguma406/224419257835",
+   "site": "네이버 블로그",
+   "date": "2026-09-22"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "2026년 9월 후기에 '꽤 붐벼 줄을 섰다'는 글. 평일 저녁은 한산했다는 글도 있음.",
+   "src": "https://tabelog.com/kr/tokyo/A1313/A131301/13108642/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-09"
+  }
+ ],
+ "nishiginza": [
+  {
+   "kind": "꿀팁",
+   "tip": "니시긴자 2층, 11~20시. 공간은 넓지만 상품은 많지 않다는 평. 키링은 다이소보다 비쌈.",
+   "src": "https://blog.naver.com/hyesung1107/224445969590",
+   "site": "네이버 블로그",
+   "date": "2026-10-19"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "도장 만들기 기계는 먼저 계산한 뒤 이용. 핑크·파랑·검정 중 색 선택.",
+   "src": "https://blog.naver.com/yidaj/224425809125",
+   "site": "네이버 블로그",
+   "date": "2026-10-04"
+  }
+ ],
+ "marronnier2": [
+  {
+   "kind": "꿀팁",
+   "tip": "6층에 다이소·스탠다드프로덕트·쓰리피, 5층 GU. 다이소는 캐릭터 상품이 적다는 평.",
+   "src": "https://blog.naver.com/hyesung1107/224445969590",
+   "site": "네이버 블로그",
+   "date": "2026-10-19"
+  },
+  {
+   "kind": "주의",
+   "tip": "스탠다드프로덕트의 보냉 장바구니·파우치가 품절이라 헛걸음한 한국인이 많았다는 후기.",
+   "src": "https://blog.naver.com/changiisoop/224439249296",
+   "site": "네이버 블로그",
+   "date": "2026-10-12"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "같은 건물 지하 OK마트도 5,000엔 이상 면세. 스탠다드 보냉 장바구니 300엔.",
+   "src": "https://blog.naver.com/unissism/224435161062",
+   "site": "네이버 블로그",
+   "date": "2026-10-08"
+  }
+ ],
+ "loft_ginza": [
+  {
+   "kind": "꿀팁",
+   "tip": "5층 문구가 한국보다 싸다는 평(MD 노트·다이어리). 6층은 니토리 익스프레스.",
+   "src": "https://blog.naver.com/autora_kimmy/224443062620",
+   "site": "네이버 블로그",
+   "date": "2026-10-16"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "1층에서 계산한 뒤 3층 면세 창구에서 처리. 영수증·여권 지참(2024년 글).",
+   "src": "https://lililys.tistory.com/417",
+   "site": "티스토리 블로그",
+   "date": "2024-12-12"
+  }
+ ],
+ "radiokaikan": [
+  {
+   "kind": "꿀팁",
+   "tip": "가게마다 10·11·12시에 열어 12시 이후가 전 층 보기 좋음. 건물은 10~20시.",
+   "src": "https://blog.naver.com/yourns/224429919055",
+   "site": "네이버 블로그",
+   "date": "2026-10-03"
+  },
+  {
+   "kind": "사진",
+   "tip": "매장마다 촬영 가능·불가 방침이 달라서 입구 표시를 꼭 확인.",
+   "src": "https://blog.naver.com/yourns/224429919055",
+   "site": "네이버 블로그",
+   "date": "2026-10-03"
+  },
+  {
+   "kind": "주의",
+   "tip": "관광객이 매우 많고 신품 위주 가게는 정가만 받음. 중고는 시세보다 비싼 편이라는 평.",
+   "src": "https://blog.naver.com/katapore/224423813040",
+   "site": "네이버 블로그",
+   "date": "2026-09-27"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "6층 옐로서브마린 '파츠 천국'에 낱개 런너 저렴, 4층 아미아미 건프라 선반은 비었다는 평.",
+   "src": "https://www.gundampixel.com/blog/gunpla-store-guide-akihabara-tokyo-2025",
+   "site": "기타 블로그",
+   "date": "2025-09"
+  }
+ ],
+ "trader": [
+  {
+   "kind": "꿀팁",
+   "tip": "경품 피규어가 근처에서 가장 싼 편이라는 평. 본점·2호점 가격은 비슷, 매장이 좁음.",
+   "src": "https://blog.naver.com/katapore/224423813040",
+   "site": "네이버 블로그",
+   "date": "2026-09-27"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "프라모델 가격은 이 일대에서 비교적 싸다는 평. 11시 개점.",
+   "src": "https://www.gundampixel.com/blog/gunpla-store-guide-akihabara-tokyo-2025",
+   "site": "기타 블로그",
+   "date": "2025-09"
+  }
+ ],
+ "surugaya_plamo": [
+  {
+   "kind": "주의",
+   "tip": "스루가야는 매장별로 취급품이 달라 프라모델관을 정확히 찾아가야 함. 직원은 영어 안 통한다는 후기.",
+   "src": "https://blog.naver.com/katapore/224423813040",
+   "site": "네이버 블로그",
+   "date": "2026-09-27"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "중고 건프라 종류는 일대 최상급이나 최저가는 아님. 11시 개점, 공구는 한 층 위.",
+   "src": "https://www.gundampixel.com/blog/gunpla-store-guide-akihabara-tokyo-2025",
+   "site": "기타 블로그",
+   "date": "2025-09"
+  }
+ ],
+ "donki_akiba": [
+  {
+   "kind": "꿀팁",
+   "tip": "24시간 영업, 2~5층 매장에 4층에 택스프리 계산대. 피규어·인형이 다른 지점보다 많음.",
+   "src": "https://blog.naver.com/bigway22/224446428057",
+   "site": "네이버 블로그",
+   "date": "2026-10-19"
+  },
+  {
+   "kind": "주의",
+   "tip": "10/31까지는 계산대에서 세금을 뺀 가격으로 결제. 11/1부터 사후 환급이라 이번엔 해당 없음.",
+   "src": "https://thestandardjapan.com/guide/don-quijote-shopping-guide",
+   "site": "기타 가이드",
+   "date": "2026-10-09"
+  }
+ ],
+ "hanamaru": [
+  {
+   "kind": "주의",
+   "tip": "여러 리뷰가 최근 가격이 올랐다고 함. 부카케 소 650엔대, 우동+튀김은 약 1,000엔 이상.",
+   "src": "https://tabelog.com/kr/tokyo/A1310/A131001/13123246/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-09"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "평일 12시경 줄 없이 바로 앉았다는 후기(6월). 저녁 시간대 후기는 확인 못 함.",
+   "src": "https://tabelog.com/kr/tokyo/A1310/A131001/13123246/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-06"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "파·튀김가루·깨·생강은 셀프. 파 무제한이고 소/중 크기 선택 가능.",
+   "src": "https://tabelog.com/kr/tokyo/A1310/A131001/13123246/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-06"
+  }
+ ],
+ "iwai": [
+  {
+   "kind": "주의",
+   "tip": "7세 미만은 입장 불가, 다른 손님을 위해 조용히 대화해 달라는 규칙이 있다는 리뷰.",
+   "src": "https://www.google.com/maps/search/?api=1&query=とんかつ いわい 芝公園",
+   "site": "구글",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "10월 평일 점심 후기: 개점 20분 전 5번째, 11:05 도착은 첫 손님. 개점 전 계단에 줄이 선다.",
+   "src": "https://tabelog.com/kr/tokyo/A1314/A131401/13170377/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-10"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "점심 피크엔 만석이었다는 후기, 늦으면 돈카츠 품절도 가능. 평일 점심 주문 마감은 13:45.",
+   "src": "https://tabelog.com/kr/tokyo/A1314/A131401/13170377/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-10"
+  },
+  {
+   "kind": "주의",
+   "tip": "현금만 가능. 카드·전자결제·QR 모두 불가, 예약도 안 받는다(공식·타베로그 일치).",
+   "src": "https://tabelog.com/kr/tokyo/A1314/A131401/13170377/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-10"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "건물 간판이 많지만 오른쪽 좁은 입구로 2층. 메뉴판 QR을 켜면 한국어가 나온다.",
+   "src": "https://blog.naver.com/onetop0808/224311085525",
+   "site": "네이버 블로그",
+   "date": "2026-06-09"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "로스·히레 정식 2,950엔(후기), 돼지국 건더기 무료 리필. 타베로그엔 로스 120g 2,450엔 기재, 가격 엇갈림.",
+   "src": "https://blog.naver.com/onetop0808/224311085525",
+   "site": "네이버 블로그",
+   "date": "2026-06-09"
+  }
+ ],
+ "tokyo_tower": [
+  {
+   "kind": "주의",
+   "tip": "공식 공지(10/20): 메인덱 마지막 입장 22:30, 톱덱 투어 22:15. 야외 계단 오르기는 주말·공휴일만.",
+   "src": "https://www.tokyotower.co.jp/en/",
+   "site": "공식",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "사진",
+   "tip": "아카바네바시역 앞 횡단보도는 줄을 서야 한다는 후기. 시바공원 외 다른 스팟은 한산했다고 한다.",
+   "src": "https://blog.naver.com/mallangcow0320/224447351643",
+   "site": "네이버 블로그",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "톱덱 투어는 시간 지정 사전예약이고 지각하면 참가 불가. 톱덱을 원하면 미리 예약.",
+   "src": "https://goasia.cc/en/article/tokyo-tower",
+   "site": "기타 블로그",
+   "date": "2026-10"
+  },
+  {
+   "kind": "주의",
+   "tip": "일반 입장권은 나갔다 재입장이 안 된다. 외관 사진은 입장 전에 먼저 찍자.",
+   "src": "https://goasia.cc/en/article/tokyo-tower",
+   "site": "기타 블로그",
+   "date": "2026-10"
+  },
+  {
+   "kind": "사진",
+   "tip": "지하주차장 입구 같은 포토존은 팀당 10분씩 찍어 줄이 1시간 가까이 안 줄었다. 첫 포토존은 한산.",
+   "src": "https://blog.naver.com/onetop0808/224408088430",
+   "site": "네이버 블로그",
+   "date": "2026-09-11"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "소요는 메인덱만 약 1시간, 톱덱 포함 1.5~2시간. 메인덱은 당일 현장 발권이 수월하다는 글.",
+   "src": "https://www.tripstore.kr/blog/%EB%8F%84%EC%BF%84%ED%83%80%EC%9B%8C-%EC%A0%84%EB%A7%9D%EB%8C%80-%EB%A9%94%EC%9D%B8%EB%8D%B1-%ED%83%91%EB%8D%B1-%EB%B9%84%EA%B5%90-%EA%BF%80%ED%8C%81",
+   "site": "트립스토어 블로그",
+   "date": "2026"
+  }
+ ],
+ "shiba_park": [
+  {
+   "kind": "사진",
+   "tip": "탑 남쪽 오르막 산책로 계단 꼭대기에 서면 도쿄타워를 정면으로 마주한다. 14시 무렵에도 촬영.",
+   "src": "https://blog.naver.com/jpearltrip/224445745812",
+   "site": "네이버 블로그",
+   "date": "2026-10-18"
+  },
+  {
+   "kind": "사진",
+   "tip": "조조지 본당 앞마당에서 기와지붕 위로 도쿄타워가 솟는 구도. 어느 각도든 절과 탑이 겹친다.",
+   "src": "https://blog.naver.com/jpearltrip/224445745812",
+   "site": "네이버 블로그",
+   "date": "2026-10-18"
+  },
+  {
+   "kind": "사진",
+   "tip": "조조지 경내 붉은 난간 다리 위에서 고개를 돌리면 대나무 숲 너머로 도쿄타워가 보인다.",
+   "src": "https://blog.naver.com/jpearltrip/224445745812",
+   "site": "네이버 블로그",
+   "date": "2026-10-18"
+  }
+ ],
+ "hachiko": [
+  {
+   "kind": "줄·대기",
+   "tip": "하치코 동상 사진은 거의 항상 줄이 있다는 안내. 10월 후기도 줄 때문에 멀리서만 봤다고 한다.",
+   "src": "https://www.tokyotourism.org/shibuya-crossing-guide/",
+   "site": "기타 블로그",
+   "date": "2026-10-15"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "무료로 내려다보기: 시부야 히카리에 11층 스카이로비, 마크시티 연결통로(조망은 무난하다는 평).",
+   "src": "https://www.tokyotourism.org/shibuya-crossing-guide/",
+   "site": "기타 블로그",
+   "date": "2026-10-15"
+  },
+  {
+   "kind": "주의",
+   "tip": "횡단 중 멈춰 서서 사진·영상을 찍는 관광객이 많다는 후기. 신호 바뀌면 사람이 몰려 부딪히기 쉽다.",
+   "src": "https://blog.naver.com/filwba2814/224441942167",
+   "site": "네이버 블로그",
+   "date": "2026-10-14"
+  }
+ ],
+ "tsutaya": [
+  {
+   "kind": "꿀팁",
+   "tip": "창가에서 교차로가 내려다보인다. 입장은 무료지만 음료를 사야 한다는 안내.",
+   "src": "https://www.tokyotourism.org/shibuya-crossing-guide/",
+   "site": "기타 블로그",
+   "date": "2026-10-15"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "10월 후기: 스타벅스 2층은 교차로를 보려는 사람으로 가득 차 자리 구하기가 어렵다.",
+   "src": "https://blog.naver.com/whereareyou-/224441898468",
+   "site": "네이버 블로그",
+   "date": "2026-10-14"
+  }
+ ],
+ "shibuya109": [
+  {
+   "kind": "주의",
+   "tip": "한 후기: 109 화장품 매장 면세가 앱 신청 후 1개월 내 환급 방식이라 현장에선 바로 안 돌려받았다.",
+   "src": "https://blog.naver.com/loveryu2000/224447006132",
+   "site": "네이버 블로그",
+   "date": "2026-10-19"
+  }
+ ],
+ "mega_donki": [
+  {
+   "kind": "줄·대기",
+   "tip": "낮에도 사람이 너무 많아 둘러보지 못하고 1분 만에 나왔다는 후기. 평일 낮 한산 설과 엇갈린다.",
+   "src": "https://blog.naver.com/ss_jung_/224447539492",
+   "site": "네이버 블로그",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "면세 카운터는 7층 전용, 줄이 길어 보여도 계산대가 많아 금방 줄어든다는 후기.",
+   "src": "https://blog.naver.com/filwba2814/224441942167",
+   "site": "네이버 블로그",
+   "date": "2026-10-14"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "면세 카운터는 여권 원본 필수. 19~24시가 가장 붐비고 평일 10~15시가 비교적 한산하다는 글.",
+   "src": "https://livejapan.com/zh-tw/in-tokyo/in-pref-tokyo/in-shibuya/article-a0005799/",
+   "site": "기타 블로그",
+   "date": "2026-10-13"
+  },
+  {
+   "kind": "주의",
+   "tip": "11/1부터 면세가 출국 시 환급 방식으로 바뀐다. 10/23엔 기존대로 현장 면세.",
+   "src": "https://livejapan.com/zh-tw/in-tokyo/in-pref-tokyo/in-shibuya/article-a0005799/",
+   "site": "기타 블로그",
+   "date": "2026-10-13"
+  }
+ ],
+ "parco": [
+  {
+   "kind": "줄·대기",
+   "tip": "10월 후기: 파르코 굿즈샵(닌텐도·세가·점프샵·캡콤)이 인산인해라 빠르게 훑고 나왔다.",
+   "src": "https://blog.naver.com/tlswo17/224445780954",
+   "site": "네이버 블로그",
+   "date": "2026-10-18"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "닌텐도 도쿄는 평일엔 바로 입장, 번호표는 주말·공휴일 중심. 신상 출시일엔 계단까지 줄.",
+   "src": "https://hontojapan.com/nintendo-tokyo-store/",
+   "site": "기타 블로그",
+   "date": "2026-08-25"
+  },
+  {
+   "kind": "주의",
+   "tip": "면세는 포켓몬센터·캡콤만 가능, 닌텐도 도쿄·점프샵은 불가. 통합 면세 카운터도 없다.",
+   "src": "https://tripmate.news/posts/shibuya-parco-nintendo-pokemon-guide/",
+   "site": "기타 블로그",
+   "date": "2025-12-11"
+  },
+  {
+   "kind": "주의",
+   "tip": "포켓몬센터 인기 팩은 계산대 보관·1인 구매 제한, 오전에 품절이 잦다. 혼잡 땐 번호표도 쓴다.",
+   "src": "https://tripmate.news/posts/shibuya-parco-nintendo-pokemon-guide/",
+   "site": "기타 블로그",
+   "date": "2025-12-11"
+  }
+ ],
+ "maasan": [
+  {
+   "kind": "주문·이용법",
+   "tip": "지하 입구는 큰 함박 광고판이 표지. 한국어 추천메뉴가 있는 외국인 메뉴판을 보여주면 된다.",
+   "src": "https://blog.naver.com/shahappy_t/224433997511",
+   "site": "네이버 블로그",
+   "date": "2026-10-15"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "추천메뉴 S 3,980엔~L 4,980엔. M도 양이 많아 S로 충분, 간이 센 편이라는 후기.",
+   "src": "https://blog.naver.com/shahappy_t/224433997511",
+   "site": "네이버 블로그",
+   "date": "2026-10-15"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "예약 불가, 2026-01 후기에 약 15분 대기. 월요일 휴무라 금요일은 영업(17:00~21:00).",
+   "src": "https://tabelog.com/kr/tokyo/A1303/A130301/13116230/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-01"
+  },
+  {
+   "kind": "주의",
+   "tip": "숟가락으로 먹는 함박이고 속이 붉게 나온다는 후기가 있다. 결제는 카드·전자·QR 가능.",
+   "src": "https://tabelog.com/kr/tokyo/A1303/A130301/13116230/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2025-12"
+  }
+ ],
+ "kuuya": [
+  {
+   "kind": "주문·이용법",
+   "tip": "2인이 오코노미야키 3개를 시켜 너무 많았다는 후기. 직원이 한 장씩 굽는다. 명란 모찌 몬자엔 치즈.",
+   "src": "https://blog.naver.com/id_qudden/224445733582",
+   "site": "네이버 블로그",
+   "date": "2026-10-18"
+  },
+  {
+   "kind": "주의",
+   "tip": "10월 후기: 구글 예약 불가라 현장 대기, 2시간 제한, 저녁 자릿세, 1인 1메뉴. 타베로그는 예약 가능이라 엇갈림.",
+   "src": "https://blog.naver.com/tlsdbsj_95/224442653437",
+   "site": "네이버 블로그",
+   "date": "2026-10-15"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "자리 QR로 주문(한국어 가능), 직원이 구워준다. 철판이 이미 뜨거우니 앉자마자 주문.",
+   "src": "https://blog.naver.com/tlsdbsj_95/224442653437",
+   "site": "네이버 블로그",
+   "date": "2026-10-15"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "저녁·주말엔 줄이 길고 점심·오픈 직후·심야엔 짧다. 평일 줄 없던 날도 있었다(2026-09).",
+   "src": "https://tabelog.com/kr/tokyo/A1303/A130301/13241793/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-10"
+  }
+ ],
+ "shirube": [
+  {
+   "kind": "주의",
+   "tip": "공식 사이트: 구글맵 오표시가 있어 공식 안내 링크로 찾을 것(goo.gl/maps/ZnouqCLxfFN9x8bC8).",
+   "src": "https://raku-co.com/?page_id=373",
+   "site": "공식",
+   "date": "미상"
+  },
+  {
+   "kind": "주의",
+   "tip": "입구 찾기가 어렵다. 공식: 건물 정면 계단으로 2층, 막다른 곳에서 오른쪽. 문이 낮고 간판이 없다.",
+   "src": "https://tabelog.com/kr/tokyo/A1303/A130301/13007275/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-09"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "주말 밤은 매우 붐벼 예약 권장, 한 달 전엔 못 잡고 2주 전엔 잡았다는 후기. 17시 오픈, 공식은 전화(03-3463-1010).",
+   "src": "https://tabelog.com/kr/tokyo/A1303/A130301/13007275/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-09"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "대표 메뉴는 시메사바·오뎅·사시미·소고기 감자조림. 카드 가능, 전자결제·QR은 불가.",
+   "src": "https://tabelog.com/kr/tokyo/A1303/A130301/13007275/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-09"
+  }
+ ],
+ "hikiniku": [
+  {
+   "kind": "주의",
+   "tip": "10월 후기 한 곳은 짜고 양이 적어 실망했다 하고, 다른 곳은 3개로도 부족할 만큼 맛있다고 한다.",
+   "src": "https://blog.naver.com/hakang99/224447403772",
+   "site": "네이버 블로그",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "예약했어도 서서 기다려야 했다는 리뷰와 '예약 필수'라는 리뷰가 둘 다 있어요.",
+   "src": "https://www.google.com/maps/search/?api=1&query=挽肉と米 渋谷",
+   "site": "구글",
+   "date": "2026-10-17"
+  },
+  {
+   "kind": "주의",
+   "tip": "2026-06-01부터 카드 전용이라는 정보(타베로그), 예약 페이지는 현금 불가. 전자·QR 불가.",
+   "src": "https://tabelog.com/kr/tokyo/A1303/A130301/13257261/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-10"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "10월 후기: 당일 예약으로 들어갔다는 사람도, 사전 예약 없이는 어렵다는 사람도 있다. 일요일 낮 예약 후 15분 대기.",
+   "src": "https://tabelog.com/kr/tokyo/A1303/A130301/13257261/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-10"
+  },
+  {
+   "kind": "주문·이용법",
+   "tip": "함박 최대 3개를 숯불 앞에서 한 개씩 내준다. 밥·미소시루 리필, 테이블에 소스 다수.",
+   "src": "https://tabelog.com/kr/tokyo/A1303/A130301/13257261/dtlrvwlst/",
+   "site": "타베로그",
+   "date": "2026-09"
+  },
+  {
+   "kind": "줄·대기",
+   "tip": "웨이팅 리스트는 7일 전부터 무료 등록, 매일 9시경 새 자리. 등록 시각이 착석 시각은 아니다.",
+   "src": "https://www.tablecheck.com/pt/shops/hikinikutocome/reserve",
+   "site": "공식(TableCheck)",
+   "date": "2025-12"
+  },
+  {
+   "kind": "주의",
+   "tip": "늦으면 취소 가능. 당일 취소는 세트 요금 100%. 선결제 1,980엔/인, 3층 좁은 계단.",
+   "src": "https://www.tablecheck.com/pt/shops/hikinikutocome/reserve",
+   "site": "공식(TableCheck)",
+   "date": "2025-12"
+  }
+ ],
+ "shibuya_sky": [
+  {
+   "kind": "주의",
+   "tip": "영업 10:00~22:30, 입장 마감 21:20.",
+   "src": "https://www.klook.com/ko/activity/70672-shibuya-sky-tokyo/",
+   "site": "클룩",
+   "date": "2026-10-20"
+  },
+  {
+   "kind": "주의",
+   "tip": "옥상에서 점프, 선글라스 머리에 걸치기, 겉옷 손에 들기 금지라고 태블릿으로 안내한다는 후기.",
+   "src": "https://blog.naver.com/yune1912/224447024534",
+   "site": "네이버 블로그",
+   "date": "2026-10-19"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "예약 시간 20분 안에 스크램블 스퀘어 14층 입구로. QR 바우처를 보여주니 데이터를 켜 둘 것.",
+   "src": "https://blog.naver.com/yune1912/224447024534",
+   "site": "네이버 블로그",
+   "date": "2026-10-19"
+  },
+  {
+   "kind": "꿀팁",
+   "tip": "역에서 지하 B6 출구, 긴자선·한조몬선과 바로 연결된다. 건물 안에서 길 찾기는 은근 어렵다는 후기.",
+   "src": "https://blog.naver.com/yune1912/224447024534",
+   "site": "네이버 블로그",
+   "date": "2026-10-19"
+  },
+  {
+   "kind": "사진",
+   "tip": "유리 모서리 스카이 엣지는 사진 줄이 생긴다. 후기에선 엘리베이터 올라와 코너에서 줄 서서 찍었다.",
+   "src": "https://blog.naver.com/minjeong1128/224443325978",
+   "site": "네이버 블로그",
+   "date": "2026-10"
+  },
+  {
+   "kind": "주의",
+   "tip": "옥상엔 가방·모자·삼각대·셀카봉·우산 반입 금지, 46층 100엔 코인락커(반환)에 맡긴다. 카메라는 스트랩 필수.",
+   "src": "https://tabimaniajapan.com/japan-trip/complete-guide-to-shibuya-sky-tokyo-tickets-rules-best-time",
+   "site": "기타 블로그",
+   "date": "2026-06-09"
+  },
+  {
+   "kind": "주의",
+   "tip": "강풍·우천·천둥 땐 옥상이 임시 폐쇄되고 46층 실내만 열린다. 체류는 보통 60~90분.",
+   "src": "https://tabimaniajapan.com/japan-trip/complete-guide-to-shibuya-sky-tokyo-tickets-rules-best-time",
+   "site": "기타 블로그",
+   "date": "2026-06-09"
+  }
+ ]
+}
