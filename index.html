@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
+<script>try{var t=localStorage.getItem("tokyo2610-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f6f1e7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#12142a" media="(prefers-color-scheme: dark)">
@@ -19,12 +20,17 @@
   --tabh:64px; --safe:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme: dark){
-  :root{ --bg:#12142a; --surface:#1c1f3a; --ink:#f1ece2; --ink2:#c4c0d4; --muted:#8f8ca6; --line:#2e3157; --hair:#242849;
+:root:not([data-theme="light"]){--bg:#12142a; --surface:#1c1f3a; --ink:#f1ece2; --ink2:#c4c0d4; --muted:#8f8ca6; --line:#2e3157; --hair:#242849;
     --warn:#ff8a7e; --warn-bg:#3a1f1d; --cash:#f0c060; --cash-bg:#33290f; --rsv:#8cc0f2; --rsv-bg:#16283a; --ok:#7fd3a2; --ok-bg:#16301f;
     --accent:#ff7a5c; --accent-bg:#3d2230; --memo:#2e2a1c; --memo-ink:#f0d68a;
     --sky:linear-gradient(165deg,#090c24 0%,#1d1d52 48%,#4a2f72 80%,#8a4a7a 100%); --city:#07081a;
-    --shadow:0 1px 1px rgba(0,0,0,.2),0 6px 16px -8px rgba(0,0,0,.6); }
+    --shadow:0 1px 1px rgba(0,0,0,.2),0 6px 16px -8px rgba(0,0,0,.6);}
 }
+:root[data-theme="dark"]{--bg:#12142a; --surface:#1c1f3a; --ink:#f1ece2; --ink2:#c4c0d4; --muted:#8f8ca6; --line:#2e3157; --hair:#242849;
+    --warn:#ff8a7e; --warn-bg:#3a1f1d; --cash:#f0c060; --cash-bg:#33290f; --rsv:#8cc0f2; --rsv-bg:#16283a; --ok:#7fd3a2; --ok-bg:#16301f;
+    --accent:#ff7a5c; --accent-bg:#3d2230; --memo:#2e2a1c; --memo-ink:#f0d68a;
+    --sky:linear-gradient(165deg,#090c24 0%,#1d1d52 48%,#4a2f72 80%,#8a4a7a 100%); --city:#07081a;
+    --shadow:0 1px 1px rgba(0,0,0,.2),0 6px 16px -8px rgba(0,0,0,.6);}
 *{box-sizing:border-box}
 html,body{margin:0;height:100%}
 body{background:var(--bg);color:var(--ink);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;font-size:15px;line-height:1.5;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
@@ -213,7 +219,10 @@ li:last-child>.stop .rail:before{bottom:calc(100% - 20px)}
 
 /* ---------- google recommendations ---------- */
 :root{--rec:#b7791f;--rec-bg:#fdf3dd}
-@media (prefers-color-scheme: dark){:root{--rec:#f2c46b;--rec-bg:#352a12}}
+@media (prefers-color-scheme: dark){
+:root:not([data-theme="light"]){--rec:#f2c46b;--rec-bg:#352a12}
+}
+:root[data-theme="dark"]{--rec:#f2c46b;--rec-bg:#352a12}
 .tag.rec{background:var(--rec);color:#fff}
 .rechead{margin:16px 0 8px;padding:9px 12px;border-radius:12px;background:var(--rec-bg);color:var(--rec);font-weight:800;font-size:14px;display:flex;align-items:center;gap:8px}
 .rechead small{font-weight:600;font-size:12px;opacity:.85}
@@ -337,11 +346,18 @@ main{padding-bottom:calc(var(--tabh) + var(--safe) + 40px)}
 [data-type="move"]{--tc:#4263eb;--tb1:#edf2ff;--tb2:#bac8ff}
 [data-type="flight"]{--tc:#1c7ed6;--tb1:#e7f5ff;--tb2:#a5d8ff}
 [data-type="hotel"]{--tc:#9775fa;--tb1:#2b2459;--tb2:#5f3dc4}
-@media (prefers-color-scheme: dark){[data-type="meal"]{--tb1:#2f2116;--tb2:#5c3410}
-[data-type="explore"]{--tb1:#122a2d;--tb2:#0b4f57}
-[data-type="sight"]{--tb1:#2e1621;--tb2:#5e1d39}
-[data-type="move"]{--tb1:#18203f;--tb2:#26357a}
-[data-type="flight"]{--tb1:#132a3f;--tb2:#1b4c78}}
+@media (prefers-color-scheme: dark){
+:root:not([data-theme="light"]) [data-type="meal"]{--tb1:#2f2116;--tb2:#5c3410}
+:root:not([data-theme="light"]) [data-type="explore"]{--tb1:#122a2d;--tb2:#0b4f57}
+:root:not([data-theme="light"]) [data-type="sight"]{--tb1:#2e1621;--tb2:#5e1d39}
+:root:not([data-theme="light"]) [data-type="move"]{--tb1:#18203f;--tb2:#26357a}
+:root:not([data-theme="light"]) [data-type="flight"]{--tb1:#132a3f;--tb2:#1b4c78}
+}
+:root[data-theme="dark"] [data-type="meal"]{--tb1:#2f2116;--tb2:#5c3410}
+:root[data-theme="dark"] [data-type="explore"]{--tb1:#122a2d;--tb2:#0b4f57}
+:root[data-theme="dark"] [data-type="sight"]{--tb1:#2e1621;--tb2:#5e1d39}
+:root[data-theme="dark"] [data-type="move"]{--tb1:#18203f;--tb2:#26357a}
+:root[data-theme="dark"] [data-type="flight"]{--tb1:#132a3f;--tb2:#1b4c78}
 .scene{display:block;position:absolute;right:0;top:0;bottom:0;width:96px;pointer-events:none;overflow:hidden;border-radius:0 14px 14px 0}
 .stop[data-type] .body{padding-right:96px;overflow:hidden}
 .stop[data-type] .body > :not(.scene){position:relative;z-index:1}
@@ -371,7 +387,10 @@ main{padding-bottom:calc(var(--tabh) + var(--safe) + 40px)}
 .sc-flight .c2{right:52px;top:12px;width:22px;height:9px}
 .sc-flight .plane{left:-10px;bottom:6px;font-size:22px;animation:fly 4.2s ease-in-out infinite}
 @keyframes fly{0%{transform:translate(0,0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translate(110px,-40px);opacity:0}}
-@media (prefers-color-scheme: dark){.sc-flight .cloud{background:#cfe3f5;opacity:.25}}
+@media (prefers-color-scheme: dark){
+:root:not([data-theme="light"]) .sc-flight .cloud{background:#cfe3f5;opacity:.25}
+}
+:root[data-theme="dark"] .sc-flight .cloud{background:#cfe3f5;opacity:.25}
 .sc-hotel .moon{right:22px;top:10px;font-size:26px;animation:bob 4s ease-in-out infinite}
 .sc-hotel .spark{color:#fff3bf}
 .stop[data-type] .body{background:linear-gradient(105deg,var(--surface) 0%,var(--surface) 42%,var(--tb1) 70%,var(--tb2) 130%);border-color:color-mix(in srgb,var(--tc) 28%,var(--line))}
@@ -414,7 +433,10 @@ main{padding-bottom:calc(var(--tabh) + var(--safe) + 40px)}
 @keyframes tk-tear{0%{transform:none}22%{transform:translateY(1px) rotate(-2deg)}50%{transform:translateY(9px) rotate(10deg)}72%{transform:translateY(5px) rotate(5deg)}100%{transform:translateY(6px) rotate(6.5deg)}}
 @keyframes tk-attach{0%{transform:translateY(6px) rotate(6.5deg)}100%{transform:none}}
 :root{--spring:cubic-bezier(.22,1.28,.36,1);--glass:color-mix(in srgb,var(--surface) 58%,transparent);--glass-line:rgba(255,255,255,.6);--glass-hi:rgba(255,255,255,.75)}
-@media (prefers-color-scheme: dark){:root{--glass:color-mix(in srgb,var(--surface) 55%,transparent);--glass-line:rgba(255,255,255,.12);--glass-hi:rgba(255,255,255,.14)}}
+@media (prefers-color-scheme: dark){
+:root:not([data-theme="light"]){--glass:color-mix(in srgb,var(--surface) 55%,transparent);--glass-line:rgba(255,255,255,.12);--glass-hi:rgba(255,255,255,.14)}
+}
+:root[data-theme="dark"]{--glass:color-mix(in srgb,var(--surface) 55%,transparent);--glass-line:rgba(255,255,255,.12);--glass-hi:rgba(255,255,255,.14)}
 body{isolation:isolate}
 body:before{content:"";position:fixed;inset:-10%;z-index:-1;pointer-events:none;
   background:radial-gradient(45% 35% at 12% 18%,color-mix(in srgb,#ff9a76 38%,transparent),transparent 70%),
@@ -481,6 +503,15 @@ li.now .stop .dot{border-color:var(--accent)}
 li.now .stop .dot:before{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--accent);animation:nowping 1.8s ease-out infinite}
 @keyframes nowping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.6);opacity:0}}
 @media (prefers-reduced-motion: reduce){ li.now .stop .dot:before{animation:none} }
+
+/* 화면 테마 버튼 (자동 → 라이트 → 다크) */
+:root{color-scheme:light dark}
+:root[data-theme="light"]{color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark}
+.top-acts{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.theme-btn{display:inline-flex;align-items:center;gap:5px;height:34px;padding:0 12px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.16);color:#fff;font:inherit;font-size:12.5px;font-weight:800;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:transform .45s cubic-bezier(.22,1.28,.36,1)}
+.theme-btn:active{transform:scale(.92);transition-duration:.1s}
+.theme-btn .ti{font-size:14px;line-height:1}
 </style>
 </head>
 <body>
@@ -494,7 +525,10 @@ li.now .stop .dot:before{content:"";position:absolute;inset:-7px;border-radius:5
         <h1>도쿄 여행 <span class="jp" lang="ja">東京旅行</span></h1>
         <a class="nowwx num" id="nowwx" hidden title="기상청 아메다스 도쿄 관측소 (10분마다 갱신)" target="_blank" rel="noopener" href="https://www.jma.go.jp/bosai/amedas/#area_type=offices&amp;area_code=130000&amp;amdno=44132"></a>
       </div>
-      <a class="hotel-btn" id="hotelBtn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>숙소 길찾기</a>
+      <div class="top-acts">
+        <a class="hotel-btn" id="hotelBtn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>숙소 길찾기</a>
+        <button class="theme-btn" id="themeBtn" type="button"></button>
+      </div>
     </div>
     <!-- 도쿄 스카이라인: 왼쪽 스카이트리, 오른쪽 도쿄타워 -->
     <svg class="skyline" viewBox="0 0 400 80" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
@@ -612,6 +646,27 @@ const svgLink = '<svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d
 const svgRoute = '<svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>';
 
 $("#hotelBtn").href = dirUrl(P.hotel);
+
+/* ---------- 화면 테마: 자동(기기 설정) → 라이트 → 다크 ---------- */
+const THEME_KEY = "tokyo2610-theme", THEMES = ["auto","light","dark"];
+const THEME_UI = {auto:["◐","자동"], light:["☀️","라이트"], dark:["🌙","다크"]};
+function applyTheme(t){
+  if (t === "auto") delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = t;
+  const [ic, lb] = THEME_UI[t];
+  $("#themeBtn").innerHTML = `<span class="ti" aria-hidden="true">${ic}</span>${lb}`;
+  $("#themeBtn").setAttribute("aria-label", `화면 테마: ${lb} (누르면 바뀜)`);
+  document.querySelectorAll('meta[name="theme-color"]').forEach(m=>{
+    if (!m.dataset.orig) m.dataset.orig = m.getAttribute("content");
+    m.setAttribute("content", t==="light" ? "#f6f1e7" : t==="dark" ? "#12142a" : m.dataset.orig);
+  });
+}
+let theme = document.documentElement.dataset.theme || "auto";
+applyTheme(theme);
+$("#themeBtn").addEventListener("click", ()=>{
+  theme = THEMES[(THEMES.indexOf(theme)+1) % THEMES.length];
+  applyTheme(theme);
+  try { if (theme === "auto") localStorage.removeItem(THEME_KEY); else localStorage.setItem(THEME_KEY, theme); } catch(e){}
+});
 const setTop=()=>document.documentElement.style.setProperty("--toph", "env(safe-area-inset-top, 0px)");
 setTop(); window.addEventListener("resize", setTop);
 
