@@ -305,7 +305,7 @@ days = [
    S("", "다이바역", "daiba_st", "", move=True, minor=True),
    S("11:00", "둘러볼 곳", "divercity", "건담베이스 평일 11:00 개장 · 다이버시티 7층", tags=["주의"], major=True, hs="오다이바",
      meal=dict(kind="place", area="오다이바", route=["divercity", "hellokitty"], rnote="둘 다 다이버시티 안이에요(7층 → 2층). 시간 남으면 해변공원은 걸어서 10분.", orig=["divercity", "hellokitty"], groups=[dict(label="근처", keys=["odaiba_beach"])])),
-   S("12:30", "점심", "caretta", "유리카모메로 신바시 복귀 후 도보", move=True, hs="시오도메", meal=dict(area="긴자", orig=["caretta", "hanayama", "hokkaibanya"], groups=[dict(label="추천 (리뷰 기반)", keys=["r_hibiki"])])),
+   S("12:30", "점심", "caretta", "유리카모메로 신바시 복귀 후 도보", move=True, hs="시오도메", meal=dict(area="긴자", orig=["caretta", "hanayama", "hokkaibanya"], groups=[dict(label="추천 (리뷰 기반)", keys=["r_hibiki", "n_heckeln"])])),
    S("14:00", "둘러볼 곳", "nishiginza", "긴자선 1정거장 · 1시간 반 정도만", move=True, hs="긴자",
      meal=dict(kind="place", area="긴자", route=["nishiginza", "marronnier2", "loft_ginza"], rnote="니시긴자 → 마로니에게이트 → 로프트가 긴자역에서 북쪽으로 한 줄이라 걸어서 각각 3–5분이에요. 로프트에서 JR 유라쿠초역이 가까워서 바로 아키하바라로 넘어가기 좋아요.", orig=["nishiginza", "marronnier2", "loft_ginza"],
                groups=[dict(label="근처", keys=["muji_ginza", "itoya", "ginza_six"]), dict(label="추천 (리뷰 기반)", keys=["n_caretta_sky", "n_kitte"])])),

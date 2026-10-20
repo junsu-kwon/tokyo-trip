@@ -25,6 +25,7 @@ OH = {  # 월..일. []=휴무, None=정보 없음
  "r_tsujita": wk(*([H("11:00","22:00")]*5), H("11:00","21:30"), H("11:00","21:30")),
  "r_uogashi": wk(*([H("11:00","23:00")]*5), H("11:00","22:00"), H("11:00","21:30")),
  "n_shiseido": wk([], *([H("11:00","21:00")]*5), H("11:00","20:00")),
+ "n_heckeln": wk(H("09:00","15:00"), H("09:00","15:00"), [], H("09:00","15:00"), H("09:00","15:00"), [], []),
  "n_tokichi": ALL(H("10:30","19:30")), "n_ichinisan": ALL(H("11:00","21:30")),
  "n_happypancake": wk(*([H("11:00","20:00")]*5), H("10:00","20:30"), H("10:00","20:30")),
  "n_kitte": wk(*([H("11:00","23:00")]*5), H("11:00","22:00"), H("11:00","22:00")),
@@ -41,7 +42,7 @@ PAY = {
  "qpot": "card", "yurinan": "card", "maasan": "card", "hikiniku": "cashless", "kuuya": "card", "shirube": "card",
  "yokocho": "mixed", "nonbei": "cash", "r_gyukatsu": "card", "r_ichiban": "cash", "r_mutekiya": "cash", "r_hibiki": "card",
  "r_tsujita": "card", "r_matsue": "card", "r_uogashi": "card", "n_ichinisan": "card", "n_marugo": "cash", "n_ikkoku": "cash",
- "n_lapin": "card", "n_shiseido": "card", "n_tokichi": "card", "n_happypancake": "card",
+ "n_heckeln": "cash", "n_lapin": "card", "n_shiseido": "card", "n_tokichi": "card", "n_happypancake": "card",
 }
 PAYD = {"nonbei": "가게 대부분 현금만", "hikiniku": "현금 불가 (카드·간편결제만)", "yokocho": "가게마다 달라요"}
 TAX = {}; TAXD = {}; RAIN = {}

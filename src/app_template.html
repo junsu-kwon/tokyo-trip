@@ -323,6 +323,164 @@ li:last-child>.stop .rail:before{bottom:calc(100% - 20px)}
 .pop small{color:#667;font-size:12px}
 .pop button{margin-top:6px;border:0;background:#1c2340;color:#fff;border-radius:8px;padding:5px 9px;font-weight:700;font-size:12px;cursor:pointer}
 @media (prefers-reduced-motion: reduce){ .sheet,.scrim{transition:none} }
+
+/* ====== 2026-10-20 디자인: 장면 카드 · 캡슐 메뉴 · 찢는 탑승권 · 쫀득한 전환 · 글래스 (시안 1·A 선택) ====== */
+.tabs{left:12px;right:12px;bottom:calc(10px + var(--safe));padding:0;border:1px solid color-mix(in srgb,var(--line) 80%,transparent);border-radius:26px;background:color-mix(in srgb,var(--surface) 72%,transparent);box-shadow:0 12px 32px -10px rgba(28,35,64,.4);max-width:520px;margin:0 auto}
+.tabs-in{display:flex;justify-content:space-between;align-items:center;height:62px;padding:0 8px}
+.tab{flex:0 0 auto;flex-direction:row;gap:6px;height:46px;padding:0 12px;border-radius:999px;font-size:0;color:var(--muted);transition:background-color .25s ease-out,padding .25s ease-out,color .2s}
+.tab svg{width:24px;height:24px;padding:0;background:none!important}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--surface);font-size:13.5px;padding:0 16px}
+main{padding-bottom:calc(var(--tabh) + var(--safe) + 40px)}
+[data-type="meal"]{--tc:#e8590c;--tb1:#fff4e6;--tb2:#ffd8a8}
+[data-type="explore"]{--tc:#0c8599;--tb1:#e6fcf5;--tb2:#99e9f2}
+[data-type="sight"]{--tc:#d6336c;--tb1:#fff0f6;--tb2:#fcc2d7}
+[data-type="move"]{--tc:#4263eb;--tb1:#edf2ff;--tb2:#bac8ff}
+[data-type="flight"]{--tc:#1c7ed6;--tb1:#e7f5ff;--tb2:#a5d8ff}
+[data-type="hotel"]{--tc:#9775fa;--tb1:#2b2459;--tb2:#5f3dc4}
+@media (prefers-color-scheme: dark){[data-type="meal"]{--tb1:#2f2116;--tb2:#5c3410}
+[data-type="explore"]{--tb1:#122a2d;--tb2:#0b4f57}
+[data-type="sight"]{--tb1:#2e1621;--tb2:#5e1d39}
+[data-type="move"]{--tb1:#18203f;--tb2:#26357a}
+[data-type="flight"]{--tb1:#132a3f;--tb2:#1b4c78}}
+.scene{display:block;position:absolute;right:0;top:0;bottom:0;width:96px;pointer-events:none;overflow:hidden;border-radius:0 14px 14px 0}
+.stop[data-type] .body{padding-right:96px;overflow:hidden}
+.stop[data-type] .body > :not(.scene){position:relative;z-index:1}
+.stop[data-type] .more{display:none}
+.scene i{position:absolute;font-style:normal;line-height:1}
+.stop:not(.inview) .scene *{animation-play-state:paused!important}
+.sc-meal .bowl{right:22px;bottom:12px;font-size:34px}
+.sc-meal .steam{bottom:44px;width:4px;height:16px;border-radius:4px;background:var(--tc);opacity:0;animation:steam 2.4s ease-out infinite}
+.sc-meal .s1{right:34px}
+.sc-meal .s2{right:44px;animation-delay:.8s}
+.sc-meal .s3{right:54px;animation-delay:1.6s}
+@keyframes steam{0%{transform:translateY(6px) scaleY(.6);opacity:0}30%{opacity:.55}100%{transform:translateY(-22px) scaleY(1.2);opacity:0}}
+.sc-explore .bag{right:18px;bottom:14px;font-size:32px;animation:bob 2.8s ease-in-out infinite}
+.sc-explore .bag2{right:44px;bottom:22px;font-size:20px;animation:bob 2.8s ease-in-out -1.4s infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-6px) rotate(4deg)}}
+.spark{color:var(--tc);font-size:12px;animation:twinkle 1.8s ease-in-out infinite}
+.spark.k1{right:14px;top:10px}
+.spark.k2{right:66px;top:14px;animation-delay:.6s}
+.spark.k3{right:44px;top:30px;animation-delay:1.2s;font-size:9px}
+@keyframes twinkle{0%,100%{transform:scale(.4);opacity:0}50%{transform:scale(1);opacity:1}}
+.sc-sight .tower{right:26px;bottom:8px;font-size:40px}
+.sc-move .rail2{left:8px;right:8px;bottom:14px;height:0;border-top:3px dashed color-mix(in srgb,var(--tc) 55%,transparent)}
+.sc-move .train{bottom:17px;right:4px;font-size:24px;animation:ride 3.6s linear infinite}
+@keyframes ride{0%{transform:translateX(0);opacity:0}12%{opacity:1}85%{opacity:1}100%{transform:translateX(-80px);opacity:0}}
+.sc-flight .cloud{width:30px;height:12px;border-radius:12px;background:#fff;opacity:.9}
+.sc-flight .c1{right:8px;bottom:16px}
+.sc-flight .c2{right:52px;top:12px;width:22px;height:9px}
+.sc-flight .plane{left:-10px;bottom:6px;font-size:22px;animation:fly 4.2s ease-in-out infinite}
+@keyframes fly{0%{transform:translate(0,0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translate(110px,-40px);opacity:0}}
+@media (prefers-color-scheme: dark){.sc-flight .cloud{background:#cfe3f5;opacity:.25}}
+.sc-hotel .moon{right:22px;top:10px;font-size:26px;animation:bob 4s ease-in-out infinite}
+.sc-hotel .spark{color:#fff3bf}
+.stop[data-type] .body{background:linear-gradient(105deg,var(--surface) 0%,var(--surface) 42%,var(--tb1) 70%,var(--tb2) 130%);border-color:color-mix(in srgb,var(--tc) 28%,var(--line))}
+.stop[data-type] .dot{border-color:var(--tc)}
+.stop[data-type="hotel"] .body{background:linear-gradient(105deg,var(--surface) 0%,var(--surface) 38%,var(--tb2) 75%,var(--tb1) 100%)}
+.stop.plain[data-type] .body{background:linear-gradient(105deg,transparent 40%,var(--tb1) 80%,var(--tb2) 140%);border-color:transparent;box-shadow:none}
+.sh-hero{display:none}
+.sh-hero{display:block;position:absolute;left:0;right:0;top:0;height:190px;pointer-events:none;z-index:0;
+  background:linear-gradient(160deg,var(--tb1) 0%,var(--tb2) 100%);
+  -webkit-mask:linear-gradient(#000 0%,#000 45%,transparent 100%);mask:linear-gradient(#000 0%,#000 45%,transparent 100%)}
+.sheet:has(.sh-hero) > :not(.sh-hero){position:relative;z-index:1}
+.sheet:has(.sh-hero) .grab{margin-bottom:78px;background:color-mix(in srgb,var(--tc) 35%,transparent)}
+.sh-hero .hl{position:absolute;left:18px;top:34px;font-size:12px;font-weight:900;letter-spacing:.5px;color:var(--tc)}
+.sh-hero .scene{display:block!important;position:absolute;right:64px;top:24px;bottom:auto;width:96px;height:70px;transform:scale(1.4);transform-origin:right bottom;overflow:visible;border:0!important;background:none!important}
+.sh-hero[data-type="move"] .scene,.sh-hero[data-type="flight"] .scene{width:200px;transform:scale(1.25)}
+.sh-hero[data-type="move"] .train{animation-duration:4.5s}
+@keyframes ride2{0%{transform:translateX(0);opacity:0}10%{opacity:1}88%{opacity:1}100%{transform:translateX(-170px);opacity:0}}
+.sh-hero[data-type="move"] .train{animation-name:ride2}
+.sh-hero[data-type="hotel"]{background:linear-gradient(160deg,#5f3dc4,#9775fa)}
+.sh-hero[data-type="hotel"]{height:150px;-webkit-mask:linear-gradient(#000 0%,#000 40%,transparent 82%);mask:linear-gradient(#000 0%,#000 40%,transparent 82%)}
+.sheet:has(.sh-hero[data-type="hotel"]) .grab{margin-bottom:100px!important}
+.sh-hero[data-type="hotel"] .hl{color:#fff}
+.sh-hero:before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none}
+.sh-hero[data-type="meal"]:before{background:radial-gradient(circle at 1px 1px,color-mix(in srgb,var(--tc) 35%,transparent) 1.2px,transparent 1.6px) 0 0/14px 14px}
+.sh-hero[data-type="explore"]:before,.sh-hero[data-type="sight"]:before{background:radial-gradient(circle,color-mix(in srgb,var(--tc) 40%,transparent) 2px,transparent 2.5px) 0 0/26px 22px,radial-gradient(circle,color-mix(in srgb,#fab005 50%,transparent) 1.5px,transparent 2px) 13px 11px/26px 22px}
+.sh-hero[data-type="move"]:before{background:repeating-linear-gradient(0deg,transparent 0 13px,color-mix(in srgb,var(--tc) 18%,transparent) 13px 14px)}
+.sh-hero[data-type="flight"]:before{background:radial-gradient(40px 14px at 30% 70%,#fff 60%,transparent 62%),radial-gradient(30px 10px at 55% 30%,#fff 60%,transparent 62%);opacity:.7}
+.sh-hero[data-type="hotel"]:before{background:radial-gradient(circle,#fff 1px,transparent 1.5px) 0 0/31px 23px,radial-gradient(circle,#fff 1px,transparent 1.5px) 15px 11px/37px 29px;opacity:.6}
+.daypick{padding-bottom:14px}
+.daypick button{background:none!important;box-shadow:none!important;-webkit-mask:none!important;mask:none!important;padding:0;border-radius:0;overflow:visible;filter:drop-shadow(0 2px 3px rgba(60,40,10,.14))}
+.daypick button:active{transform:none}
+.daypick .dn{position:relative;background:var(--surface);border:1.5px solid var(--line);border-bottom:0;border-radius:12px 12px 0 0;padding:9px 4px 6px;transition:background-color .25s,color .25s;
+  -webkit-mask:radial-gradient(circle 6px at 0 100%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 100%,#0000 98%,#000) right/51% 100% no-repeat;mask:radial-gradient(circle 6px at 0 100%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 100%,#0000 98%,#000) right/51% 100% no-repeat}
+.daypick .dd{margin:0;padding:5px 4px 6px;border:1.5px solid var(--line);border-top:1.5px dashed var(--line);border-radius:0 0 12px 12px;background:var(--surface);transform-origin:90% 0;
+  -webkit-mask:radial-gradient(circle 6px at 0 0,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 0,#0000 98%,#000) right/51% 100% no-repeat;mask:radial-gradient(circle 6px at 0 0,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 0,#0000 98%,#000) right/51% 100% no-repeat}
+.daypick button[aria-selected="true"] .dn{background:var(--c);border-color:var(--c);color:#fff;clip-path:polygon(0 0,100% 0,100.00% calc(100% - 4px),91.67% calc(100% - 0px),83.33% calc(100% - 4px),75.00% calc(100% - 0px),66.67% calc(100% - 4px),58.33% calc(100% - 0px),50.00% calc(100% - 4px),41.67% calc(100% - 0px),33.33% calc(100% - 4px),25.00% calc(100% - 0px),16.67% calc(100% - 4px),8.33% calc(100% - 0px),0.00% calc(100% - 4px));animation:tk-punch .5s cubic-bezier(.3,1.5,.5,1)}
+.daypick button[aria-selected="true"] .dd{background:color-mix(in srgb,var(--c) 80%,#fff);border-color:transparent;color:#fff;clip-path:polygon(0.00% 4px,8.33% 0px,16.67% 4px,25.00% 0px,33.33% 4px,41.67% 0px,50.00% 4px,58.33% 0px,66.67% 4px,75.00% 0px,83.33% 4px,91.67% 0px,100.00% 4px,100% 100%,0 100%);animation:tk-tear .8s cubic-bezier(.25,.8,.3,1) forwards}
+.daypick button.reattach .dd{animation:tk-attach .35s ease-out}
+@keyframes tk-punch{0%{transform:scale(1)}35%{transform:scale(.93)}100%{transform:scale(1)}}
+@keyframes tk-tear{0%{transform:none}22%{transform:translateY(1px) rotate(-2deg)}50%{transform:translateY(9px) rotate(10deg)}72%{transform:translateY(5px) rotate(5deg)}100%{transform:translateY(6px) rotate(6.5deg)}}
+@keyframes tk-attach{0%{transform:translateY(6px) rotate(6.5deg)}100%{transform:none}}
+:root{--spring:cubic-bezier(.22,1.28,.36,1);--glass:color-mix(in srgb,var(--surface) 58%,transparent);--glass-line:rgba(255,255,255,.6);--glass-hi:rgba(255,255,255,.75)}
+@media (prefers-color-scheme: dark){:root{--glass:color-mix(in srgb,var(--surface) 55%,transparent);--glass-line:rgba(255,255,255,.12);--glass-hi:rgba(255,255,255,.14)}}
+body{isolation:isolate}
+body:before{content:"";position:fixed;inset:-10%;z-index:-1;pointer-events:none;
+  background:radial-gradient(45% 35% at 12% 18%,color-mix(in srgb,#ff9a76 38%,transparent),transparent 70%),
+             radial-gradient(40% 32% at 92% 42%,color-mix(in srgb,#9aa8ff 40%,transparent),transparent 70%),
+             radial-gradient(50% 36% at 25% 88%,color-mix(in srgb,#7fe0e8 32%,transparent),transparent 70%),
+             radial-gradient(35% 28% at 80% 92%,color-mix(in srgb,#ffd36e 30%,transparent),transparent 70%)}
+.top{background:transparent}
+.daypick,.mapfilters,.mapaf{background:color-mix(in srgb,var(--bg) 45%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.8);backdrop-filter:blur(18px) saturate(1.8)}
+.tabs{background:var(--glass)!important;-webkit-backdrop-filter:blur(22px) saturate(1.9);backdrop-filter:blur(22px) saturate(1.9);border-color:var(--glass-line)!important;box-shadow:inset 0 1px 0 var(--glass-hi),0 12px 32px -12px rgba(28,35,64,.4)!important}
+.sheet{background:color-mix(in srgb,var(--surface) 76%,transparent);-webkit-backdrop-filter:blur(30px) saturate(1.8);backdrop-filter:blur(30px) saturate(1.8);box-shadow:inset 0 1px 0 var(--glass-hi),0 -12px 40px rgba(20,15,40,.25)}
+.scrim{background:rgba(20,18,40,.28)}
+.chip,.aftime button,.btn:not(.primary){background:var(--glass);border-color:var(--glass-line);box-shadow:inset 0 1px 0 var(--glass-hi);-webkit-backdrop-filter:blur(10px) saturate(1.6);backdrop-filter:blur(10px) saturate(1.6)}
+.chip[aria-pressed="true"]{background:var(--ink)}
+.stop .body,.card,.wx,.daymap-wrap,.changes,.alerts,.check,.linkgrid a{border-color:var(--glass-line);box-shadow:inset 0 1px 0 var(--glass-hi),var(--shadow)}
+.card,.wx,.changes,.alerts,.check,.linkgrid a,.stop:not([data-type]) .body{background:color-mix(in srgb,var(--surface) 80%,transparent)}
+.stop.plain:not([data-type]) .body{background:transparent;box-shadow:none;border-color:transparent}
+.view.active{animation:fx-in .55s var(--spring) both}
+#dayview > div > .dayhead,#dayview > div > .callout,#dayview > div > .daymap-wrap{animation:fx-in .5s var(--spring) both}
+#dayview > div > .callout{animation-delay:.04s}
+#dayview > div > .daymap-wrap{animation-delay:.08s}
+#dayview .line > li{animation:fx-in .5s var(--spring) both}
+#dayview .line > li:nth-child(1){animation-delay:0.135s}
+#dayview .line > li:nth-child(2){animation-delay:0.170s}
+#dayview .line > li:nth-child(3){animation-delay:0.205s}
+#dayview .line > li:nth-child(4){animation-delay:0.240s}
+#dayview .line > li:nth-child(5){animation-delay:0.275s}
+#dayview .line > li:nth-child(6){animation-delay:0.310s}
+#dayview .line > li:nth-child(7){animation-delay:0.345s}
+#dayview .line > li:nth-child(8){animation-delay:0.380s}
+#dayview .line > li:nth-child(9){animation-delay:0.415s}
+#dayview .line > li:nth-child(10){animation-delay:0.450s}
+#dayview .line > li:nth-child(11){animation-delay:0.485s}
+#dayview .line > li:nth-child(12){animation-delay:0.520s}
+#dayview .line > li:nth-child(13){animation-delay:0.555s}
+#dayview .line > li:nth-child(14){animation-delay:0.590s}
+#dayview .line > li:nth-child(15){animation-delay:0.625s}
+@keyframes fx-in{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
+.sheet,.sheet.show{transition:transform .55s var(--spring),visibility 0s linear .55s}
+.sheet.show{transition:transform .55s var(--spring)}
+.card,.stop .body,.chip,.btn,.tab svg,.hotel-btn{transition:transform .45s var(--spring),background-color .25s}
+.card:active,.stop:active .body{transform:scale(.965);transition-duration:.12s}
+.chip:active,.btn:active{transform:scale(.92);transition-duration:.1s}
+.tab[aria-selected="true"] svg{animation:fx-pop .5s var(--spring)}
+@keyframes fx-pop{0%{transform:scale(.7)}100%{transform:scale(1)}}
+.tiplist:not([hidden]) li{animation:fx-in .45s var(--spring) both}
+.tiplist li:nth-child(1){animation-delay:0.03s}
+.tiplist li:nth-child(2){animation-delay:0.06s}
+.tiplist li:nth-child(3){animation-delay:0.09s}
+.tiplist li:nth-child(4){animation-delay:0.12s}
+.tiplist li:nth-child(5){animation-delay:0.15s}
+.tiplist li:nth-child(6){animation-delay:0.18s}
+.tiplist li:nth-child(7){animation-delay:0.21s}
+.tiplist li:nth-child(8){animation-delay:0.24s}
+.tiplist li:nth-child(9){animation-delay:0.27s}
+.tiplist li:nth-child(10){animation-delay:0.30s}
+.tiplist li:nth-child(11){animation-delay:0.33s}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+@media (prefers-reduced-motion: reduce){.scene *{animation:none!important}}
+/* 지금 여기 (일본 시간) */
+.nowtag{display:inline-flex;align-items:center;gap:5px;margin-bottom:4px;padding:2px 9px 2px 7px;border-radius:999px;background:var(--accent);color:#fff;font-size:11.5px;font-weight:800;position:relative;z-index:1}
+.nowtag:before{content:"";width:7px;height:7px;border-radius:50%;background:#fff}
+li.now .stop .body{box-shadow:0 0 0 2.5px var(--accent),var(--shadow)}
+li.now .stop .dot{border-color:var(--accent)}
+li.now .stop .dot:before{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--accent);animation:nowping 1.8s ease-out infinite}
+@keyframes nowping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+@media (prefers-reduced-motion: reduce){ li.now .stop .dot:before{animation:none} }
 </style>
 </head>
 <body>
@@ -468,12 +626,11 @@ function showView(v){
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>showView(t.dataset.v)));
 
 /* ---------- today ---------- */
+// 일본 시간 기준 '지금'. 미리 보기: 주소 끝에 ?now=2026-10-21T15:20 (일본 시간)
+const NOW_FIX = (()=>{ const m = location.search.match(/[?&]now=(\d{4}-\d\d-\d\dT\d\d:\d\d)/); return m ? Date.parse(m[1]+":00+09:00") : null; })();
+const nowMs = () => NOW_FIX!=null ? NOW_FIX : Date.now();
 let todayKey = null;
-try {
-  const t = new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Tokyo"}));
-  const ymd = t.getFullYear()+"-"+String(t.getMonth()+1).padStart(2,"0")+"-"+String(t.getDate()).padStart(2,"0");
-  const d = DAYS.find(x=>x.date===ymd); if (d) todayKey = d.id;
-} catch(e){}
+{ const d = DAYS.find(x=>x.date===tkParts(nowMs()).ymd); if (d) todayKey = d.id; }
 
 /* ---------- 날씨: 일본 기상청(JMA) 도쿄 ---------- */
 // 지금 기온 = 아메다스 도쿄(44132) 10분 관측, 날짜별 = 도쿄 지방(130010) 단기·주간 예보. 불러오지 못하면 숨김.
@@ -629,11 +786,52 @@ function gmapsRoute(day){
   return "https://www.google.com/maps/dir/"+seen.slice(0,10).map(enc).join("/");
 }
 
+/* ---------- 일정 칸 종류 · 배경 장면 ---------- */
+const CAT_TYPE = {food:"meal", cafe:"meal", shop:"explore", sight:"sight", station:"move", hotel:"hotel"};
+const TYPE_LABEL = {meal:"🍜 식사", explore:"🛍️ 둘러보기", sight:"🗼 관광", move:"🚃 이동", flight:"✈️ 공항", hotel:"🏨 숙소"};
+function stepType(s){
+  const p = s.k ? P[s.k] : null;
+  if (s.meal) return s.meal.kind === "place" ? (p && p.cat === "sight" ? "sight" : "explore") : "meal";
+  if (/공항|비행기|출국|터미널/.test(s.title)) return "flight";
+  if (s.move || (p && p.cat === "station")) return "move";
+  return p ? (CAT_TYPE[p.cat] || "") : "";
+}
+const SPARK = '<i class="spark k1">✦</i><i class="spark k2">✦</i><i class="spark k3">✦</i>';
+const SCENE = {
+  meal:   '<i class="steam s1"></i><i class="steam s2"></i><i class="steam s3"></i><i class="bowl">🍜</i>',
+  explore:'<i class="bag2">🎁</i><i class="bag">🛍️</i>' + SPARK,
+  sight:  '<i class="tower">🗼</i>' + SPARK,
+  move:   '<i class="rail2"></i><i class="train">🚃</i>',
+  flight: '<i class="cloud c1"></i><i class="cloud c2"></i><i class="plane">✈️</i>',
+  hotel:  '<i class="moon">🌙</i>' + SPARK,
+};
+const sceneHtml = t => SCENE[t] ? `<span class="scene sc-${t}" aria-hidden="true">${SCENE[t]}</span>` : "";
+const sheetHero = t => SCENE[t] ? `<div class="sh-hero inview" data-type="${t}" aria-hidden="true"><span class="hl">${TYPE_LABEL[t]}</span>${sceneHtml(t)}</div>` : "";
+// 화면에 보이는 칸만 장면이 움직이게
+const sceneIO = "IntersectionObserver" in window ? new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle("inview", e.isIntersecting))) : null;
+
+/* ---------- 지금 여기 (일본 시간) ---------- */
+function markNow(){
+  const d = DAYS.find(x=>x.id===curDay); if (!d) return;
+  const n = tkParts(nowMs()); let at = -1;
+  if (n.ymd === d.date) d.steps.forEach((s,i)=>{ const m = /^(\d{1,2}):(\d{2})$/.exec(s.time||""); if (m && +m[1]*60 + +m[2] <= n.min) at = i; });
+  document.querySelectorAll("#dayview .line > li").forEach((li,i)=>{
+    li.classList.toggle("now", i===at);
+    const tag = li.querySelector(".nowtag");
+    if (i===at && !tag) li.querySelector(".body").insertAdjacentHTML("afterbegin", `<span class="nowtag">지금 여기 · ${hhmm(n.min)}</span>`);
+    else if (i===at) tag.textContent = `지금 여기 · ${hhmm(n.min)}`;
+    else if (tag) tag.remove();
+  });
+}
+setInterval(markNow, 60000);
+
 /* ---------- day view ---------- */
 let curDay = todayKey || "d1", dayMap = null; let dayRoute = null;
 function renderDayPick(){
   $("#daypick").innerHTML = DAYS.map(d=>`<button role="tab" style="--c:${DAYC[d.id]}" data-d="${d.id}" aria-selected="${d.id===curDay}" class="${d.id===todayKey?"is-today":""}"><span class="todaydot"></span><span class="dn">${esc(d.short)}</span><span class="dd num">${esc(d.when)}</span></button>`).join("");
-  document.querySelectorAll("#daypick button").forEach(b=>b.addEventListener("click",()=>{ curDay=b.dataset.d; renderDayPick(); renderDay(); window.scrollTo(0,0); }));
+  document.querySelectorAll("#daypick button").forEach(b=>b.addEventListener("click",()=>{ const prev = curDay; curDay=b.dataset.d; renderDayPick(); renderDay(); window.scrollTo(0,0);
+    // 이전에 고른 날짜는 찢어진 쪽지가 다시 붙는 모습
+    const pb = prev!==curDay && $(`#daypick button[data-d="${prev}"]`); if (pb) pb.classList.add("reattach"); }));
 }
 function renderDay(){
   const d = DAYS.find(x=>x.id===curDay);
@@ -642,14 +840,15 @@ function renderDay(){
   const steps = d.steps.map((s,i)=>{
     const p = s.k ? P[s.k] : null;
     const cls = ["stop", s.move?"move":"", s.major?"major":"", s.minor?"minor":"", p?"":"plain"].join(" ");
+    const ty = stepType(s), tya = ty ? ` data-type="${ty}"` : "";
     const tag = tagHtml(s.tags || []);
     const mealTxt = !s.meal ? "" : (s.meal.route
       ? `<span class="nt mealnt" style="display:block">추천 동선 <b>${s.meal.route.map(k=>esc(shortName(P[k]))).join(" → ")}</b> · 후보 ${mealKeys(s).length}곳</span>`
       : `<span class="nt mealnt" style="display:block">원본 <b>${s.meal.orig.map(k=>esc(shortName(P[k]))).join(" · ")}</b> · 후보 ${mealKeys(s).length}곳</span>`);
     const ttl = s.meal ? `${esc(s.title)} 후보 <span class="mealarea">${esc(s.meal.area)}</span>` : esc(s.title);
     const stx = (p && !s.meal && !s.move && !["hotel","station"].includes(p.cat)) ? `<span class="attrs">${stHtml(p)}${payHtml(p)}${taxHtml(p)}</span>` : (s.meal ? `<span class="attrs" data-mealopen="${i}"></span>` : "");
-    const inner = `<span class="t num">${esc(s.time||"")}</span><span class="rail"><span class="dot"></span></span><span class="body"><span class="ttl">${ttl} ${tag}</span>${stx}${mealTxt}${s.note?`<span class="nt" style="display:block">${s.note}</span>`:""}${p?'<span class="more"></span>':""}</span>`;
-    return `<li>${p?`<button class="${cls}" data-i="${i}" data-k="${esc(s.k)}"${s.meal?' data-meal="1"':""}>${inner}</button>`:`<div class="${cls}">${inner}</div>`}</li>`;
+    const inner = `<span class="t num">${esc(s.time||"")}</span><span class="rail"><span class="dot"></span></span><span class="body"><span class="ttl">${ttl} ${tag}</span>${stx}${mealTxt}${s.note?`<span class="nt" style="display:block">${s.note}</span>`:""}${p?'<span class="more"></span>':""}${sceneHtml(ty)}</span>`;
+    return `<li>${p?`<button class="${cls}"${tya} data-i="${i}" data-k="${esc(s.k)}"${s.meal?' data-meal="1"':""}>${inner}</button>`:`<div class="${cls}"${tya}>${inner}</div>`}</li>`;
   }).join("");
   $("#dayview").innerHTML = `
     <div style="--c:${c}">
@@ -664,7 +863,8 @@ function renderDay(){
       </div>
       <ol class="line">${steps}</ol>
     </div>`;
-  applyAF(); paintDayWx();
+  applyAF(); paintDayWx(); markNow();
+  if (sceneIO) $("#dayview").querySelectorAll(".stop[data-type]").forEach(el=>sceneIO.observe(el));
   $("#dayview").querySelectorAll("button.stop").forEach(b=>b.addEventListener("click",()=>{
     const s = d.steps[+b.dataset.i]; if (s.meal) openMeal(d, s); else openSheet(s.k, d.id, s);
   }));
@@ -741,7 +941,7 @@ function applyFilters(){
 /* ---------- 영업 상태 · 결제 · 면세 필터 ---------- */
 const AF = {open:false, cash:false, card:false, tax:false, at:null, pick:false, ctx:null};
 function tkParts(t){ const d=new Date(t+9*3600e3); return {dow:(d.getUTCDay()+6)%7, min:d.getUTCHours()*60+d.getUTCMinutes(), ymd:d.toISOString().slice(0,10)}; }
-function tokyoNow(){ const t = AF.at!=null ? AF.at : (AF.ctx!=null ? AF.ctx : Date.now()); const n=tkParts(t); n.prevYmd=tkParts(t-864e5).ymd; return n; }
+function tokyoNow(){ const t = AF.at!=null ? AF.at : (AF.ctx!=null ? AF.ctx : nowMs()); const n=tkParts(t); n.prevYmd=tkParts(t-864e5).ymd; return n; }
 const hhmm = m => { m=((m%1440)+1440)%1440; return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0"); };
 function openStatus(p){
   if(!p || !p.oh) return null;
@@ -920,7 +1120,7 @@ function openMeal(d, s){
   sh.style.setProperty("--c", DAYC[d.id]);
   const sub = m.kind==="place" ? "순서는 정해 두지 않았어요. 닫는 시간을 보고 골라 가요." : "정해 두지 않았어요. 그날 상황에 맞춰 골라요.";
   sh.innerHTML = `
-    <div class="grab"></div>
+    <div class="grab"></div>${sheetHero(stepType(s))}
     <div class="sh-top"><div><div class="sh-kicker">${esc(d.short)} ${esc(d.when)}${s.time?" "+esc(s.time):""}</div><div class="sh-name" id="shName">${esc(s.title)} 후보 · ${esc(m.area)}</div><div class="sh-jp">${sub}</div></div><button class="x" aria-label="닫기">✕</button></div>
     ${s.note?`<p class="mealmove">${s.note}</p>`:""}
     <div class="afbar" data-af></div>
@@ -962,7 +1162,7 @@ function openSheet(k, dayId, step, back){
   const sh = $("#sheet");
   sh.style.setProperty("--c", color);
   sh.innerHTML = `
-    <div class="grab"></div>
+    <div class="grab"></div>${sheetHero(step ? stepType(step) : (CAT_TYPE[p.cat] || ""))}
     ${back?'<button class="sh-back">‹ 후보 목록으로</button>':""}
     <div class="sh-top"><div><div class="sh-kicker">${esc(kicker)}</div><div class="sh-name" id="shName">${esc(p.name)}</div>${p.jp?`<div class="sh-jp jp">${esc(p.jp)}</div>`:""}</div><button class="x" aria-label="닫기">✕</button></div>
     ${(p.tags&&p.tags.length)?`<div class="sh-tags">${tagHtml(p.tags)}</div>`:""}

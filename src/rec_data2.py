@@ -24,6 +24,15 @@ RECS2 = [
       rvT="연어·연어알 정식이 인기, 밥 무한리필에 반찬이 정갈하다는 평. 식권기는 1만 엔권이 안 돼 천 엔권을 챙기라는 팁. 고기 메뉴는 아쉬웠다는 후기도.",
       brief="솥밥 정식 · 식권기"),
  # ---------- cafe / dessert ----------
+ # 2026-10-20 사용자 요청 추가: 구글 리뷰(최신순)·네이버 블로그로 확인
+ dict(key="n_heckeln", name="헤케룬 (ヘッケルン) · 점보 푸딩", cat="cafe", area="ginza", areaName="신바시",
+      jp="東京都港区西新橋1-20-11 安藤ビル1F", jpname="ヘッケルン",
+      pid="", ll=[35.66786, 139.75217], g=dict(r=4.0, n=1174),
+      hours="월·화·목·금 09:00–15:00 · 수·토·일 휴무 (구글)", wait="개점 전부터 줄, 1시간 넘게 기다렸다는 리뷰 여럿 (구글 10월)",
+      warn="푸딩은 하루 수량 한정이라 오전에 품절돼요 (구글 리뷰: 10:30쯤 품절 안내, 정오쯤 품절). 현금만.",
+      fit="2일차(목) 10시 신바시역 환승 때 들르거나 점심 전후로 맞아요. 3일차(금)도 영업. 수·토·일은 쉬어요.",
+      rvT="마스터가 푸딩을 내는 퍼포먼스로 SNS에서 유명한 쇼와 킷사텐. 좌석이 22석뿐이고 1인 1음료 주문이 필요하며, 손님이 한꺼번에 나간 뒤 다음 손님을 받아 대기가 길다는 리뷰가 많아요. 준비 중 촬영은 엄격히 금지, 퍼포먼스 때만 촬영 허용이었다는 후기.",
+      brief="점보 푸딩 · 쇼와 킷사텐 · 현금만"),
  dict(key="n_lapin", name="카페 라팡 (Café Lapin)", cat="cafe", area="ueno", areaName="우에노",
       jp="東京都台東区上野3-15-7", jpname="Café Lapin 上野",
       pid="ChIJ9zTs3h-MGGARvqx1jws3E8s", ll=[35.70566, 139.77265], g=dict(r=4.6, n=945),
@@ -91,6 +100,6 @@ RECS2 = [
 ]
 REC_GROUPS2 = {
  "food": {"akiba": ["n_ichinisan", "n_marugo"], "ikebukuro": ["n_ikkoku"], "ueno": ["n_lapin"],
-          "ginza": ["n_shiseido", "n_tokichi"], "shibuya": ["n_happypancake"]},
+          "ginza": ["n_heckeln", "n_shiseido", "n_tokichi"], "shibuya": ["n_happypancake"]},
  "place": {"ginza": ["n_caretta_sky", "n_kitte"], "akiba": ["n_gachapon", "n_superpotato", "n_hey"]},
 }
