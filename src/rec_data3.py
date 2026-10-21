@@ -71,7 +71,7 @@ RECS3 = [
 ]
 # 식사 후보 칸에 넣을 위치 (일정 단계 시간 → 추가할 키)
 MEAL_ADD = {
- ("d1", "15:00"): ["n_maimon", "n_magurobito"],
+ ("d1", "14:00"): ["n_maimon", "n_magurobito"],
  ("d1", "19:00"): ["n_tenka", "n_houkou"],
  ("d2", "12:30"): ["n_itamae", "n_midori"],
  ("d2", "20:00"): ["n_fujiyama", "n_ginzo"],
