@@ -320,7 +320,13 @@ li:last-child>.stop .rail:before{bottom:calc(100% - 20px)}
 .mealsec.orig .card{box-shadow:0 0 0 2px var(--c,var(--ink)) inset}
 .mealsec .cards{display:grid;gap:8px}
 .mealmove{margin:8px 0 0;font-size:13px;color:var(--ink2)}
-.sh-back{border:0;background:none;padding:2px 0 8px;font:inherit;font-size:13.5px;font-weight:800;color:var(--c,var(--ink));cursor:pointer}
+.sh-back{position:sticky;top:6px;z-index:3;display:inline-flex;align-items:center;gap:4px;margin:0 0 10px;padding:8px 14px 8px 9px;border-radius:999px;font:inherit;font-size:14px;font-weight:800;color:var(--ink);cursor:pointer;
+  background:color-mix(in srgb,var(--surface) 78%,transparent);border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 6px 16px -8px rgba(28,35,64,.4);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);transition:transform .45s cubic-bezier(.22,1.28,.36,1)}
+.sh-back:active{transform:scale(.94);transition-duration:.1s}
+.sh-back svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+/* 장면 머리가 있을 때는 그 띠 안 왼쪽 위로 올리고, 장면 이름표는 숨김 */
+.sheet:has(.sh-hero) > .sh-back{position:sticky!important;z-index:3!important;margin:-66px 0 30px}
+.sheet:has(.sh-back) .sh-hero .hl{display:none}
 .sh-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
 .sh-actions .wide{grid-column:1/-1}
 .sh-actions .sv{flex-wrap:wrap;row-gap:0}
@@ -1193,7 +1199,7 @@ $("#check").querySelectorAll("input").forEach(cb=>cb.addEventListener("change",(
 $("#links").innerHTML = DATA.links.map(l=>`<a href="${esc(l.u)}" target="_blank" rel="noopener">${esc(l.t)}<small>${esc(l.d)}</small></a>`).join("");
 
 /* ---------- bottom sheet ---------- */
-let miniMap=null, lastFocus=null, sheetTok=0;
+let miniMap=null, lastFocus=null, sheetTok=0, backLabel="후보 목록";
 function shortName(p){ return (p.name||"").replace(/\s*\(.*?\)\s*/g," ").replace(/\s+[^\s]{1,8}점$/,"").trim(); }
 function mealKeys(s){ const m=s.meal; return m.orig.concat(...m.groups.map(g=>g.keys)).filter(k=>P[k]); }
 function openMeal(d, s){
@@ -1206,6 +1212,7 @@ function openMeal(d, s){
   const recKeys = [].concat(...m.groups.map(g=>g.keys));
   const sh = $("#sheet");
   sh.style.setProperty("--c", DAYC[d.id]);
+  backLabel = `${s.title} 후보 · ${m.area}`;
   const sub = m.kind==="place" ? "순서는 정해 두지 않았어요. 닫는 시간을 보고 골라 가요." : "정해 두지 않았어요. 그날 상황에 맞춰 골라요.";
   sh.innerHTML = `
     <div class="grab"></div>${sheetHero(stepType(s))}
@@ -1252,7 +1259,7 @@ function openSheet(k, dayId, step, back){
   sh.style.setProperty("--c", color);
   sh.innerHTML = `
     <div class="grab"></div>${sheetHero(step ? stepType(step) : (CAT_TYPE[p.cat] || ""))}
-    ${back?'<button class="sh-back">‹ 후보 목록으로</button>':""}
+    ${back?`<button class="sh-back" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>${esc(backLabel)}</button>`:""}
     <div class="sh-top"><div><div class="sh-kicker">${esc(kicker)}</div><div class="sh-name" id="shName">${esc(p.name)}</div>${p.jp?`<div class="sh-jp jp">${esc(p.jp)}</div>`:""}</div><button class="x" aria-label="닫기">✕</button></div>
     ${(p.tags&&p.tags.length)?`<div class="sh-tags">${tagHtml(p.tags)}</div>`:""}
     ${p.tips&&p.tips.length?`<button class="tipbtn" aria-expanded="false" aria-controls="tiplist">💬 최신 리뷰 팁 ${p.tips.length}개<span class="tchev" aria-hidden="true"></span></button><ul class="tiplist" id="tiplist" hidden>${p.tips.map(t=>`<li><span class="tk">${esc(t.kind)}</span>${esc(t.tip)}<small>${esc(t.site)} · ${esc(t.date)} · <a href="${esc(t.src)}" target="_blank" rel="noopener">출처</a></small></li>`).join("")}</ul>`:""}
