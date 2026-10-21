@@ -683,14 +683,25 @@ const setTop=()=>document.documentElement.style.setProperty("--toph", "env(safe-
 setTop(); window.addEventListener("resize", setTop);
 
 /* ---------- tabs ---------- */
+let curView = "plan";
 function showView(v){
+  curView = v;
   document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected", t.dataset.v===v));
   document.querySelectorAll(".view").forEach(s=>s.classList.toggle("active", s.id==="v-"+v));
   window.scrollTo(0,0);
   if (v==="map") initFullMap();
   if (v==="plan" && dayMap) setTimeout(()=>dayMap.invalidateSize(),50);
 }
-document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>showView(t.dataset.v)));
+// 뒤로 가기: 일정 탭이 처음 화면, 다른 탭은 한 단계 위. 상세 창은 그 위에 한 단계씩 쌓인다.
+function goView(v){
+  if (v === curView) return;
+  if (curView === "plan") history.pushState({view:v}, "");
+  else if (v === "plan") { history.back(); return; }
+  else history.replaceState({view:v}, "");
+  showView(v);
+}
+history.replaceState({view:"plan"}, "");
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>goView(t.dataset.v)));
 
 /* ---------- today ---------- */
 // 일본 시간 기준 '지금'. 미리 보기: 주소 끝에 ?now=2026-10-21T15:20 (일본 시간)
@@ -1188,7 +1199,7 @@ function mealKeys(s){ const m=s.meal; return m.orig.concat(...m.groups.map(g=>g.
 function openMeal(d, s){
   const m = s.meal; sheetTok++;
   AF.ctx = (d.date && tkParts(Date.now()).ymd!==d.date && /^\d{1,2}:\d{2}$/.test(s.time||"")) ? Date.parse(`${d.date}T${s.time.padStart(5,"0")}:00+09:00`) : null;
-  if (!$("#sheet").classList.contains("show")) lastFocus = document.activeElement;
+  const wasOpen = $("#sheet").classList.contains("show"); if (!wasOpen) lastFocus = document.activeElement;
   if (miniMap){ miniMap.remove(); miniMap=null; }
   const sec = (label, keys, cls) => { keys = keys.filter(k=>P[k]); if(!keys.length) return "";
     return `<div class="mealsec ${cls||""}">${label?`<div class="mlabel">${label}</div>`:""}<div class="cards">${keys.map(k=>card(P[k])).join("")}</div></div>`; };
@@ -1206,6 +1217,7 @@ function openMeal(d, s){
     ${m.groups.map((g,i)=>sec(g.label || (i===0?"다른 후보":""), g.keys, g.orig?"orig":"")).join("")}
     <div class="afempty af-hide" data-afempty="sheet">조건에 맞는 후보가 없어요. 필터를 풀거나 기준 시각을 바꿔 보세요.</div>`;
   $("#scrim").classList.add("show"); sh.classList.add("show");
+  sheetHistory(wasOpen, null);
   sh.scrollTop = 0;
   sh.querySelector(".x").addEventListener("click", closeSheet);
   sh.querySelectorAll(".card, .rroute button").forEach(b=>b.addEventListener("click",()=>openSheet(b.dataset.k, d.id, null, ()=>openMeal(d, s))));
@@ -1214,7 +1226,7 @@ function openMeal(d, s){
 }
 function openSheet(k, dayId, step, back){
   const p = P[k]; if(!p) return;
-  if (!$("#sheet").classList.contains("show")) lastFocus = document.activeElement;
+  const wasOpen = $("#sheet").classList.contains("show"); if (!wasOpen) lastFocus = document.activeElement;
   const d = dayId ? DAYS.find(x=>x.id===dayId) : null;
   const color = d ? DAYC[d.id] : "var(--muted)";
   const kicker = d ? `${d.short} ${d.when}${step && step.time?" "+step.time:""}` : (p.areaName||"");
@@ -1255,9 +1267,10 @@ function openSheet(k, dayId, step, back){
     </div>
     ${(hasL && COORDS[k] && !p.nomini)?'<div class="minimap" id="minimap"></div>':""}`;
   $("#scrim").classList.add("show"); sh.classList.add("show");
+  sheetHistory(wasOpen, back);
   sh.scrollTop = 0;
   sh.querySelector(".x").addEventListener("click", closeSheet);
-  if (back) sh.querySelector(".sh-back").addEventListener("click", back);
+  if (back) sh.querySelector(".sh-back").addEventListener("click", ()=>history.back());
   const tb = sh.querySelector(".tipbtn");
   if (tb) tb.addEventListener("click",()=>{ const open = tb.getAttribute("aria-expanded")!=="true"; tb.setAttribute("aria-expanded", open); $("#tiplist").hidden = !open; });
   sh.querySelector(".x").focus();
@@ -1273,11 +1286,32 @@ function openSheet(k, dayId, step, back){
     }, 230);
   }
 }
-function closeSheet(){
+function hideSheet(){
   if (AF.ctx!=null){ AF.ctx=null; setTimeout(afChanged,0); }
   $("#scrim").classList.remove("show"); $("#sheet").classList.remove("show");
   if (lastFocus && lastFocus.focus) lastFocus.focus();
 }
+// 상세 창 단계: [첫 창, 그 안에서 들어간 창의 '돌아가기' …]. 뒤로 가기 한 번에 한 단계씩.
+let sheetStack = [], skipPop = false;
+function sheetHistory(wasOpen, back){
+  if (!wasOpen){ sheetStack = [null]; history.pushState({view:curView, sheet:1}, ""); }
+  else if (back){ sheetStack.push(back); history.pushState({view:curView, sheet:sheetStack.length}, ""); }
+}
+// X·바깥 누르기·쓸어내리기·Esc로 닫을 때는 쌓인 기록도 한 번에 되돌린다
+function closeSheet(){
+  const n = sheetStack.length; sheetStack = []; hideSheet();
+  if (n){ skipPop = true; history.go(-n); }
+}
+window.addEventListener("popstate", e=>{
+  if (skipPop){ skipPop = false; return; }
+  if (sheetStack.length){
+    const top = sheetStack.pop();
+    if (sheetStack.length){ if (top) top(); } else hideSheet();
+    return;
+  }
+  const v = (e.state && e.state.view) || "plan";
+  if (v !== curView) showView(v);
+});
 $("#scrim").addEventListener("click", closeSheet);
 document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeSheet(); });
 (function(){
