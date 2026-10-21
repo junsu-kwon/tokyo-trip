@@ -393,11 +393,11 @@ changes = [
 checklist = [
  dict(k="c1", t="스카이라이너 예약", done=True), dict(k="c2", t="시부야 스카이 10/23 입장권 예매", done=True),
  dict(k="c3", t="스카이라이너 QR → 실물 티켓 교환 (공항 제2빌딩역)", done=False),
- dict(k="c4", t="ICOCA 잔액 확인 (충전은 역 발매기)", done=False), dict(k="c5", t="eSIM 등록", done=False),
+ dict(k="c15", t="Suica 만들기 · 1인 3,000엔 충전 (아이폰: Welcome Suica Mobile 앱 / 그 외: JR 우에노역 Welcome Suica·일반 Suica)", done=False), dict(k="c5", t="eSIM 등록", done=False),
  dict(k="c6", t="Visit Japan Web 등록, QR 캡처", done=False), dict(k="c7", t="히키니쿠토코메 예약 여부 결정", done=False),
  dict(k="c8", t="현금 준비 (돈카츠 이와이 · 카모토네기 · 논베이 요코초)", done=False), dict(k="c9", t="청주공항 주차 요금 확인", done=False),
  dict(k="c11", t="귀국 스카이라이너 티켓 우에노역에서 미리 교환 (3일차 밤)", done=False),
- dict(k="c12", t="교통카드 어떻게 할지 정하기", done=False),
+ dict(k="c12", t="교통카드: Suica로 결정 (1일권·패스는 우리 동선에선 손해라 안 삼, 스카이라이너는 왕복표로)", done=True),
  dict(k="c13", t="바우처 인쇄 또는 캡처 (스카이라이너 QR · 시부야 스카이 · 숙소 확인서 · 항공 e티켓)", done=False),
  dict(k="c14", t="여권 사본 1장 + 여권 사진 2장 (원본과 따로 보관 · 원본은 늘 휴대, 면세에 필요)", done=False),
 ]
