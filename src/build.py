@@ -306,9 +306,12 @@ days = [
    S("11:00", "둘러볼 곳", "divercity", "건담베이스 평일 11:00 개장 · 다이버시티 7층", tags=["주의"], major=True, hs="오다이바",
      meal=dict(kind="place", area="오다이바", route=["divercity", "hellokitty"], rnote="둘 다 다이버시티 안이에요(7층 → 2층). 시간 남으면 해변공원은 걸어서 10분.", orig=["divercity", "hellokitty"], groups=[dict(label="근처", keys=["odaiba_beach"])])),
    S("12:05", "다이버시티 → 신바시 (유리카모메)", "daiba_st", "다이바역까지 도보 약 5분 · 「新橋行」 약 15분, IC 325엔 · 4~5분 간격 (예: 12:07발 → 12:22 신바시)", hs="이동"),
-   S("12:30", "점심", "caretta", "신바시역(시오도메 쪽)에서 도보 · 하나야마(긴자)·홋카이반야(쓰키지)는 아래 후보 참고", move=True, hs="시오도메", meal=dict(area="긴자", orig=["caretta", "hanayama", "hokkaibanya"], groups=[dict(label="추천 (리뷰 기반)", keys=["r_hibiki", "n_heckeln"])])),
-   S("13:50", "점심 → 긴자", None, "신바시에서 긴자선 1정거장 (1분, IC 178엔) 또는 도보 약 12분 · 하나야마(긴자 3초메)에서 먹었다면 걸어서 바로", move=True, minor=True),
-   S("14:00", "둘러볼 곳", "nishiginza", "1시간 반 정도만", move=True, hs="긴자",
+   S("12:25", "신바시 → 긴자 (긴자선)", "shimbashi_st", "긴자선 「浅草行」 1정거장 (1분, IC 178엔) 또는 도보 약 12분", hs="이동"),
+   S("12:30", "점심", "hanayama", "긴자에서 점심 · 하나야마는 오전 번호표가 일찍 끝나는 날이 많아 긴자 안 다른 후보도 같이 봐요", move=True, hs="긴자",
+     meal=dict(area="긴자", orig=["hanayama", "caretta", "hokkaibanya"],
+               groups=[dict(label="긴자 안 (리뷰 기반 추천)", keys=["n_midori", "n_shiseido", "n_tokichi"]),
+                       dict(label="신바시·시오도메 쪽 (리뷰 기반 추천)", keys=["r_hibiki", "n_heckeln", "n_itamae"])])),
+   S("14:00", "둘러볼 곳", "nishiginza", "점심 먹은 곳에서 걸어서 · 1시간 반 정도만", hs="긴자",
      meal=dict(kind="place", area="긴자", route=["nishiginza", "marronnier2", "loft_ginza"], rnote="니시긴자 → 마로니에게이트 → 로프트가 긴자역에서 북쪽으로 한 줄이라 걸어서 각각 3–5분이에요. 로프트에서 JR 유라쿠초역이 가까워서 바로 아키하바라로 넘어가기 좋아요.", orig=["nishiginza", "marronnier2", "loft_ginza"],
                groups=[dict(label="근처", keys=["muji_ginza", "itoya", "ginza_six"]), dict(label="추천 (리뷰 기반)", keys=["n_caretta_sky", "n_kitte"])])),
    S("15:30", "긴자 → 아키하바라", "akiba_st", "JR 유라쿠초 → 아키하바라 (야마노테·게이힌토호쿠선) 또는 히비야선 긴자 → 아키하바라 약 12분", move=True, minor=True),
@@ -381,6 +384,7 @@ alerts = [
  "Q-pot 카페는 오모테산도에만 있고, 캐스키드슨 카페는 현재 없어요. \"URINAN 도라야키\"는 하라주쿠 YURINAN으로 보여요.",
 ]
 changes = [
+ ("2일차 점심 장소 (10/22 결정)", "신바시·시오도메 쪽 → 긴자", "다이버시티에서 유리카모메로 신바시, 긴자선 1정거장으로 긴자에 가서 점심. 이후 긴자 둘러보기는 걸어서 바로 이어져요."),
  ("1일차 스카이라이너 앞당김 (10/21 실제)", "13:22발 → 12:42발 탑승 (게이세이우에노 14:09 → 13:23 도착)", "실제로 한 대 앞 열차를 탔어요. 숙소 짐 맡기기·점심·이케부쿠로 이동을 약 1시간씩 당기고 저녁(19:00)은 그대로. 이케부쿠로 시간이 1시간 늘었어요."),
  ("2일차 긴자·아키하바라 배분", "원본: 긴자 오후 → 17시 긴자 저녁 → 18:30 아키하바라 / 지금: 14시 긴자 1시간 반 → 16시 아키하바라 → 20시 아키하바라 저녁", "아키하바라 가게 대부분이 20:00에 닫아서, 원본대로면 1시간 반밖에 못 봐요. 대신 긴자 저녁(하나야마·홋카이반야)은 점심 후보로만 남아요."),
  ("2일차 출발·도착 시간", "원본 09:30 출발 · 10:30 도착 → 10:00 출발 · 11:00 도착", "건담베이스가 평일 11:00에 열어서요. 원본대로 가면 30분 기다려요."),

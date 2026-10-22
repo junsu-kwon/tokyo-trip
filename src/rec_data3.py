@@ -73,7 +73,6 @@ RECS3 = [
 MEAL_ADD = {
  ("d1", "14:00"): ["n_maimon", "n_magurobito"],
  ("d1", "19:00"): ["n_tenka", "n_houkou"],
- ("d2", "12:30"): ["n_itamae", "n_midori"],
  ("d2", "20:00"): ["n_fujiyama", "n_ginzo"],
  ("d3", "11:30"): ["n_utami"],
 }
